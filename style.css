@@ -16,3 +16,19 @@ h4, h5 {
 h6 {
       font-family: 'Old Standard', sans-serif;
 }
+
+a:link {
+      color: #FFB581;
+}
+
+a:visited {
+      color: #7F5B40;
+}
+
+a:hover {
+      color: #CCB5A4;
+}
+
+a:active {
+      color: #FFE2CD;
+}

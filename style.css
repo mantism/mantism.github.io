@@ -2,10 +2,14 @@ body {
       font-family: 'Fira Sans', sans-serif;
 }
 
-.font1 {
+h1, h2, h3 {
+      font-family: 'Fira Sans', sans-serif;
+}
+
+h4, h5 {
       font-family: 'Inconsolata', monospace;
 }
 
-.font2 {
+h6 {
       font-family: 'Old Standard', sans-serif;
 }

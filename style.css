@@ -1,14 +1,20 @@
 html, body {
       font-family: 'Fira Sans', sans-serif;
-      background-color: #f6dac6;
-      background-image: url(/res/asanoha-400px.png);
+      background-image: url(/res/subtle_white_mini_waves.png);
       background-blend-mode: multiply;
+
 }
 
 h1, h2, h3 {
       font-family: 'Fira Sans', sans-serif;
 }
 
+h1 {
+      text-align: center !important;
+}
+h2, h3 {
+      border-bottom: solid #f49445 1px;
+}
 h4, h5 {
       font-family: 'Inconsolata', monospace;
 }
@@ -32,3 +38,13 @@ a:hover {
 a:active {
       color: #FFE2CD;
 }
+
+.material-icons {
+      display: inline-block;
+      vertical-align: middle;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

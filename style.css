@@ -2,7 +2,7 @@ html, body {
       font-family: 'Fira Sans', sans-serif;
       background-color: #f6dac6;
       background-image: url(/res/asanoha-400px.png);
-      background-blend-mode: screen;
+      background-blend-mode: multiply;
 }
 
 h1, h2, h3 {

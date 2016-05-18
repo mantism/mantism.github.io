@@ -1,9 +1,9 @@
 $(document).ready( function() {
       $('#about-button').click(function() {
-            $('#about-content').fadeIn();
-            $('#work-content').hide();
-            $('#project-content').hide();
-            $('#tricking-content').hide();
+            $('#about').fadeIn();
+            $('#work').hide();
+            $('#project').hide();
+            $('#tricking').hide();
             $(this).addClass('current');
             $('#work-button').removeClass('current');
             $('#project-button').removeClass('current');
@@ -11,10 +11,10 @@ $(document).ready( function() {
       });
 
       $('#work-button').click(function() {
-            $('#about-content').hide();
-            $('#work-content').fadeIn();
-            $('#project-content').hide();
-            $('#tricking-content').hide();
+            $('#about').hide();
+            $('#work').fadeIn();
+            $('#project').hide();
+            $('#tricking').hide();
             $(this).addClass('current');
             $('#about-button').removeClass('current');
             $('#project-button').removeClass('current');
@@ -22,10 +22,10 @@ $(document).ready( function() {
       });
 
       $('#project-button').click(function() {
-            $('#about-content').hide();
-            $('#work-content').hide();
-            $('#project-content').fadeIn();
-            $('#tricking-content').hide();
+            $('#about').hide();
+            $('#work').hide();
+            $('#project').fadeIn();
+            $('#tricking').hide();
             $(this).addClass('current');
             $('#work-button').removeClass('current');
             $('#about-button').removeClass('current');
@@ -33,10 +33,10 @@ $(document).ready( function() {
       });
 
       $('#tricking-button').click(function() {
-            $('#about-content').hide();
-            $('#work-content').hide();
-            $('#project-content').hide();
-            $('#tricking-content').fadeIn();
+            $('#about').hide();
+            $('#work').hide();
+            $('#project').hide();
+            $('#tricking').fadeIn();
             $(this).addClass('current');
             $('#work-button').removeClass('current');
             $('#project-button').removeClass('current');

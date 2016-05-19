@@ -5,6 +5,7 @@
       <meta name="keywords" content="Mikael Mantis, Mikael, Mantis, UPenn, Student, Tricking, HTML, CSS, JavaScript"/>
       <meta name="description" content="Studying Computer Science at the University of Pennsylvania. CIS 110 Mentor, Web Developer for The Daily Pennsylvanian, Vice President of Penn Hype Dance Crew, and Tricker." />
       <meta name="author" content="Mikael Mantis" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
@@ -16,11 +17,12 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <script src="node_modules/progressbar.js/dist/progressbar.js"></script>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="style.css?v=1.0.8">
-      <script src="script.js"></script>
+      <link rel="stylesheet" href="style.css?v=1.0.14">
+
       <title>Mikael Mantis</title>
 </head>
 <body>
@@ -52,32 +54,115 @@
                   <br />
                   <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
-                              <h5 style="text-align:center;">Hi, I am an undergraduate student at the <a href="http://www.upenn.edu/">University of Pennsylvania's</a> School of Engineering and Applied Sciences pursuing a Bachelor of Science in Engineering degree in <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>. I'm currently a Game Development Intern for <a href="http://brav.org/">Brav</a>, a Web Developer for <a href="http://www.thedp.com/">The Daily Pennsylvanian</a>, a Mentor for <a href="http://www.seas.upenn.edu/~cis110/current/">CIS 110</a> (Intro to Computer Science), Vice President of <a href="http://www.pennhype.com/">Penn Hype Dance Crew</a>, and a <a href="http://mantism.github.io/TrickingWiki/">Tricker</a>. </h5>
+                              <!--
+                                    <img id="pic_mikael" src="mikael_pic_2.jpg" alt="Picture taken by Teresa Xu for Penn Hype" width="340.5" height="227"/>
+
+                                    <img id="pic_mikael" src="mikael_tam_modelingpic.png" alt="Picture taken by Tim Lee for Tailors and Madmen" width="300" height="225"/> -->
                         </div>
                   </div>
-                  <div class="row">
+                  <div class="row" style="margin-bottom:0px;">
+                        <div class="col-sm-6 col-sm-offset-3" style="text-align:center;">
+                              <h5>Hi, I am an undergraduate student at the <a href="http://www.upenn.edu/">University of Pennsylvania's</a> School of Engineering and Applied Sciences pursuing a Bachelor of Science in Engineering degree in <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>. I'm currently a Game Development Intern for <a href="http://brav.org/">Brav</a>, a Web Developer for <a href="http://www.thedp.com/">The Daily Pennsylvanian</a>, a Mentor for <a href="http://www.seas.upenn.edu/~cis110/current/">CIS 110</a> (Intro to Computer Science), Vice President of <a href="http://www.pennhype.com/">Penn Hype Dance Crew</a>, and a <a href="http://mantism.github.io/TrickingWiki/">Tricker</a>. </h5>
+                              <h5 >Feel free to reach me at: <br />
+                                    E: <a href="mailto:mantism@seas.upenn.edu">mantism@seas.upenn.edu</a>
+                                    <div class="row" style="margin-bottom:0px;">
+                                          <a href="https://www.linkedin.com/in/mikael-mantis-862783a2" style="padding-left:0px;"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+
+                                          <a href="https://github.com/mantism" style="padding-left: 5px;"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+
+                                          <a href="https://www.youtube.com/user/Ninjamikael" style="padding-left: 5px;"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
+                                    </div>
+                              </h5>
+                        </div>
+                  </div>
+                  <div class="row" style="margin-top:0px;">
+                        <div class="col-sm-8" >
+                              <h3>Skills</h3>
+                              <div class="col-sm-6">
+                                    <h4 style="font-weight:bold">Programming</h4>
+                                    <div class="col-sm-3">
+                                          <h5 class="skill">Java</h5>
+                                          <h5  class="skill">Javascript</h5>
+                                          <h5  class="skill">HTML</h5>
+                                          <h5  class="skill">CSS</h5>
+                                          <h5  class="skill">C++</h5>
+                                          <h5  class="skill">C</h5>
+                                          <h5  class="skill">Processing</h5>
+                                          <h5  class="skill">OCaml</h5>
+                                          <h5  class="skill">Assembly</h5>
+                                          <h5  class="skill">LaTeX</h5>
+                                    </div>
+                                    <div class="col-sm-9">
+                                          <div class="bar" id="javabar"></div>
+                                          <div class="bar" id="jsbar"></div>
+                                          <div class="bar" id="htmlbar"></div>
+                                          <div class="bar" id="cssbar"></div>
+                                          <div class="bar" id="cppbar"></div>
+                                          <div class="bar" id="cbar"></div>
+                                          <div class="bar" id="procbar"></div>
+                                          <div class="bar" id="ocamlbar"></div>
+                                          <div class="bar" id="asmbar"></div>
+                                          <div class="bar" id="latexbar"></div>
+                                    </div>
+                              </div>
+                              <div class="col-sm-6">
+                                    <h4 style="font-weight:bold; margin-bottom: 0px;">Software</h4>
+                                    <div class="row" style="margin-top:0px;">
+                                          <h4 style="margin-bottom:3px; margin-top:0; font-style: italic; text-align: center;">Adobe Software:</h4>
+                                          <div class="col-sm-4">
+                                                <h5 class="skill">Photoshop</h5>
+                                                <h5 class="skill">Illustrator</h5>
+                                                <h5 class="skill">InDesign</h5>
+                                          </div>
+                                          <div class="col-sm-8">
+                                                <div class="bar" id="photoshopbar" style=""></div>
+                                                <div class="bar" id="illustratorbar"></div>
+                                                <div class="bar" id="indesignbar"></div>
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                          <h4 style="margin-bottom:3px; margin-top:1px; font-style: italic; text-align:center;">Microsoft Office:</h4>
+                                          <div class="col-sm-4">
+                                                <h5 class="skill">Word</h5>
+                                                <h5 class="skill">Powerpoint</h5>
+                                                <h5 class="skill">Excel</h5>
+                                          </div>
+                                          <div class="col-sm-8">
+                                                <div class="bar" id="wordbar"></div>
+                                                <div class="bar" id="ppbar"></div>
+                                                <div class="bar" id="excelbar"></div>
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                          <h4 style="margin-bottom:3px; margin-top:1px; font-style: italic; text-align:center;">IDEs / Text Editors</h4>
+                                          <div class="col-sm-4">
+                                                <h5 class="skill">Eclipse</h5>
+                                                <h5 class="skill">QT Creator</h5>
+                                                <h5 class="skill">Atom</h5>
+                                                <h5 class="skill">Android Studio</h5>
+                                          </div>
+                                          <div class="col-sm-8">
+                                                <div class="bar" id="eclipsebar"></div>
+                                                <div class="bar" id="qtbar"></div>
+                                                <div class="bar" id="atombar"></div>
+                                                <div class="bar" id="androidbar"></div>
+                                          </div>
+                                    </div>
+
+                              </div>
+                        </div>
                         <div class="col-sm-4" >
                               <h3>Hobbies/Interests</h3>
-                              <div style="">
-                                    <h5>Coding, Computer Graphics, Web Design/Development, Data Visualization, Tricking (<a href="http://mantism.github.io/TrickingWiki/">click here to learn more about Tricking</a>), Dance, Graphic Design, Animation, Video Games, Science Fiction, Anime, and Film </h5>
-                              </div>
-
-
-                        </div>
-                        <div class="col-sm-4" >
-                              <h3>Skills</h3>
-                              <div style="">
-                                    <h5>I like to write JavaScript, Java, C++, HTML, and CSS and have had experience with C, OCaml, and LaTeX. The IDEs/Text Editors I use the most are: Atom, Eclipse, and QTCreator. JavaScript libraries and frameworks that i've worked with include JQuery, D3, React, Bootstrap, and Backbone. </h5>
-                              </div>
-                        </div>
-                        <div class="col-sm-4">
-                              <h3>Contact</h3>
-                                    <h5>E: <a href="mailto:mantism@seas.upenn.edu">mantism@seas.upenn.edu</a></h5>
-                              <h5>Find me on: <br />
-                                    <a href="https://www.linkedin.com/in/mikael-mantis-862783a2" style="padding-left: 30px;">LinkedIn</a> <br />
-                                    <a href="https://github.com/mantism" style="padding-left: 30px;">GitHub</a> <br />
-                                    <a href="https://www.youtube.com/user/Ninjamikael" style="padding-left: 30px;">YouTube</a>
-                              </h5>
+                                    <h5>Computer Graphics, Web Design/Development, Data Visualization, Tricking (<a href="http://mantism.github.io/TrickingWiki/">click here to learn more about Tricking</a>), Dance, Graphic Design, Animation, Video Games, Science Fiction, Anime, and Film </h5>
+                              <h3>Activities</h3>
+                                    <h5 style="margin-bottom:0px;">Penn Hype Dance Crew</h5>
+                                    <h6 style="margin-top:0px;">Vice President (2016-2017), Internal External Affairs Chair (2015-2016)</h6>
+                                    <h5 style="margin-bottom:0px;">Check One: Mixed Heritage Club</h5>
+                                    <h6 style="margin-top:0px;">Marketing Chair (2015-2016)</h6>
+                                    <h5 style="margin-bottom:0px;">Freaks of the Beat</h5>
+                                    <h6 style="margin-top:0px;">Vice President Internal (2015-2016)</h6>
+                                    <h5 style="margin-bottom:0px;">Phi Kappa Psi Fraternity</h5>
+                                    <h6 style="margin-top:0px;">Historian (2015-2016)</h6>
                         </div>
                   </div>
             </section>
@@ -125,13 +210,30 @@
                   </div>
             </section>
             <section id="footer">
-                  <div class="col-sm-6 col-sm-offset-3">
-                        <h5 style="text-align: center;">
-                                <i class="material-icons md-24">code</i> with <i class="material-icons md-24">favorite</i> by Mikael Mantis
-                          </h5>
+                  <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3" style="text-align: center;">
+                              <h3 style="margin-top:0">Contact</h3>
+                              <h5 style="margin-bottom:10">E: <a href="mailto:mantism@seas.upenn.edu">mantism@seas.upenn.edu</a></h5>
+                              <div class="row" >
+                                    <a href="https://www.linkedin.com/in/mikael-mantis-862783a2" style="padding-left:0px;"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+
+                                    <a href="https://github.com/mantism" style="padding-left: 5px;"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+
+                                    <a href="https://www.youtube.com/user/Ninjamikael" style="padding-left: 5px;"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
+                              </div>
+
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                              <h5 style="text-align: center;">
+                                      <i class="material-icons md-24">code</i> with <i class="material-icons md-24">favorite</i> by Mikael Mantis
+                                </h5>
+                        </div>
                   </div>
             </section>
       </div>
 
 </body>
+<script src="script.js"></script>
 </html>

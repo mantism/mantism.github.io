@@ -24,6 +24,10 @@ h5 {
 }
 
 
+.nav_link {
+      color: black !important;
+}
+
 a:visited {
       color: #7F5B40;
 }

@@ -188,6 +188,17 @@ $(document).ready( function() {
       });
       indesignbar.animate(0.7);
 
+      var mayabar = new ProgressBar.Line('#mayabar', {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 2000,
+            color: '#f49445',
+            trailColor: '#b0abab',
+            trailWidth: 1,
+            svgStyle: {width: '100%', height:'500%'}
+      });
+
+      mayabar.animate(0.4);
       var wordbar = new ProgressBar.Line('#wordbar', {
        strokeWidth: 4,
        easing: 'easeInOut',

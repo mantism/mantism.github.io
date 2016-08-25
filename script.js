@@ -111,50 +111,6 @@ $(document).ready( function() {
       });
       cbar.animate(0.6);
 
-      var ocamlbar = new ProgressBar.Line('#ocamlbar', {
-        strokeWidth: 4,
-        easing: 'easeInOut',
-        duration: 2000,
-        color: '#f49445',
-        trailColor: '#b0abab',
-        trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
-      });
-      ocamlbar.animate(0.4);
-
-      var asmbar = new ProgressBar.Line('#asmbar', {
-        strokeWidth: 4,
-        easing: 'easeInOut',
-        duration: 2000,
-        color: '#f49445',
-        trailColor: '#b0abab',
-        trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
-      });
-      asmbar.animate(0.4);
-
-      var procbar = new ProgressBar.Line('#procbar', {
-        strokeWidth: 4,
-        easing: 'easeInOut',
-        duration: 2000,
-        color: '#f49445',
-        trailColor: '#b0abab',
-        trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
-      });
-      procbar.animate(0.5);
-
-      var latexbar = new ProgressBar.Line('#latexbar', {
-        strokeWidth: 4,
-        easing: 'easeInOut',
-        duration: 2000,
-        color: '#f49445',
-        trailColor: '#b0abab',
-        trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
-      });
-      latexbar.animate(0.4);
-
       var photoshopbar = new ProgressBar.Line('#photoshopbar', {
         strokeWidth: 4,
         easing: 'easeInOut',
@@ -197,40 +153,7 @@ $(document).ready( function() {
             trailWidth: 1,
             svgStyle: {width: '100%', height:'500%'}
       });
-
       mayabar.animate(0.4);
-      var wordbar = new ProgressBar.Line('#wordbar', {
-       strokeWidth: 4,
-       easing: 'easeInOut',
-       duration: 2000,
-       color: '#f49445',
-       trailColor: '#b0abab',
-       trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
-      });
-      wordbar.animate(1.0);
-
-      var excelbar = new ProgressBar.Line('#excelbar', {
-       strokeWidth: 4,
-       easing: 'easeInOut',
-       duration: 2000,
-       color: '#f49445',
-       trailColor: '#b0abab',
-       trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
-      });
-      excelbar.animate(0.7);
-
-      var ppbar = new ProgressBar.Line('#ppbar', {
-       strokeWidth: 4,
-       easing: 'easeInOut',
-       duration: 2000,
-       color: '#f49445',
-       trailColor: '#b0abab',
-       trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
-      });
-      ppbar.animate(1.0);
 
       var eclipsebar = new ProgressBar.Line('#eclipsebar', {
        strokeWidth: 4,

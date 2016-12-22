@@ -1,7 +1,7 @@
 html, body {
       font-family: 'Fira Sans', sans-serif;
-      /*background-image: url(/res/subtle_white_mini_waves.png);
-      background-blend-mode: multiply;*/
+      background-image: url(/res/subtle_white_mini_waves.png);
+      background-blend-mode: multiply; 
 
 }
 
@@ -77,15 +77,3 @@ a:active {
 .bar {
       margin-top: 0px;
 }
-
-progress {
-      padding-top: 5px;
-      color: #f49445;
-      background: #f49445;
-      height: 0.5em;
-      width: 15.0em;
-}
-
-progress::-moz-progress-bar { background: #f49445; }
-progress::-webkit-progress-bar { background: #f49445; }
-progress::-webkit-progress-value { background: #f49445; }

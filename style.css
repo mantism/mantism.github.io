@@ -1,8 +1,18 @@
 html, body {
       font-family: 'Fira Sans', sans-serif;
       background-image: url(/res/subtle_white_mini_waves.png);
-      background-blend-mode: multiply; 
+      background-blend-mode: multiply;
+      height: 100%;
+}
 
+header {
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      margin-bottom: 0;
+      border-bottom: solid #f49445 1px;
+      border-top: solid #f49445 1px;
 }
 
 h1, h2, h3 {
@@ -11,6 +21,7 @@ h1, h2, h3 {
 
 h1 {
       text-align: center !important;
+      border-bottom: solid #f49445 1px;
 }
 h2, h3 {
       border-bottom: solid #f49445 1px;
@@ -23,6 +34,9 @@ h5 {
       font-size: 1.10em;
 }
 
+#about, #work, #code, #tricking {
+      margin-bottom: 50px;
+}
 
 .nav_link {
       color: black !important;
@@ -63,11 +77,6 @@ a:active {
       margin: 0 auto;
 }
 
-#java-bar {
-      width: 80px;
-      height: 5px;
-}
-
 .skill {
       text-align: left;
       margin-top: 0;
@@ -76,4 +85,35 @@ a:active {
 
 .bar {
       margin-top: 0px;
+}
+
+.parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#flashkick {
+      min-height: 100%;
+      background-image: url('/res/flashkick.jpg');
+}
+
+#desert {
+      min-height: 500px;
+      background-image: url('/res/desert.jpg');
+}
+
+#blurrycode {
+      min-height: 500px;
+      background-image: url('/res/blurrycode.png');
+}
+
+#trickingpic {
+      min-height: 500px;
+      background-image: url('/res/tricking.jpg');
+}
+
+.button.active {
+      background: rgba(223, 223, 223, 0.80);
 }

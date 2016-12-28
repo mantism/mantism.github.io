@@ -1,46 +1,72 @@
+var isInView = function (element) {
+      var elementTop = element.offset().top;
+      var elementBot = elementTop + element.outerHeight();
+      var screenBot = $(window).scrollTop() + $(window).height();
+      return (screenBot > elementTop) && (screenBot <  elementBot);
+
+}
+
+var buttons = ['#about-button', '#work-button', '#code-button', '#tricking-button'];
+
+var toggleActive = function (element) {
+      for (var i = 0; i < buttons.length; i++) {
+            if (element === buttons[i]) {
+                  $(buttons[i]).addClass('active');
+            } else {
+                  $(buttons[i]).removeClass('active');
+            }
+      }
+}
+
+$(window).scroll(function() {
+      if (isInView($('#about'))) {
+            toggleActive('#about-button');
+            $('header').css('border-bottom', 'solid #f49445  1px');
+            $('header').css('border-top', 'solid #f49445  1px');
+      }
+
+      if (isInView($('#work'))) {
+            toggleActive('#work-button');
+            $('header').css('border-bottom', 'solid #40cde4  1px');
+            $('header').css('border-top', 'solid #40cde4  1px');
+      }
+
+      if (isInView($('#code'))) {
+            toggleActive('#code-button');
+            $('header').css('border-bottom', 'solid #5aa814  1px');
+            $('header').css('border-top', 'solid #5aa814 1px');
+      }
+
+      if (isInView($('#tricking'))) {
+            toggleActive('#tricking-button');
+            $('header').css('border-bottom', 'solid #d42700 1px');
+            $('header').css('border-top', 'solid #d42700 1px');
+      }
+});
+
 $(document).ready( function() {
       $('#about-button').click(function() {
-            $('#about').fadeIn();
-            $('#work').hide();
-            $('#code').hide();
-            $('#tricking').hide();
-            $(this).addClass('current');
-            $('#work-button').removeClass('current');
-            $('#code-button').removeClass('current');
-            $('#tricking-button').removeClass('current');
+            toggleActive('#about-button');
+            $('header').css('border-bottom', 'solid #f49445  1px');
+            $('header').css('border-top', 'solid #f49445  1px');
       });
 
       $('#work-button').click(function() {
-            $('#about').hide();
-            $('#work').fadeIn();
-            $('#code').hide();
-            $('#tricking').hide();
-            $(this).addClass('current');
-            $('#about-button').removeClass('current');
-            $('#code-button').removeClass('current');
-            $('#tricking-button').removeClass('current');
+            toggleActive('#work-button');
+            $('header').css('border-bottom', 'solid #40cde4  1px');
+            $('header').css('border-top', 'solid #40cde4  1px');
       });
 
       $('#code-button').click(function() {
-            $('#about').hide();
-            $('#work').hide();
-            $('#code').fadeIn();
-            $('#tricking').hide();
-            $(this).addClass('current');
-            $('#work-button').removeClass('current');
-            $('#about-button').removeClass('current');
-            $('#tricking-button').removeClass('current');
+            toggleActive('#code-button');
+            $('header').css('border-bottom', 'solid #5aa814  1px');
+            $('header').css('border-top', 'solid #5aa814 1px');
       });
 
       $('#tricking-button').click(function() {
-            $('#about').hide();
-            $('#work').hide();
-            $('#code').hide();
-            $('#tricking').fadeIn();
-            $(this).addClass('current');
-            $('#work-button').removeClass('current');
-            $('#code-button').removeClass('current');
-            $('#about-button').removeClass('current');
+            toggleActive('#tricking-button');
+            $('header').css('border-bottom', 'solid #d42700 1px');
+            $('header').css('border-top', 'solid #d42700 1px');
       });
 });
 

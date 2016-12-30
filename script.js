@@ -18,6 +18,8 @@ var toggleActive = function (element) {
       }
 }
 
+
+
 $(window).scroll(function() {
       if (isInView($('#about'))) {
             toggleActive('#about-button');
@@ -67,6 +69,20 @@ $(document).ready( function() {
             toggleActive('#tricking-button');
             $('header').css('border-bottom', 'solid #d42700 1px');
             $('header').css('border-top', 'solid #d42700 1px');
+      });
+
+      $('a').click(function(e) {
+            if (this.hash !== ' ' ) {
+                  e.preventDefault();
+
+                  var hash = this.hash;
+
+                  $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 50
+                  }, 800, function() {
+                        window.location.hash = hash;
+                  });
+            }
       });
 });
 

@@ -71,8 +71,8 @@ $(document).ready( function() {
             $('header').css('border-top', 'solid #d42700 1px');
       });
 
-      $('a').click(function(e) {
-            if (this.hash !== ' ' ) {
+      $("a[href^='#']").click(function(e) {
+            if (this.hash !== ' ') {
                   e.preventDefault();
 
                   var hash = this.hash;

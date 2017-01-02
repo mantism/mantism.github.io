@@ -87,161 +87,375 @@ $(document).ready( function() {
 });
 
 (function(d3) {
-      var javabar = new ProgressBar.Line('#javabar', {
-        strokeWidth: 4,
+      var bar = new ProgressBar.Line('#javabar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+             style: {
+                   color: '#000',
+                   position: 'absolute',
+                   right: '0',
+                   top: '0',
+                   padding: 0,
+                   margin: 0,
+                   transform: null,
+             }
+       }
       });
-      javabar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var jsbar = new ProgressBar.Line('#jsbar', {
-        strokeWidth: 4,
+
+      bar = new ProgressBar.Line('#jsbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+             style: {
+                   color: '#000',
+                   position: 'absolute',
+                   right: '0',
+                   top: '0',
+                   padding: 0,
+                   margin: 0,
+                   transform: null
+             }
+       }
       });
-      jsbar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var htmlbar = new ProgressBar.Line('#htmlbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#htmlbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      htmlbar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var cssbar = new ProgressBar.Line('#cssbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#cssbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      cssbar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var cppbar = new ProgressBar.Line('#cppbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#cppbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      cppbar.animate(0.8);
+      bar.animate(0.6);
+      bar.setText('3/5');
 
-      var cbar = new ProgressBar.Line('#cbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#cbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      cbar.animate(0.6);
+      bar.animate(0.3);
+      bar.setText('2/5');
 
-      var photoshopbar = new ProgressBar.Line('#photoshopbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#latexbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '100%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      photoshopbar.animate(1.0);
+      bar.animate(0.8);
+      bar.setText('4/5');
 
-      var illustratorbar = new ProgressBar.Line('#illustratorbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#sqlbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '500%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      illustratorbar.animate(1.0);
+      bar.animate(0.6);
+      bar.setText('3/5');
 
-      var indesignbar = new ProgressBar.Line('#indesignbar', {
-        strokeWidth: 4,
+      bar = new ProgressBar.Line('#photoshopbar', {
+        strokeWidth: 5,
         easing: 'easeInOut',
         duration: 2000,
         color: '#f49445',
         trailColor: '#b0abab',
         trailWidth: 1,
-        svgStyle: {width: '100%', height: '500%'}
+        svgStyle: {width: '80%', height: '100%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
       });
-      indesignbar.animate(0.7);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var mayabar = new ProgressBar.Line('#mayabar', {
-            strokeWidth: 4,
+      bar = new ProgressBar.Line('#illustratorbar', {
+        strokeWidth: 5,
+        easing: 'easeInOut',
+        duration: 2000,
+        color: '#f49445',
+        trailColor: '#b0abab',
+        trailWidth: 1,
+        svgStyle: {width: '80%', height: '500%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
+      });
+      bar.animate(1.0);
+      bar.setText('5/5');
+
+      bar = new ProgressBar.Line('#indesignbar', {
+        strokeWidth: 5,
+        easing: 'easeInOut',
+        duration: 2000,
+        color: '#f49445',
+        trailColor: '#b0abab',
+        trailWidth: 1,
+        svgStyle: {width: '80%', height: '500%'},
+        text: {
+           style: {
+                  color: '#000',
+                  position: 'absolute',
+                  right: '0',
+                  top: '0',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+           }
+      }
+      });
+      bar.animate(0.6);
+      bar.setText('3/5');
+
+      bar = new ProgressBar.Line('#mayabar', {
+            strokeWidth: 5,
             easing: 'easeInOut',
             duration: 2000,
             color: '#f49445',
             trailColor: '#b0abab',
             trailWidth: 1,
-            svgStyle: {width: '100%', height:'500%'}
+            svgStyle: {width: '80%', height:'500%'},
+            text: {
+               style: {
+                      color: '#000',
+                      position: 'absolute',
+                      right: '0',
+                      top: '0',
+                      padding: 0,
+                      margin: 0,
+                      transform: null
+               }
+          }
       });
-      mayabar.animate(0.4);
+      bar.animate(0.2);
+      bar.setText('1/5');
 
-      var eclipsebar = new ProgressBar.Line('#eclipsebar', {
-       strokeWidth: 4,
+
+      bar = new ProgressBar.Line('#eclipsebar', {
+       strokeWidth: 5,
        easing: 'easeInOut',
        duration: 2000,
        color: '#f49445',
        trailColor: '#b0abab',
        trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
+       svgStyle: {width: '80%', height: '500%'},
+       text: {
+          style: {
+                 color: '#000',
+                 position: 'absolute',
+                 right: '0',
+                 top: '0',
+                 padding: 0,
+                 margin: 0,
+                 transform: null
+          }
+     }
       });
-      eclipsebar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var qtbar = new ProgressBar.Line('#qtbar', {
-       strokeWidth: 4,
+
+      bar = new ProgressBar.Line('#qtbar', {
+       strokeWidth: 5,
        easing: 'easeInOut',
        duration: 2000,
        color: '#f49445',
        trailColor: '#b0abab',
        trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
+       svgStyle: {width: '80%', height: '500%'},
+       text: {
+          style: {
+                 color: '#000',
+                 position: 'absolute',
+                 right: '0',
+                 top: '0',
+                 padding: 0,
+                 margin: 0,
+                 transform: null
+          }
+     }
       });
-      qtbar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var atombar = new ProgressBar.Line('#atombar', {
-       strokeWidth: 4,
+      bar = new ProgressBar.Line('#atombar', {
+       strokeWidth: 5,
        easing: 'easeInOut',
        duration: 2000,
        color: '#f49445',
        trailColor: '#b0abab',
        trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
+       svgStyle: {width: '80%', height: '500%'},
+       text: {
+          style: {
+                 color: '#000',
+                 position: 'absolute',
+                 right: '0',
+                 top: '0',
+                 padding: 0,
+                 margin: 0,
+                 transform: null
+          }
+     }
       });
-      atombar.animate(1.0);
+      bar.animate(1.0);
+      bar.setText('5/5');
 
-      var androidbar = new ProgressBar.Line('#androidbar', {
-       strokeWidth: 4,
+      bar = new ProgressBar.Line('#androidbar', {
+       strokeWidth: 5,
        easing: 'easeInOut',
        duration: 2000,
        color: '#f49445',
        trailColor: '#b0abab',
        trailWidth: 1,
-       svgStyle: {width: '100%', height: '500%'}
+       svgStyle: {width: '80%', height: '500%'},
+       text: {
+          style: {
+                 color: '#000',
+                 position: 'absolute',
+                 right: '0',
+                 top: '0',
+                 padding: 0,
+                 margin: 0,
+                 transform: null
+          }
+     }
       });
-      androidbar.animate(0.8);
-
-
-
+      bar.animate(0.8);
+      bar.setText('4/5');
 
 })(window.d3);

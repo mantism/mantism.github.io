@@ -16,19 +16,92 @@ header {
       background-image: url(/res/subtle_white_mini_waves.png);
       background-blend-mode: multiply;
 }
-nav div{
+
+#menu {
+      font-family: 'Inconsolata', monospace;
+      margin-left: 50px;
+}
+
+.topnav .icon {
+      display: none;
+}
+
+#menu div{
       display: inline;
 }
-nav ul {
+#menu ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      font-family: 'Inconsolata', monospace;
 }
 
-nav li {
+#menu li {
       display: inline;
       font-weight: 200;
+}
+
+#logo {
+      font-size: 30px;
+      font-weight: bold;
+      float: left;
+      width: 300px;
+      left: auto;
+}
+
+@media screen and (max-width: 750px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+        font-size: 22px;
+        float: right;
+        display: block;
+        line-height: 42px;
+        text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+.button {
+      text-align: right;
+      margin-left: 10px;
+      font-size: 22px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: 42px;
+}
+
+#links {
+      float: right;
+      margin-right: 20px;
+}
+
+#about-button.active a {
+      color: #f49445;
+}
+
+#work-button.active a {
+      color: #40cde4;
+}
+
+#code-button.active a {
+      color: #5aa814;
+}
+
+#tricking-button.active a {
+      color: #d42700;
 }
 
 h1, h2, h3 {
@@ -58,10 +131,6 @@ h6 {
 
 #about, #work, #code, #tricking {
       margin-bottom: 50px;
-}
-
-.nav_link {
-      color: black !important;
 }
 
 a:visited {
@@ -134,31 +203,4 @@ a:active {
 #trickingpic {
       min-height: 500px;
       background-image: url('/res/tricking.jpg');
-}
-
-.button {
-      text-align: right;
-      margin-left: 10px;
-      font-size: 22px;
-      margin-top: 0px;
-      height: 100%;
-}
-
-#links {
-      float: right;
-}
-
-#resume-button{
-      margin-right: 20px;
-}
-
-.button.active {
-      font-weight: bold;
-      font-size: 23px;
-}
-
-#logo {
-      font-size: 30px;
-      font-weight: bold;
-      margin-left: 100px;
 }

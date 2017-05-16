@@ -82,6 +82,16 @@ $(document).ready( function() {
                   });
             }
       });
+
+      $(".topnav").click(function(e) {
+            var x = document.getElementById("links");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                console.log("sup");
+            } else {
+                x.className = "topnav";
+            }
+      })
 });
 
 /*(function(d3) {

@@ -142,11 +142,14 @@ a:active {
       font-size: 22px;
       margin-top: 0px;
       height: 100%;
-      /*font-weight: 200;*/
 }
 
-#about-button {
-      margin-left: 500px;
+#links {
+      float: right;
+}
+
+#resume-button{
+      margin-right: 20px;
 }
 
 .button.active {

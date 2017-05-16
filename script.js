@@ -18,8 +18,6 @@ var toggleActive = function (element) {
       }
 }
 
-
-
 $(window).scroll(function() {
       if (isInView($('#about'))) {
             toggleActive('#about-button');
@@ -86,7 +84,7 @@ $(document).ready( function() {
       });
 });
 
-(function(d3) {
+/*(function(d3) {
       var bar = new ProgressBar.Line('#javabar', {
         strokeWidth: 5,
         easing: 'easeInOut',
@@ -458,4 +456,4 @@ $(document).ready( function() {
       bar.animate(0.8);
       bar.setText('4/5');
 
-})(window.d3);
+})(window.d3); */

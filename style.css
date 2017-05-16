@@ -75,6 +75,17 @@ header {
 
 }
 
+@media screen and (max-width: 600px) {
+      .parallax {
+            display: none;
+      }
+      #about, #work, #code, #tricking {
+            margin-top: 25px;
+            margin-bottom: 0px;
+      }
+
+}
+
 .button {
       text-align: right;
       margin-left: 10px;
@@ -185,6 +196,7 @@ a:active {
       background-repeat: no-repeat;
       background-size: cover;
 }
+
 
 #flashkick {
       min-height: 100%;

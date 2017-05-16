@@ -65,6 +65,7 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+    text-decoration: none;
   }
   .topnav.responsive a {
     float: none;
@@ -88,19 +89,19 @@ header {
       margin-right: 20px;
 }
 
-#about-button.active a {
+#about-button.active {
       color: #f49445;
 }
 
-#work-button.active a {
+#work-button.active {
       color: #40cde4;
 }
 
-#code-button.active a {
+#code-button.active {
       color: #5aa814;
 }
 
-#tricking-button.active a {
+#tricking-button.active {
       color: #d42700;
 }
 

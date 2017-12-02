@@ -1,7 +1,6 @@
 html, body {
       font-family: 'Fira Sans', sans-serif;
-      background-image: url(/res/subtle_white_mini_waves.png);
-      background-blend-mode: multiply;
+      background-color: #fffcf7;
       height: 100%;
 }
 
@@ -11,10 +10,9 @@ header {
       left: 0;
       z-index: 1030;
       margin-bottom: 0;
-      border-bottom: solid #f49445 1px;
-      border-top: solid #f49445 1px;
-      background-image: url(/res/subtle_white_mini_waves.png);
-      background-blend-mode: multiply;
+      border-bottom: solid #40cde4 1px;
+      border-top: solid #40cde4 1px;
+      background-color: #fffcf7;
 }
 
 #menu {
@@ -101,11 +99,11 @@ header {
 }
 
 #about-button.active {
-      color: #f49445;
+      color: #40cde4;
 }
 
 #work-button.active {
-      color: #40cde4;
+      color: #f49445;
 }
 
 #code-button.active {
@@ -121,14 +119,13 @@ h1, h2, h3 {
 }
 
 h1 {
-      text-align: center !important;
-      border-bottom: solid #f49445 1px;
+      text-align: center;
+      border-bottom: solid #40cde4 1px;
 }
 h2, h3 {
-      border-bottom: solid #f49445 1px;
+      border-bottom: solid #40cde4 1px;
 }
 h4, h5, h6 {
-      /*font-family: 'Inconsolata', monospace;*/
       font-family: 'Roboto', sans-serif;
 }
 
@@ -146,7 +143,7 @@ h6 {
 }
 
 a:visited {
-      color: #a37552;
+      color: #846A6A;
 }
 
 a:link{

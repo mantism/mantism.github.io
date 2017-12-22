@@ -6,60 +6,60 @@ html, body {
 }
 
 header {
-      position: fixed;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-      margin-top: 0;
-      margin-bottom: 0;
-      border-bottom: solid #40cde4 1px;
-      border-top: solid #40cde4 1px;
-      background-color: #fffcf7;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: solid #40cde4 1px;
+  border-top: solid #40cde4 1px;
+  background-color: #fffcf7;
 }
 
 #menu {
-      margin-top: 0;
-      margin-left: 50px;
+  margin-top: 0;
+  margin-left: 50px;
 }
 
 .topnav .icon {
-      display: none;
+  display: none;
 }
 
 #menu div{
-      display: inline;
+  display: inline;
 }
 #menu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #menu li {
-      display: inline;
-      font-weight: 200;
+  display: inline;
+  font-weight: 200;
 }
 
 #menu a {
-      text-decoration: none;
+  text-decoration: none;
 }
 
 #logo {
-      font-size: 2rem;
-      float: left;
-      width: 300px;
-      left: auto;
-      max-height: 2em;
+  font-size: 2rem;
+  float: left;
+  width: 300px;
+  left: auto;
+  max-height: 2em;
 }
 
 @media screen and (max-width: 750px) {
   .topnav a {display: none;}
   .topnav a.icon {
-        font-size: 22px;
-        float: right;
-        display: block;
-        line-height: 42px;
-        text-decoration: none;
+    font-size: 22px;
+    float: right;
+    display: block;
+    line-height: 42px;
+    text-decoration: none;
   }
 }
 
@@ -80,76 +80,76 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-      .parallax {
-            display: none;
-      }
-      #about, #work, #code, #tricking {
-            margin-top: 25px;
-            margin-bottom: 0px;
-      }
-      .section {
-            width: 80%;
-      }
+  .parallax {
+    display: none;
+  }
+  #about, #work, #code, #tricking {
+    margin-top: 25px;
+    margin-bottom: 0px;
+  }
+  .section {
+    width: 80%;
+  }
 
 }
 
 .button {
-      text-align: right;
-      margin-left: 10px;
-      font-size: 22px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      line-height: 42px;
+  text-align: right;
+  margin-left: 10px;
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 42px;
 }
 
 #links {
-      float: right;
-      margin-right: 20px;
+  float: right;
+  margin-right: 20px;
 }
 
 #about-button.active {
-      color: #40cde4;
+  color: #40cde4;
 }
 
 #work-button.active {
-      color: #f49445;
+  color: #f49445;
 }
 
 #code-button.active {
-      color: #5aa814;
+  color: #5aa814;
 }
 
 #tricking-button.active {
-      color: #d42700;
+  color: #d42700;
 }
 
 h1, h2 {
-      text-align: center;
-      border-bottom: solid #40cde4 1px;
+  text-align: center;
+  border-bottom: solid #40cde4 1px;
 }
 h3 {
-      border-bottom: solid #40cde4 1px;
+  border-bottom: solid #40cde4 1px;
 }
 
 a:visited {
-      color: #846A6A;
+  color: #846A6A;
 }
 
 a:link{
-      color: #5e9190;
+  color: #5e9190;
 }
 
 a:hover {
-      color: #CCB5A4;
+  color: #CCB5A4;
 }
 
 a:active {
-      color: #FFE2CD;
+  color: #FFE2CD;
 }
 
 .material-icons {
-      display: inline-block;
-      vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .material-icons.md-18 { font-size: 18px; }
@@ -158,59 +158,58 @@ a:active {
 .material-icons.md-48 { font-size: 48px; }
 
 #pic_mikael {
-      display: block;
-      margin: 0 auto;
-      box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  box-shadow: none;
 }
 
 .parallax {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #about, #work, #code, #tricking {
-      margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .section {
-      width: 60%;
-      margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .contact-links {
-      text-align: center;
+  text-align: center;
 }
 
 .image-container {
-      display: block;
-      margin: 0 auto;
-      width: 60%;
-      height: 60%;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 60%;
 }
 
 img {
-      box-shadow: 3px 4px 10px 3px #979797;
+  box-shadow: 3px 4px 10px 3px #979797;
 }
 
-
 #flashkick {
-      min-height: 100%;
-      background-image: url('/res/flashkick.png');
+  min-height: 100%;
+  background-image: url('/res/flashkick.png');
 }
 
 #desert {
-      min-height: 500px;
-      background-image: url('/res/desert.png');
+  min-height: 500px;
+  background-image: url('/res/desert.png');
 }
 
 #blurrycode {
-      min-height: 500px;
-      background-image: url('/res/blurrycode.png');
+  min-height: 500px;
+  background-image: url('/res/blurrycode.png');
 }
 
 #trickingpic {
-      min-height: 500px;
-      background-image: url('/res/tricking.png');
+  min-height: 500px;
+  background-image: url('/res/tricking.png');
 }

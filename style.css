@@ -1,7 +1,8 @@
 html, body {
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #fffcf7;
   height: 100%;
+  margin: 0;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
       right: 0;
       left: 0;
       z-index: 1030;
+      margin-top: 0;
       margin-bottom: 0;
       border-bottom: solid #40cde4 1px;
       border-top: solid #40cde4 1px;
@@ -16,6 +18,7 @@ header {
 }
 
 #menu {
+      margin-top: 0;
       margin-left: 50px;
 }
 
@@ -37,11 +40,16 @@ header {
       font-weight: 200;
 }
 
+#menu a {
+      text-decoration: none;
+}
+
 #logo {
-      font-size: 3rem;
+      font-size: 2rem;
       float: left;
       width: 300px;
       left: auto;
+      max-height: 2em;
 }
 
 @media screen and (max-width: 750px) {
@@ -79,6 +87,9 @@ header {
             margin-top: 25px;
             margin-bottom: 0px;
       }
+      .section {
+            width: 80%;
+      }
 
 }
 
@@ -112,16 +123,12 @@ header {
       color: #d42700;
 }
 
-h1 {
+h1, h2 {
       text-align: center;
       border-bottom: solid #40cde4 1px;
 }
-h2, h3 {
+h3 {
       border-bottom: solid #40cde4 1px;
-}
-
-#about, #work, #code, #tricking {
-      margin-bottom: 50px;
 }
 
 a:visited {
@@ -150,23 +157,10 @@ a:active {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.current h3{
-      text-decoration: underline;
-}
-
 #pic_mikael {
       display: block;
       margin: 0 auto;
-}
-
-.skill {
-      text-align: left;
-      margin-top: 0;
-      margin-bottom: 4.25px;
-}
-
-.bar {
-      margin-top: 0px;
+      box-shadow: none;
 }
 
 .parallax {
@@ -174,6 +168,30 @@ a:active {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+}
+
+#about, #work, #code, #tricking {
+      margin-bottom: 50px;
+}
+
+.section {
+      width: 60%;
+      margin: 0 auto;
+}
+
+.contact-links {
+      text-align: center;
+}
+
+.image-container {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      height: 60%;
+}
+
+img {
+      box-shadow: 3px 4px 10px 3px #979797;
 }
 
 

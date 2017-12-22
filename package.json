@@ -1,0 +1,27 @@
+{
+  "name": "mantism.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantism/mantism.github.io.git"
+  },
+  "keywords": [
+    "Front",
+    "End",
+    "Project"
+  ],
+  "author": "Mikael Mantis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mantism/mantism.github.io/issues"
+  },
+  "homepage": "https://github.com/mantism/mantism.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

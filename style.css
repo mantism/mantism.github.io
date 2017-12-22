@@ -1,7 +1,7 @@
 html, body {
-      font-family: 'Fira Sans', sans-serif;
-      background-color: #fffcf7;
-      height: 100%;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background-color: #fffcf7;
+  height: 100%;
 }
 
 header {
@@ -16,7 +16,6 @@ header {
 }
 
 #menu {
-      font-family: 'Inconsolata', monospace;
       margin-left: 50px;
 }
 
@@ -115,7 +114,7 @@ header {
 }
 
 h1, h2, h3 {
-      font-family: 'Fira Sans', sans-serif;
+  /*font-family: 'Fira Sans', sans-serif;*/
 }
 
 h1 {
@@ -126,7 +125,7 @@ h2, h3 {
       border-bottom: solid #40cde4 1px;
 }
 h4, h5, h6 {
-      font-family: 'Roboto', sans-serif;
+      /*font-family: 'Roboto', sans-serif;*/
 }
 
 h5 {
@@ -197,12 +196,12 @@ a:active {
 
 #flashkick {
       min-height: 100%;
-      background-image: url('/res/flashkick.jpg');
+      background-image: url('/res/flashkick.png');
 }
 
 #desert {
       min-height: 500px;
-      background-image: url('/res/desert.jpg');
+      background-image: url('/res/desert.png');
 }
 
 #blurrycode {
@@ -212,5 +211,5 @@ a:active {
 
 #trickingpic {
       min-height: 500px;
-      background-image: url('/res/tricking.jpg');
+      background-image: url('/res/tricking.png');
 }

@@ -20,7 +20,7 @@ gulp.task('changelog', () => {
 gulp.task('commit-changes', () => {
 	return gulp.src('.')
 	  .pipe(git.add())
-	  .pipe(git.commit('[Prerelease] Bumped version number'));
+	  .pipe(git.commit('Updating using gulp: see change log'));
 });
 
 gulp.task('push-changes', (callback) => {

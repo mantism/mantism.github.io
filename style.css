@@ -38,8 +38,7 @@ header {
 }
 
 #logo {
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 3rem;
       float: left;
       width: 300px;
       left: auto;
@@ -113,28 +112,12 @@ header {
       color: #d42700;
 }
 
-h1, h2, h3 {
-  /*font-family: 'Fira Sans', sans-serif;*/
-}
-
 h1 {
       text-align: center;
       border-bottom: solid #40cde4 1px;
 }
 h2, h3 {
       border-bottom: solid #40cde4 1px;
-}
-h4, h5, h6 {
-      /*font-family: 'Roboto', sans-serif;*/
-}
-
-h5 {
-      font-size: 1.20em;
-      line-height: 150%;
-}
-
-h6 {
-      font-size: 1.05em;
 }
 
 #about, #work, #code, #tricking {

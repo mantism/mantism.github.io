@@ -22,6 +22,13 @@
   },
   "homepage": "https://github.com/mantism/mantism.github.io#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-conventional-changelog": "^1.1.7",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^2.2.0"
   }
 }

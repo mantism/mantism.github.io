@@ -7,8 +7,8 @@
 /coverage
 
 # production
-/build
-
+/dist
+*-debug.js
 # misc
 .DS_Store
 .env.local

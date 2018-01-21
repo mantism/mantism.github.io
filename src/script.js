@@ -8,7 +8,18 @@ var isInView = function (element) {
 
 var buttons = ['#about-button', '#work-button', '#code-button', '#tricking-button'];
 
-var toggleActive = function (element) {
+var colors = {
+  blue: '#40cde4',
+  orange: '#f49445',
+  code: '#5aa814',
+  tricking: '#d42700'
+
+}
+
+var toggleActive = function (element, color) {
+  var borderStyle = 'solid ' + color + ' 1px';
+  $('header').css('border-bottom', borderStyle);
+  $('header').css('border-top', borderStyle);
   for (var i = 0; i < buttons.length; i++) {
     if (element === buttons[i]) {
       $(buttons[i]).addClass('active');
@@ -21,52 +32,36 @@ var toggleActive = function (element) {
 $(window).scroll(function() {
   if (isInView($('#about'))) {
     toggleActive('#about-button');
-    $('header').css('border-bottom', 'solid #40cde4  1px');
-    $('header').css('border-top', 'solid #40cde4  1px');
   }
 
   if (isInView($('#work'))) {
     toggleActive('#work-button');
-    $('header').css('border-bottom', 'solid #f49445  1px');
-    $('header').css('border-top', 'solid #f49445  1px');
   }
 
   if (isInView($('#code'))) {
     toggleActive('#code-button');
-    $('header').css('border-bottom', 'solid #5aa814  1px');
-    $('header').css('border-top', 'solid #5aa814 1px');
   }
 
   if (isInView($('#tricking'))) {
     toggleActive('#tricking-button');
-    $('header').css('border-bottom', 'solid #d42700 1px');
-    $('header').css('border-top', 'solid #d42700 1px');
   }
 });
 
 $(document).ready( function() {
   $('#about-button').click(function() {
     toggleActive('#about-button');
-    $('header').css('border-bottom', 'solid #40cde4  1px');
-    $('header').css('border-top', 'solid #40cde4  1px');
   });
 
   $('#work-button').click(function() {
     toggleActive('#work-button');
-    $('header').css('border-bottom', 'solid #f49445  1px');
-    $('header').css('border-top', 'solid #f49445  1px');
   });
 
   $('#code-button').click(function() {
     toggleActive('#code-button');
-    $('header').css('border-bottom', 'solid #5aa814  1px');
-    $('header').css('border-top', 'solid #5aa814 1px');
   });
 
   $('#tricking-button').click(function() {
     toggleActive('#tricking-button');
-    $('header').css('border-bottom', 'solid #d42700 1px');
-    $('header').css('border-top', 'solid #d42700 1px');
   });
 
   $("a[href^='#']").click(function(e) {

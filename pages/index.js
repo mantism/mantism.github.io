@@ -26,11 +26,11 @@ const Home = () => (
         <br/><br/>
         In my free time I practice a sport called tricking and work on <a href='https://vertigotricking.com'>Vertigo Tricking</a>
       </p>
-      <p style={{textAlign: 'center'}}>
+      <div style={{textAlign: 'center'}}>
         Feel free to reach me at: <br/>
         E: <a href="mailto:mikael.mantis7@gmail.com">mikael.mantis7@gmail.com</a><br/><br/>
         <Icons/>
-      </p>
+      </div>
     </main>
 
     <footer>

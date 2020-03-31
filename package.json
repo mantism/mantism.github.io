@@ -1,34 +1,21 @@
 {
   "name": "mantism.github.io",
-  "version": "1.0.0",
-  "description": "My personal website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "http-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mantism/mantism.github.io.git"
-  },
-  "keywords": [
-    "Front",
-    "End",
-    "Project"
-  ],
-  "author": "Mikael Mantis",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mantism/mantism.github.io/issues"
-  },
-  "homepage": "https://github.com/mantism/mantism.github.io#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-conventional-changelog": "^1.1.7",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-minify": "^2.1.0",
-    "gulp-util": "^3.0.8",
-    "run-sequence": "^2.2.0"
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@zeit/next-css": "^1.0.1",
+    "next": "9.3.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   }
 }

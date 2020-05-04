@@ -12,6 +12,10 @@ const Icons = () => {
           .fontIcon {
             margin: 0.5rem;
           }
+
+          a, a:visited {
+            color: #0070f3;
+          }
         `}
       </style>
     </div>

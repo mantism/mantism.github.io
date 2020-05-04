@@ -1,54 +1,38 @@
-import Head from 'next/head'
-import Icons from '../components/Icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faHeart } from '@fortawesome/free-solid-svg-icons'
+import Icons from '../components/Icons';
+import Blob from '../components/Blob';
 
 const Home = () => (
-  <div className='container'>
-    <Head>
-      <title>Mikael Mantis</title>
-      <link rel='icon' href='/favicon.ico' />
-    </Head>
-
+  <div>
+    <h1 className='title'>
+      Mikael Mantis
+    </h1>
+    <Blob svg='/blob-shape.svg'/>
     <main>
-      <h1 className='title'>
-        Hi, my name is Mikael Mantis
-      </h1>
-
-      <img src='/me.jpg' alt='picture of me'/>
-
-      <p className='description'>
-        I'm currently a Software Engineer at BlackRock, Inc. where I have been 
-        rotating amongst various development teams within the Aladdin Product Group.
-        <br/><br/>
-        I graduated from the University of Pennsylvania in May 2018 with a Bachelor's 
-        in Computer Science from the School of Engineering. 
-        <br/><br/>
-        In my free time I practice a sport called tricking and work on <a href='https://vertigotricking.com'>Vertigo Tricking</a>
-      </p>
-      <div style={{textAlign: 'center'}}>
-        Feel free to reach me at: <br/>
-        E: <a href="mailto:mikael.mantis7@gmail.com">mikael.mantis7@gmail.com</a><br/><br/>
-        <Icons/>
+      <div className='content'>
+        <p className='description'>
+          I'm currently a Software Engineer at BlackRock, Inc. where I have been 
+          rotating amongst various development teams within the Aladdin Product Group.
+          <br/><br/>
+          I graduated from the University of Pennsylvania in May 2018 with a Bachelor's 
+          in Computer Science from the School of Engineering. 
+          <br/><br/>
+          In my free time I practice a sport called tricking and work on <a href='https://vertigotricking.com'>Vertigo Tricking</a>
+        </p>
+        <div style={{textAlign: 'center'}}>
+          Feel free to reach me at: <br/>
+          E: <a href="mailto:mikael.mantis7@gmail.com">mikael.mantis7@gmail.com</a><br/><br/>
+          <Icons/>
+        </div>
+        <div className='massive-random-content'>
+        </div>
       </div>
     </main>
 
-    <footer>
-      <FontAwesomeIcon icon={faCode} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={faHeart} style={{margin: '0.5rem'}}/> by Mikael Mantis
-    </footer>
-
     <style jsx>{`
-      .container {
-        min-height: 100vh;
-        max-width: 100vw;
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow-x: hidden;
+      .massive-random-content {
+        height: 1000px;
+        width: 100%;
       }
-
       main {
         padding: 5rem 0rem;
         flex: 1;
@@ -56,29 +40,15 @@ const Home = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 1000px;
+        max-width: 500px;
+        max-height: 600px;
       }
 
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .content {
+        overflow: auto;
       }
 
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
+      a, a:visited {
         color: #0070f3;
         text-decoration: none;
       }
@@ -90,7 +60,7 @@ const Home = () => (
       }
 
       .title {
-        margin: 0;
+        margin: 0 auto;
         line-height: 1.15;
         font-size: 4rem;
       }
@@ -102,7 +72,7 @@ const Home = () => (
 
       .description {
         line-height: 1.5;
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       code {
@@ -159,24 +129,14 @@ const Home = () => (
           width: 100%;
           flex-direction: column;
         }
+
+        .title {
+          text-align: center;
+        }
       }
 
       img {
         margin: 1rem 0;
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
       }
     `}</style>
   </div>

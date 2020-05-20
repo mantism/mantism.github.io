@@ -10,7 +10,7 @@ const Blob = (props) => {
   const wildWillow = '#ADC865';
 
   return (
-    <div className='svg-blob wildWillow'>
+    <div className={`svg-blob ${props.expanded ? 'expanded': ''}`}>
       <svg
         width="600"
         height="600"
@@ -23,9 +23,17 @@ const Blob = (props) => {
       </svg>
       <style jsx>{`
         .svg-blob {
-          position: absolute;
+          position: fixed;
           z-index: -1;
-          animation: rotation 150s infinite linear;
+          animation: scale 5s infinite linear;
+        }
+
+        .svg-blob svg {
+          transition: width 0.5s;
+        }
+
+        .svg-blob.expanded svg{
+          transform: scale(1.5);
         }
 
         .svg-blob path {
@@ -56,13 +64,17 @@ const Blob = (props) => {
           fill: ${wildWillow};
         }
 
-        @keyframes rotation {
-          from {
-            transform: rotate(0deg);
+        @keyframes scale {
+          0% {
+            transform: scale(1);
           }
 
-          to {
-            transform: rotate(359deg);
+          50% {
+            transform: scale(0.95);
+          }
+
+          100% {
+            transform: scale(1);
           }
         }
       `}</style>

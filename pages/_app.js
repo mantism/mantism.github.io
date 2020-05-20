@@ -1,11 +1,11 @@
-import React from 'react'
-import App from 'next/app'
-import Head from 'next/head'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faHeart } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import App from 'next/app';
+import Head from 'next/head';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
 config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 class MyApp extends App {
@@ -51,7 +51,7 @@ class MyApp extends App {
           .container {
             min-height: 100vh;
             max-width: 100vw;
-            padding: 0 1rem;
+            padding: 10rem 1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -67,13 +67,85 @@ class MyApp extends App {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          
+            -webkit-animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            -ms-animation: fadein 2s;
+            -o-animation: fadein 2s;
+            animation: fadein 2s;
+          }
+
+          a, a:visited {
+            color: #0070f3;
+            text-decoration: none;
           }
 
           * {
             box-sizing: border-box;
           }
 
-
+          @keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-o-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          
+          .visible {
+            display: block;
+            -webkit-animation: fadein 1s;
+            -moz-animation: fadein 1s;
+            -ms-animation: fadein 1s;
+            -o-animation: fadein 1s;
+            animation: fadein 1s;
+          }
+  
+          .hidden {
+            opacity: 0;
+          }
+  
+          @keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+  
+          @-o-keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
         `}</style>
       </React.Fragment>
     )

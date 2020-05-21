@@ -1,6 +1,7 @@
 import About from '../components/About';
 import Work from '../components/Work';
 import Projects from '../components/Projects';
+import Tricking from '../components/Tricking';
 import Blob from '../components/Blob';
 import SideNav from '../components/SideNav';
 import React, { useState, useRef, useEffect} from 'react';
@@ -9,14 +10,14 @@ import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled';
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
 const MIN_SCROLL_TO_SHOW_PROJ = 900;
-const MIN_SCROLL_TO_MAX_WIDTH = 5000;
+const MIN_SCROLL_TO_TRICKING = 1500;
 const TIMEOUT_DELAY = 100;
 
 const Home = () => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
   const [shouldShowWork, setShouldShowWork] = useState(false);
-  const [shouldExpandToMax, setShouldExpandToMax] = useState(false);
   const [shouldShowProjects, setShouldShowProjects] = useState(false);
+  const [shouldShowTricking, setShouldShowTricking] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
   const aboutRef = useRef(null); 
   const workRef = useRef(null);
@@ -27,7 +28,7 @@ const Home = () => {
     setActiveSection(section);
     switch (section) {
       case 'about':
-        scrollToRef(aboutRef, 300);
+        scrollToRef(aboutRef, 500);
         break;
       case 'work':
         scrollToRef(workRef);
@@ -37,6 +38,7 @@ const Home = () => {
         break;
       case 'tricking':
         scrollToRef(trickingRef);
+        break;
       default:
         alert('whoa how did this happen?! please email me so I can bugfix :)');
     }
@@ -56,11 +58,13 @@ const Home = () => {
     const scrolledForNav = currentScrollTop > MIN_SCROLL_NAV;
     const scrolledToWork = currentScrollTop > MIN_SCROLL_TO_SHOW_WORK;
     const scrolledToProjects = currentScrollTop > MIN_SCROLL_TO_SHOW_PROJ;
-    const scrolledToMaxWidth = currentScrollTop > MIN_SCROLL_TO_MAX_WIDTH;
+    const scrolledToTricking = currentScrollTop > MIN_SCROLL_TO_TRICKING;
     if (scrolledToWork && !scrolledToProjects) {
       setActiveSection('work');
-    } else if (scrolledToProjects) {
+    } else if (scrolledToProjects && !scrolledToTricking) {
       setActiveSection('projects');
+    } else if (scrolledToTricking) {
+      setActiveSection('tricking');
     } else {
       setActiveSection('about');
     }
@@ -70,7 +74,7 @@ const Home = () => {
       setShouldShowSideNav(prev => prev ? prev : scrolledForNav);
       setShouldShowWork(prev => prev ? prev : scrolledToWork);
       setShouldShowProjects(prev => prev ? prev :scrolledToProjects);
-      setShouldExpandToMax(prev => prev ? prev : scrolledToMaxWidth);
+      setShouldShowTricking(prev => prev ? prev : scrolledToTricking);
     }, TIMEOUT_DELAY);
   });
 
@@ -86,6 +90,7 @@ const Home = () => {
           <About ref={aboutRef}/>
           <Work ref={workRef} display={shouldShowWork}/>
           <Projects ref={projectsRef} display={shouldShowProjects}/>
+          <Tricking ref={trickingRef} display={true}/>
         </div>
       </main>
       <style jsx>{`

@@ -73,11 +73,17 @@ class MyApp extends App {
             -ms-animation: fadein 2s;
             -o-animation: fadein 2s;
             animation: fadein 2s;
+
+            scroll-behavior: smooth;
           }
 
           a, a:visited {
             color: #0070f3;
             text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: underline;
           }
 
           * {

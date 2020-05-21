@@ -1,13 +1,23 @@
-const SideNav = (props) => {
-  const display = props.display ? 'visible' : 'hidden';
-
+const SideNav = ({display, section, handleClick}) => {
   return (
-    <div className={`sidenav ${display}`}>
+    <div className={`sidenav ${ display ? 'visible' : 'hidden'}`}>
       <ul>
-        <li className={props.section == 'about' ? 'active' : ''}>About</li>
-        <li className={props.section == 'work' ? 'active' : ''}>Work</li>
-        <li className={props.section == 'projects' ? 'active' : ''}>Projects</li>
-        <li className={props.section == 'tricking' ? 'active' : ''}>Tricking</li>
+        <li className={section == 'about' ? 'active' : ''} 
+          onClick={() => handleClick('about')}>
+            About
+        </li>
+        <li className={section == 'work' ? 'active' : ''}
+          onClick={() => handleClick('work')}>
+            Work
+        </li>
+        <li className={section == 'projects' ? 'active' : ''}
+          onClick={() => handleClick('projects')}>
+            Projects
+        </li>
+        <li className={section == 'tricking' ? 'active' : ''}
+          onClick={() => handleClick('tricking')}>
+            Tricking
+        </li>
       </ul>
       <style jsx>{`
         .sidenav {
@@ -27,12 +37,17 @@ const SideNav = (props) => {
           padding-left: 10px;
           font-size: 1.25rem;
         }
+
+        li:hover {
+          color: #0070f3;
+        }
+        
         .active {
           border-left: solid 3px #0070f3;
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
 export default SideNav;

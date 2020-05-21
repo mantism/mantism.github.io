@@ -1,10 +1,16 @@
-import Icons from '../components/Icons';
+import About from '../components/About';
 import Work from '../components/Work';
 import Projects from '../components/Projects';
 import Blob from '../components/Blob';
 import SideNav from '../components/SideNav';
-import React, { useState,  } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled';
+
+const MIN_SCROLL_NAV = 25;
+const MIN_SCROLL_TO_SHOW_WORK = 300;
+const MIN_SCROLL_TO_SHOW_PROJ = 900;
+const MIN_SCROLL_TO_MAX_WIDTH = 5000;
+const TIMEOUT_DELAY = 100;
 
 const Home = () => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
@@ -12,11 +18,38 @@ const Home = () => {
   const [shouldExpandToMax, setShouldExpandToMax] = useState(false);
   const [shouldShowProjects, setShouldShowProjects] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const MIN_SCROLL_NAV = 25;
-  const MIN_SCROLL_TO_SHOW_WORK = 300;
-  const MIN_SCROLL_TO_SHOW_PROJ = 800;
-  const MIN_SCROLL_TO_MAX_WIDTH = 5000;
-  const TIMEOUT_DELAY = 100;
+  const aboutRef = useRef(null); 
+  const workRef = useRef(null);
+  const projectsRef = useRef(null);
+  const trickingRef = useRef(null);
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+    switch (section) {
+      case 'about':
+        scrollToRef(aboutRef, 300);
+        break;
+      case 'work':
+        scrollToRef(workRef);
+        break;
+      case 'projects':
+        scrollToRef(projectsRef);
+        break;
+      case 'tricking':
+        scrollToRef(trickingRef);
+      default:
+        alert('whoa how did this happen?! please email me so I can bugfix :)');
+    }
+  }
+
+  const scrollToRef = (ref, offset=0) => {
+    window.scrollTo(0, ref.current.offsetTop - offset)
+  };
+
+  useEffect(() => {
+    handleNavClick.bind(this);
+  }, []);
+  
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData;
@@ -48,34 +81,14 @@ const Home = () => {
       </h1>
       <img src='/me.png'></img>
       <main>
-        
-        <SideNav display={shouldShowSideNav} section={activeSection}/>
+        <SideNav display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
         <div className={`content ${shouldShowProjects ? 'expanded' : ''}`}>
-          <p className='description'>
-            I'm currently a Software Engineer at BlackRock, Inc. where I have been 
-            rotating amongst various development teams within the Aladdin Product Group.
-            <br/><br/>
-            I graduated from the University of Pennsylvania in May 2018 with a Bachelor's 
-            in Computer Science from the School of Engineering. 
-            <br/><br/>
-            In my free time I like brewing coffee, reading sci-fi, and practicing this sport called tricking!
-             I also co-run a tricking event brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>
-          </p>
-          <div style={{textAlign: 'center'}}>
-            Feel free to reach me at: <br/>
-            E: <a href="mailto:mikael.mantis7@gmail.com">mikael.mantis7@gmail.com</a><br/><br/>
-            <Icons/>
-          </div>
-          <Work display={shouldShowWork}/>
-          <Projects display={shouldShowProjects}/>
+          <About ref={aboutRef}/>
+          <Work ref={workRef} display={shouldShowWork}/>
+          <Projects ref={projectsRef} display={shouldShowProjects}/>
         </div>
       </main>
       <style jsx>{`
-        .massive-random-content {
-          height: 1000px;
-          width: 100%;
-        }
-
         main {
           display: flex;
           flex-direction: row;
@@ -102,16 +115,7 @@ const Home = () => {
         .title {
           line-height: 1.15;
           font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: left;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1rem;
+          text-align: center;
         }
 
         code {
@@ -131,36 +135,6 @@ const Home = () => {
 
           max-width: 800px;
           margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
         }
 
         @media (max-width: 600px) {

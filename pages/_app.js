@@ -22,7 +22,7 @@ class MyApp extends App {
       <React.Fragment>
         <Head>
           <title>Mikael Mantis</title>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name='description' content='Personal website of Mikael Mantis, Software Engineer and Martial Arts Tricker, currently based out of Philadelphia'/>
           <meta name="author" content="Mikael Mantis" />
           <meta name="viewport" content="width=device-width, initial-scale=1"/>

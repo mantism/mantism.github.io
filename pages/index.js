@@ -4,13 +4,13 @@ import Projects from '../components/Projects';
 import Tricking from '../components/Tricking';
 import SideNav from '../components/SideNav';
 import React, { useState, useRef, useEffect} from 'react';
-import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled';
+import useDocumentScroll from '../hooks/useDocumentScroll';
 
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
 const MIN_SCROLL_TO_SHOW_PROJ = 900;
 const MIN_SCROLL_TO_TRICKING = 1500;
-const TIMEOUT_DELAY = 100;
+const TIMEOUT_DELAY = 0;
 
 const Home = () => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
@@ -52,7 +52,7 @@ const Home = () => {
   }, []);
   
 
-  useDocumentScrollThrottled(callbackData => {
+  useDocumentScroll(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const scrolledForNav = currentScrollTop > MIN_SCROLL_NAV;
     const scrolledToWork = currentScrollTop > MIN_SCROLL_TO_SHOW_WORK;

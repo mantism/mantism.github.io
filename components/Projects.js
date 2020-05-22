@@ -1,15 +1,14 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const iconStyle = {
   color: '#B3DDD1'
 }
 
-const Projects = forwardRef((props, ref) => {
+const Projects = (props) => {
   return (
-    <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
-      <FontAwesomeIcon icon={faCoffee} size='3x' style={iconStyle}/>
+    <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
+      <FontAwesomeIcon icon='coffee' size='3x' style={iconStyle}/>
       <h2>Projects</h2>
       <div className='grid'>
         <div className='card'>
@@ -87,6 +86,6 @@ const Projects = forwardRef((props, ref) => {
       `}</style>
     </div>
   )
-});
+};
 
 export default Projects;

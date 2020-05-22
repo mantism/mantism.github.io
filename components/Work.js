@@ -1,15 +1,14 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSuitcase } from '@fortawesome/free-solid-svg-icons';
 
 const iconStyle = {
   color: '#FF8357'
 }
 
-const Work = forwardRef((props, ref) => {
+const Work = (props) => {
   return (
-    <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
-      <FontAwesomeIcon icon={faSuitcase} size='3x' style={iconStyle}/>
+    <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
+      <FontAwesomeIcon icon='suitcase' size='3x' style={iconStyle}/>
       <h2>Work</h2>
       <ul className='positions'>
         <li>Software Engineer <a>@BlackRock, Inc</a><br/> <i>7/18- Present</i></li>
@@ -40,6 +39,6 @@ const Work = forwardRef((props, ref) => {
       </style>
     </div>
   );
-});
+};
 
 export default Work;

@@ -1,9 +1,9 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 import Icons from '../components/Icons';
 
-const About = forwardRef((props, ref) => {
+const About = (props) => {
   return (
-    <div className='about' ref={ref}>
+    <div className='about' ref={props.refProp}>
       <p className='description'>
         Hi, I'm currently a Software Engineer at BlackRock, Inc. where I have been 
         rotating amongst various development teams within the Aladdin Product Group.
@@ -28,6 +28,6 @@ const About = forwardRef((props, ref) => {
       `}</style>
     </div>
   );
-});
+};
 
 export default About;

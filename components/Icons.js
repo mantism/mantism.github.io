@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub, faYoutubeSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 const Icons = () => {
   return (
     <div className='icons'>
-      <a href='https://www.linkedin.com/in/mikaelmantis' className='fontIcon'><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
-      <a href='https://github.com/mantism' className='fontIcon'><FontAwesomeIcon icon={faGithub} size='2x'/></a>
-      <a href='https://www.youtube.com/user/ninjamikael' className='fontIcon'><FontAwesomeIcon icon={faYoutubeSquare} size='2x' /></a>
-      <a href='https://instagram.com/mikael_mantis' className='fontIcon'><FontAwesomeIcon icon={faInstagram} size='2x' /></a>
+      <a href='https://www.linkedin.com/in/mikaelmantis' className='fontIcon' aria-label='linkedin'><FontAwesomeIcon icon={['fab','linkedin']} size='2x'/></a>
+      <a href='https://github.com/mantism' className='fontIcon' aria-label='github'><FontAwesomeIcon icon={['fab','github']} size='2x'/></a>
+      <a href='https://www.youtube.com/user/ninjamikael' className='fontIcon' aria-label='youtube'><FontAwesomeIcon icon={['fab','youtube-square']} size='2x' /></a>
+      <a href='https://instagram.com/mikael_mantis' className='fontIcon' aria-label='instagram'><FontAwesomeIcon icon={['fab','instagram']} size='2x' /></a>
       <style jsx>
         {`
           .fontIcon {

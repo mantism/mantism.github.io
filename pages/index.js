@@ -2,7 +2,6 @@ import About from '../components/About';
 import Work from '../components/Work';
 import Projects from '../components/Projects';
 import Tricking from '../components/Tricking';
-import Blob from '../components/Blob';
 import SideNav from '../components/SideNav';
 import React, { useState, useRef, useEffect} from 'react';
 import useDocumentScrollThrottled from '../hooks/useDocumentScrollThrottled';
@@ -80,17 +79,14 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <h1 className='title'>
-        Mikael Mantis
-      </h1>
-      <img src='/me.png'></img>
+      <img src='/me.png' alt='picture of me (mikael mantis)'></img>
       <main>
         <SideNav display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
-        <div className={`content ${shouldShowProjects ? 'expanded' : ''}`}>
-          <About ref={aboutRef}/>
-          <Work ref={workRef} display={shouldShowWork}/>
-          <Projects ref={projectsRef} display={shouldShowProjects}/>
-          <Tricking ref={trickingRef} display={true}/>
+        <div className='content'>
+          <About refProp={aboutRef}/>
+          <Work refProp={workRef} display={shouldShowWork}/>
+          <Projects refProp={projectsRef} display={shouldShowProjects}/>
+          <Tricking refProp={trickingRef} display={shouldShowTricking}/>
         </div>
       </main>
       <style jsx>{`
@@ -103,24 +99,7 @@ const Home = () => {
           padding-top: 2rem;
           margin: 0 auto;
           flex: 1;
-          max-width: 600px;
-          transition: max-width 0.5s;
-        }
-
-        .expanded {
-          max-width: 750px;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          line-height: 1.15;
-          font-size: 4rem;
-          text-align: center;
+          max-width: 700px;
         }
 
         code {

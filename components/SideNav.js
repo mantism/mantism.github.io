@@ -23,7 +23,7 @@ const SideNav = ({display, section, handleClick}) => {
         .sidenav {
           width: 120px;
           position: fixed;
-          margin-left: -8em;
+          margin-left: -10em;
           top: 25%;
         }
 

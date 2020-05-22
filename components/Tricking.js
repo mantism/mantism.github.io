@@ -10,7 +10,7 @@ const Tricking = (props) => {
     <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={props.refProp}>
       <img src='./V-logo.svg' alt='vertigo-logo' style={imgStyle}></img>
       <h2>Tricking</h2>
-      <img src='/combo.gif' alt='Tricking Combo Performed by Me!'></img>
+      <img src='/combo.gif' alt='Tricking Combo Performed by Me!' id='combo'></img>
       <div className='caption'>
         Above is one of my favorite "combos" to do but it doesn't nearly capture the beauty of the movement! If interested, 
         I recommend doing a search of 'tricking' or 'martial arts tricking' on YouTube or Instagram to see the breadth of 
@@ -57,7 +57,9 @@ const Tricking = (props) => {
         }
 
         .description {
+          line-height: 1.5;
           text-align: left;
+          font-size: 1rem;
         }
 
         .emphasis {
@@ -71,6 +73,10 @@ const Tricking = (props) => {
         .caption {
           font-size: 0.8rem;
           font-weight: 100;
+        }
+
+        #combo, #groupPhoto {
+          box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
         }
 
         #groupPhoto {

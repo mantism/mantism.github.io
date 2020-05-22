@@ -26,6 +26,7 @@ class MyApp extends App {
           <meta name='description' content='Personal website of Mikael Mantis, Software Engineer and Martial Arts Tricker, currently based out of Philadelphia'/>
           <meta name="author" content="Mikael Mantis" />
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet"></link>
         </Head>
         <div className='container'>
           <h1 className='title'>
@@ -33,7 +34,7 @@ class MyApp extends App {
           </h1>
           <Component {...pageProps} />
           <footer>
-            <FontAwesomeIcon icon={faCode} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={faHeart} style={{margin: '0.5rem'}}/> by Mikael Mantis
+            <FontAwesomeIcon icon={faCode} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={faHeart} style={{margin: '0.5rem'}}/> by Mikael Mantis, 2020
           </footer>
         </div>
         <style jsx>{`
@@ -84,10 +85,13 @@ class MyApp extends App {
           body {
             padding: 0;
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+            font-family: Open Sans, sans-serif;
 
             scroll-behavior: smooth;
+          }
+
+          h1, h2, h3, h4, h5, h6 {
+            font-family: Roboto, sans-serif;
           }
 
           a, a:visited {

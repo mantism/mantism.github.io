@@ -11,11 +11,11 @@ const Work = (props) => {
       <FontAwesomeIcon icon='suitcase' size='3x' style={iconStyle}/>
       <h2>Work</h2>
       <ul className='positions'>
-        <li>Software Engineer <a>@BlackRock, Inc</a><br/> <i>7/18- Present</i></li>
-        <li>Software Engineering Intern <a>@WillowTree, Inc</a><br/><i>6/17 - 8/17</i></li>
-        <li>Teaching Assistant <a>@University of Pennslyvania</a> <br/> <i>September 2016 - May 2018</i></li>
-        <li>Game Development Intern <a>@Brav Conflict Management</a> <br/> <i>May '16 - Jul '16</i></li>
-        <li>Front-End Developer <a>@The Daily Pennsylvanian</a> <br/> <i>Feb 2016 - May 2017</i></li>
+        <li>Software Engineer <a href='https://blackrock.com'>@BlackRock, Inc</a><br/> <i>Jul '18 - Present</i></li>
+        <li>Software Engineering Intern <a href='https://willowtreeapps.com'>@WillowTree, Inc</a><br/><i>Jun '17 - August '17</i></li>
+        <li>Teaching Assistant <a href='https://upenn.edu'>@University of Pennslyvania</a> <br/> <i>Sept '16 - May '18</i></li>
+        <li>Game Development Intern <a href='https://brav.org'>@Brav Conflict Management</a> <br/> <i>May '16 - Jul '16</i></li>
+        <li>Front-End Developer <a href='https://thedp.com'>@The Daily Pennsylvanian</a> <br/> <i>Feb '16 - May '17</i></li>
       </ul>
       <style jsx>{`
         .work {
@@ -23,6 +23,8 @@ const Work = (props) => {
           text-align: center;
           max-width: 300px;
           margin: 0 auto;
+          border-bottom: 1px solid #eaeaea;
+          padding-bottom: 5rem;
         }
 
         ul {

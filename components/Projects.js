@@ -56,7 +56,7 @@ const Projects = (props) => {
 
         .card {
           margin: 1rem;
-          flex-basis: 45%;
+          flex-basis: 40%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;

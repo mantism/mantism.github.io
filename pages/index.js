@@ -99,7 +99,7 @@ const Home = () => {
           padding-top: 2rem;
           margin: 0 auto;
           flex: 1;
-          max-width: 700px;
+          max-width: 650px;
         }
 
         code {

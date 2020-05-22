@@ -33,7 +33,7 @@ class MyApp extends App {
           </h1>
           <Component {...pageProps} />
           <footer>
-            <FontAwesomeIcon icon={faCode} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={faHeart} style={{margin: '0.5rem'}}/> by Mikael Mantis
+            <FontAwesomeIcon icon={faCode} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={faHeart} style={{margin: '0.5rem'}}/> by Mikael Mantis, 2020
           </footer>
         </div>
         <style jsx>{`

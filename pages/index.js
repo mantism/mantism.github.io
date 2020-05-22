@@ -8,8 +8,8 @@ import useDocumentScroll from '../hooks/useDocumentScroll';
 
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
-const MIN_SCROLL_TO_SHOW_PROJ = 900;
-const MIN_SCROLL_TO_TRICKING = 1500;
+const MIN_SCROLL_TO_SHOW_PROJ = 1000;
+const MIN_SCROLL_TO_TRICKING = 2200;
 const TIMEOUT_DELAY = 0;
 
 const Home = () => {

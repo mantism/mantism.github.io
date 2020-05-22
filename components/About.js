@@ -7,6 +7,8 @@ const About = (props) => {
       <p className='description'>
         Hi, I'm currently a Software Engineer at BlackRock, Inc. where I have been 
         rotating amongst various development teams within the Aladdin Product Group.
+        I consider Java and JavaScript my main languages but also work regularly with Python, sometimes Perl, 
+        and in the past have dabbled in C/C++.
         <br/><br/>
         I graduated from the University of Pennsylvania in May 2018 with a Bachelor's 
         in Computer Science from the School of Engineering. 
@@ -20,6 +22,11 @@ const About = (props) => {
         <Icons/>
       </div>
       <style jsx>{`
+
+        .about {
+          border-bottom: 1px solid #eaeaea;
+          padding-bottom: 5rem;
+        }
         .description {
           line-height: 1.5;
           font-size: 1rem;

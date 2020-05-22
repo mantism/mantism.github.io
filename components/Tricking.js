@@ -8,9 +8,12 @@ const Tricking = (props) => {
   
   return (
     <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={props.refProp}>
-      <img src='./V-logo.svg' alt='vertigo-logo' style={imgStyle}></img>
+      <img src='./V-Logo.svg' alt='vertigo-logo' style={imgStyle}></img>
       <h2>Tricking</h2>
-      <img src='/combo.gif' alt='Tricking Combo Performed by Me!' id='combo'></img>
+      <video autoPlay loop muted playsinline id='combo'>
+        <source src="./combo.webm" type="video/webm"/>
+        <source src="./combo.mp4" type="video/mp4"/>
+      </video>
       <div className='caption'>
         Above is one of my favorite "combos" to do but it doesn't nearly capture the beauty of the movement! If interested, 
         I recommend doing a search of 'tricking' or 'martial arts tricking' on YouTube or Instagram to see the breadth of 
@@ -51,9 +54,8 @@ const Tricking = (props) => {
 
       <style jsx>{`
         .tricking {
-          padding: 5rem 0;
+          padding: 3rem 0;
           text-align: center;
-
         }
 
         .description {
@@ -80,9 +82,12 @@ const Tricking = (props) => {
         }
 
         #groupPhoto {
-          width: 70%;
-          height: auto;
+          max-width: 400px;
           margin: 0 auto;
+        }
+
+        #combo {
+          margin: 1rem 0;
         }
         
       `}</style>

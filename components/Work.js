@@ -19,12 +19,12 @@ const Work = (props) => {
       </ul>
       <style jsx>{`
         .work {
-          padding-top: 5rem;
+          padding-top: 3rem;
           text-align: center;
           max-width: 300px;
           margin: 0 auto;
           border-bottom: 1px solid #eaeaea;
-          padding-bottom: 5rem;
+          padding-bottom: 3rem;
         }
 
         ul {

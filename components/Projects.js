@@ -52,13 +52,14 @@ const Projects = (props) => {
           </p>
           <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with Java, JS, HTML, CSS</p>
         </div>
+        <p className='footnote'>Also this website was a fun project built with next.js, you can view the source <a href='https://github.com/mantism/personal-website'>here</a> </p>
       </div>
       <style jsx>{`
         .projects {
-          padding-top: 5rem;
+          padding-top: 3rem;
           text-align: center;
           border-bottom: 1px solid #eaeaea;
-          padding-bottom: 5rem;
+          padding-bottom: 3rem;
         }
 
         .grid {
@@ -105,6 +106,11 @@ const Projects = (props) => {
           padding: 0.75rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .footnote {
+          font-size: 0.75rem;
+          font-weight: 200;
         }
       `}</style>
     </div>

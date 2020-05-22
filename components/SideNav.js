@@ -25,6 +25,7 @@ const SideNav = ({display, section, handleClick}) => {
           position: fixed;
           margin-left: -10em;
           top: 25%;
+          display: block;
         }
 
         ul {
@@ -44,6 +45,12 @@ const SideNav = ({display, section, handleClick}) => {
         
         .active {
           border-left: solid 3px #0070f3;
+        }
+
+        @media screen and (max-width: 48em) {
+          .sidenav {
+            display: none !important;
+          }
         }
       `}</style>
     </div>

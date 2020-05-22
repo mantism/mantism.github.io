@@ -4,13 +4,13 @@ import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faYoutubeSquare, faInstagram} from '@fortawesome/free-brands-svg-icons'
-import { faCode, faHeart, faCoffee, faSuitcase, faLink} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faHome, faTimes, faCode, faHeart, faCoffee, faSuitcase} from '@fortawesome/free-solid-svg-icons';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
 config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
-library.add(faCode, faHeart, faCoffee, faSuitcase, faLinkedin, faGithub, faYoutubeSquare, faInstagram)
+library.add(faBars, faHome, faTimes, faCode, faHeart, faCoffee, faSuitcase, faLinkedin, faGithub, faYoutubeSquare, faInstagram)
 /*export function reportWebVitals(metric) {
   console.log(metric)
 }*/
@@ -18,6 +18,10 @@ library.add(faCode, faHeart, faCoffee, faSuitcase, faLinkedin, faGithub, faYoutu
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
+
+    // base font and line heights measured in em
+    const baseFontSize = 1;
+    const baseLineHeight = 1.25
     return (
       <React.Fragment>
         <Head>
@@ -77,7 +81,19 @@ class MyApp extends App {
             justify-content: center;
             align-items: center;
             overflow-x: hidden;
-          }     
+          }  
+          
+          //tablet or smaller screen sizes (600px)
+          @media (max-width: 37.5em) {
+            .container {
+              padding: 2rem 0;
+            }
+
+            footer {
+              padding-top: 0;
+              width: 80%;
+            }
+          }
         `}
         </style>
         <style jsx global>{`
@@ -86,7 +102,8 @@ class MyApp extends App {
             padding: 0;
             margin: 0;
             font-family: Open Sans, sans-serif;
-
+            font-size: ${baseFontSize}em;
+            line-height: ${baseLineHeight}em;
             scroll-behavior: smooth;
           }
 
@@ -143,6 +160,29 @@ class MyApp extends App {
   
           .hidden {
             opacity: 0;
+          }
+
+          @media (min-width: 64em) {
+            html
+            body {
+              font-size: ${baseFontSize * 1.2}em;
+              line-height: ${baseLineHeight * 1.2}em;
+            }
+          }
+
+          @media (min-width: 85.375em) {
+            html
+            body {
+              font-size: ${baseFontSize * 1.3}em;
+            }
+          }
+
+          @media (min-width: 120em) {
+            html
+            body {
+              font-size: ${baseFontSize * 1.4}em;
+              line-height: ${baseLineHeight * 1.4}em;
+            }
           }
         `}</style>
       </React.Fragment>

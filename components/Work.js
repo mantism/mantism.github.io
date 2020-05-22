@@ -37,6 +37,12 @@ const Work = (props) => {
         li {
           margin: 1rem auto;
         }
+
+        @media (min-width: 85.375em) {
+          .work {
+            max-width: 500px;
+          }
+        }
       `}
       </style>
     </div>

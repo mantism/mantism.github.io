@@ -28,8 +28,6 @@ const About = (props) => {
           padding-bottom: 5rem;
         }
         .description {
-          line-height: 1.5;
-          font-size: 1rem;
           text-align: left;
         }
       `}</style>

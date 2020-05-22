@@ -3,6 +3,7 @@ import Work from '../components/Work';
 import Projects from '../components/Projects';
 import Tricking from '../components/Tricking';
 import SideNav from '../components/SideNav';
+import NavWrapper from '../components/NavWrapper';
 import React, { useState, useRef, useEffect} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
 
@@ -81,7 +82,7 @@ const Home = () => {
     <React.Fragment>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
       <main>
-        <SideNav display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
+        <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
         <div className='content'>
           <About refProp={aboutRef}/>
           <Work refProp={workRef} display={shouldShowWork}/>
@@ -101,34 +102,17 @@ const Home = () => {
           flex: 1;
           max-width: 650px;
         }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
+        
+        //tablet or smaller screen sizes (600px)
+        @media (max-width: 37.5em) {
+          .content {
+            max-width: 300px;
           }
+        }
 
-          .title {
-            text-align: center;
+        @media (min-width: 120em) {
+          .content {
+            max-width: 800px;
           }
         }
 

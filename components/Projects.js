@@ -84,6 +84,13 @@ const Projects = (props) => {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
+        //tablet or smaller screen sizes (600px)
+        @media (max-width: 37.5em) {
+          .card {
+            flex-basis: 95%;
+          }
+        }
+
         .card:hover,
         .card:focus,
         .card:active {

@@ -10,7 +10,7 @@ const Tricking = (props) => {
     <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={props.refProp}>
       <img src='./V-Logo.svg' alt='vertigo-logo' style={imgStyle}></img>
       <h2>Tricking</h2>
-      <video autoPlay loop muted playsinline id='combo'>
+      <video autoPlay loop muted playsInline id='combo'>
         <source src="./combo.webm" type="video/webm"/>
         <source src="./combo.mp4" type="video/mp4"/>
       </video>
@@ -82,12 +82,23 @@ const Tricking = (props) => {
         }
 
         #groupPhoto {
-          max-width: 400px;
+          max-width: 350px;
           margin: 0 auto;
         }
 
         #combo {
           margin: 1rem 0;
+        }
+
+        //mobile sizing for images
+        @media (max-width: 420px) {
+          #groupPhoto {
+            max-width: 300px;
+          }
+
+          #combo {
+            max-width: 300px;
+          }
         }
         
       `}</style>

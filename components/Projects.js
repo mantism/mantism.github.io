@@ -100,6 +100,7 @@ const Projects = (props) => {
 
         .card h3 {
           margin: 0 0 1rem 0;
+          line-height: 1.5;
           font-size: 1.5rem;
         }
 

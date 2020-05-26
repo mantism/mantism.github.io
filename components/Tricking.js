@@ -11,8 +11,8 @@ const Tricking = (props) => {
       <img src='./V-Logo.svg' alt='vertigo-logo' style={imgStyle}></img>
       <h2>Tricking</h2>
       <video autoPlay loop muted playsInline id='combo'>
-        <source src="./combo.webm" type="video/webm"/>
         <source src="./combo.mp4" type="video/mp4"/>
+        <source src="./combo.webm" type="video/webm"/>
       </video>
       <div className='caption'>
         Above is one of my favorite "combos" to do but it doesn't nearly capture the beauty of the movement! If interested, 

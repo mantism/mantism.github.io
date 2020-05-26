@@ -16,11 +16,11 @@ const MobileNav = ({display, section, handleClick}) => {
   return (
     <div className='mobilenav'>
         <div className={'outer-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon='bars' size='1x'/>
+            <FontAwesomeIcon icon='bars' size='sm'/>
         </div>
         <div className={'menu ' + (open ? 'opened' : 'closed')}>
           <div className={'inner-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon='times' size='1x'/>
+            <FontAwesomeIcon icon='times' size='sm'/>
           </div>
           <div className='label'>
             Sections
@@ -73,7 +73,7 @@ const MobileNav = ({display, section, handleClick}) => {
             left: 0;
             position: fixed;
             border-radius: 10px;
-            transition: opacity 0.3s;
+            transition: opacity 0.5s;
             background: #ffffff;
             box-shadow:  14px 14px 28px #b8b8b8, 
              -14px -14px 28px #ffffff;
@@ -94,10 +94,12 @@ const MobileNav = ({display, section, handleClick}) => {
 
           .menu.closed {
             opacity: 0;
+            display: none;
           }
 
           .menu.opened {
             opacity: 1;
+            display: block;
           }
 
           .outer-toggle {

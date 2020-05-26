@@ -10,9 +10,6 @@ const About = (props) => {
         I consider Java and JavaScript my main languages but also work regularly with Python, sometimes Perl, 
         and in the past have dabbled in C/C++.
         <br/><br/>
-        I graduated from the University of Pennsylvania in May 2018 with a Bachelor's 
-        in Computer Science from the School of Engineering. 
-        <br/><br/>
         In my free time I like brewing coffee, reading sci-fi, and practicing a sport called tricking!
           I also co-run a tricking event brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>
       </p>

@@ -1,4 +1,10 @@
-const SideNav = ({display, section, handleClick}) => {
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import DarkModeToggle from './DarkModeToggle';
+
+const SideNav = ({display, section, handleClick, darkMode}) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={`sidenav ${ display ? 'visible' : 'hidden'}`}>
       <ul>
@@ -17,6 +23,9 @@ const SideNav = ({display, section, handleClick}) => {
         <li className={section == 'tricking' ? 'active' : ''}
           onClick={() => handleClick('tricking')}>
             Tricking
+        </li>
+        <li>
+          <DarkModeToggle darkMode={darkMode}/>
         </li>
       </ul>
       <style jsx>{`
@@ -40,11 +49,11 @@ const SideNav = ({display, section, handleClick}) => {
         }
 
         li:hover {
-          color: #0070f3;
+          color: ${theme.text.links};
         }
         
         .active {
-          border-left: solid 3px #0070f3;
+          border-left: solid 3px ${theme.text.links};
         }
 
         @media screen and (max-width: 48em) {

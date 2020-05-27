@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Icons from '../components/Icons';
+import { ThemeContext } from 'styled-components';
 
 const About = (props) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
@@ -21,7 +24,7 @@ const About = (props) => {
       <style jsx>{`
 
         .about {
-          border-bottom: 1px solid #eaeaea;
+          border-bottom: 1px solid ${theme.borderColor};
           padding-bottom: 5rem;
         }
         .description {

@@ -6,7 +6,7 @@ const Footer = styled.footer`
   max-width: 550px;
   width: 50%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid ${props => props.theme.borderColor};
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
 import React, { useState, useRef, useEffect} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
+import DarkModeToggle from '../components/DarkModeToggle';
 
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
@@ -50,7 +51,6 @@ const Home = (props) => {
 
   useEffect(() => {
     handleNavClick.bind(this);
-    console.log(props);
   }, []);
   
 
@@ -85,8 +85,9 @@ const Home = (props) => {
         Mikael Mantis
       </h1>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
+      <DarkModeToggle darkMode={props.darkMode}/>
       <main>
-        <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
+        <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>
         <div className='content'>
           <About refProp={aboutRef}/>
           <Work refProp={workRef} display={shouldShowWork}/>

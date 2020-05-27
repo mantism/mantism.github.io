@@ -1,7 +1,7 @@
 const light = {
   bg: {
-    primary: '#eff0f5',
-    secondary: '#ffffff',
+    primary: '#ffffff',
+    secondary: '#eaeaea',
     inset: '#e2e4e8',
     input: 'rgba(65, 67, 78, 0, 0.12'
   },
@@ -11,24 +11,62 @@ const light = {
     tertiary: '#525560',
     quarternary: '#9194a1',
     placeholder: 'rgba(82,85,96,0.5)',
-    onPrimary: '#ffffff'
-  }
+    onPrimary: '#ffffff',
+    links: '#0070f3'
+  },
+  borderColor: '#eaeaea',
+  boxShadow: {
+    light: '#ffffff',
+    dark: '#b8b8b8'
+  },
+  boxButton: {
+    light: '#0078ff',
+    dark: '#0065db'
+  },
+  circleButton: {
+    light: '#ffffff',
+    dark: '#e6e6e6'
+  },
+  circleShadow: {
+    light: '#ffffff',
+    dark: '#fcfcfc'
+  },
+
+
 }
 
 const dark = {
   bg: {
-    primary: '#050505',
-    secondary: '#111111',
+    primary: '#282a36',
+    secondary: '#44475a',
     inset: '#111111',
     input: 'rgba(191,193,201,0.12)'
   },
   text: {
-    primary: '#fbfbfc',
+    primary: '#f8f8f2',
     secondary: '#e3e4e8',
     tertiary: '#a9abb6',
     quarternary: '#6c6f7e',
     placeholder: 'rgba(145,148,161,0.5)',
-    onPrimary: '#050505'
+    links: '#6272a4',
+    //links: '#8be9fd'
+  },
+  borderColor: '#44475a',
+  boxShadow: {
+    light: '#2e303e',
+    dark: '#22242e'
+  },
+  boxButton: {
+    light: '#697aaf',
+    dark: '#586794'
+  },
+  circleButton: {
+    light: '#2b2d3a',
+    dark: '#242631'
+  },
+  circleShadow: {
+    light: '#282a37',
+    dark: '#282a35'
   },
   // ...
 }
@@ -51,10 +89,12 @@ const defaultTheme = {
     heading: 800,
   },
   lineHeights: {
-    body: 1.5,
-    heading: 1.3,
+    body: 1.25,
+    heading: 1.5,
     code: 1.6,
   },
+  baseFontSize: '1',
+
   // ...
 };
 

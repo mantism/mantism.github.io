@@ -1,6 +1,10 @@
+import React, { useContext } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { ThemeContext } from 'styled-components';
 
 const IconButton = ({icon, text, color='#0070f3', action}) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className='icon-button' onClick={action}>
       <div className='icon-circle'>
@@ -36,18 +40,18 @@ const IconButton = ({icon, text, color='#0070f3', action}) => {
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          background: linear-gradient(145deg, #ffffff, #e6e6e6);
-          box-shadow:  5px 5px 100px #fcfcfc, 
-             -5px -5px 100px #ffffff;
+          background: linear-gradient(145deg, ${theme.circleButton.light}, ${theme.circleButton.dark});
+          box-shadow:  5px 5px 100px ${theme.circleShadow.dark}, 
+             -5px -5px 100px ${theme.circleShadow.light};
           margin-right: 1rem;
           display: inline-block;
           vertical-align: middle;
         }
 
         .icon-circle:hover {
-          background: linear-gradient(145deg, #e6e6e6, #ffffff);
-          box-shadow:  5px 5px 100px #fcfcfc, 
-             -5px -5px 100px #ffffff;
+          background: linear-gradient(145deg, ${theme.circleButton.dark}, ${theme.circleButton.light});
+          box-shadow:  5px 5px 100px ${theme.circleShadow.dark}, 
+             -5px -5px 100px ${theme.circleShadow.light};
         }
 
         .text {

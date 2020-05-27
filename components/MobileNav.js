@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import IconButton from './IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ThemeContext } from 'styled-components';
 
 const MobileNav = ({display, section, handleClick}) => {
   const [open, setOpen] = useState(false);
+  const theme = useContext(ThemeContext);
 
   const toggleMenu = (callback) => {
     setOpen(!open);
@@ -74,16 +76,16 @@ const MobileNav = ({display, section, handleClick}) => {
             position: fixed;
             border-radius: 10px;
             transition: opacity 0.5s;
-            background: #ffffff;
-            box-shadow:  14px 14px 28px #b8b8b8, 
-             -14px -14px 28px #ffffff;
+            background: ${theme.bg.primary};
+            box-shadow:  14px 14px 28px ${theme.boxShadow.dark}, 
+             -14px -14px 28px ${theme.boxShadow.light};
           }
 
           .sections {
             padding-top: 1.5rem;
             width: 80%;
             margin: 0 auto;
-            border-bottom: 1px dotted #eaeaea;
+            border-bottom: 1px dotted ${theme.borderColor};
           }
 
           .socials {
@@ -139,7 +141,7 @@ const MobileNav = ({display, section, handleClick}) => {
             width: 95%;
             height: 75px;
             margin: 20px auto 5px;
-            background-color: #eaeaea;
+            background-color: ${theme.borderColor};
             border-radius: 10px;
             padding: 20px;
           }
@@ -152,11 +154,11 @@ const MobileNav = ({display, section, handleClick}) => {
             padding: 8px;
             margin: 0 auto;
             border-radius: 5px;
-            background: linear-gradient(145deg, #0078ff, #0065db);
+            background: linear-gradient(145deg, ${theme.boxButton.light}, ${theme.boxButton.dark});
           }
 
           .contact-me:hover {
-            background: linear-gradient(145deg, #0065db, #0078ff);
+            background: linear-gradient(145deg, ${theme.boxButton.dark}, ${theme.boxButton.light});
           }
 
           @media screen and (min-width: 48em) {

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ThemeContext } from 'styled-components';
 
 const iconStyle = {
   color: '#FF8357'
 }
 
 const Work = (props) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
       <FontAwesomeIcon icon='suitcase' size='3x' style={iconStyle}/>
@@ -23,7 +26,7 @@ const Work = (props) => {
           text-align: center;
           max-width: 300px;
           margin: 0 auto;
-          border-bottom: 1px solid #eaeaea;
+          border-bottom: 1px solid ${theme.borderColor};
           padding-bottom: 3rem;
         }
 

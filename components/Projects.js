@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ThemeContext } from 'styled-components';
 
 const iconStyle = {
   color: '#B3DDD1'
 }
 
 const Projects = (props) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
       <FontAwesomeIcon icon='coffee' size='3x' style={iconStyle}/>
@@ -58,7 +61,7 @@ const Projects = (props) => {
         .projects {
           padding-top: 3rem;
           text-align: center;
-          border-bottom: 1px solid #eaeaea;
+          border-bottom: 1px solid ${theme.borderColor};
           padding-bottom: 3rem;
         }
 
@@ -94,8 +97,8 @@ const Projects = (props) => {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: ${theme.text.links};
+          border-color: ${theme.text.links};
         }
 
         .card h3 {

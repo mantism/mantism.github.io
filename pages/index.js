@@ -2,7 +2,7 @@ import About from '../components/About';
 import Work from '../components/Work';
 import Projects from '../components/Projects';
 import Tricking from '../components/Tricking';
-import SideNav from '../components/SideNav';
+import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
 import React, { useState, useRef, useEffect} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
@@ -13,7 +13,7 @@ const MIN_SCROLL_TO_SHOW_PROJ = 1000;
 const MIN_SCROLL_TO_TRICKING = 2200;
 const TIMEOUT_DELAY = 0;
 
-const Home = () => {
+const Home = (props) => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
   const [shouldShowWork, setShouldShowWork] = useState(false);
   const [shouldShowProjects, setShouldShowProjects] = useState(false);
@@ -50,6 +50,7 @@ const Home = () => {
 
   useEffect(() => {
     handleNavClick.bind(this);
+    console.log(props);
   }, []);
   
 
@@ -79,7 +80,10 @@ const Home = () => {
   });
 
   return (
-    <React.Fragment>
+    <Layout>
+      <h1 className='title'>
+        Mikael Mantis
+      </h1>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick}/>
@@ -94,6 +98,12 @@ const Home = () => {
         main {
           display: flex;
           flex-direction: row;
+        }
+
+        .title {
+          line-height: 1.15;
+          font-size: 4rem;
+          text-align: center;
         }
 
         .content {
@@ -120,7 +130,7 @@ const Home = () => {
           margin: 1rem 0;
         }
       `}</style>
-    </React.Fragment>
+    </Layout>
   )
 }
   

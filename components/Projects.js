@@ -52,7 +52,7 @@ const Projects = (props) => {
           </p>
           <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with Java, JS, HTML, CSS</p>
         </div>
-        <p className='footnote'>Also this website was a fun project built with next.js, you can view the source <a href='https://github.com/mantism/personal-website'>here</a> </p>
+        <p className='footnote'>Also this website was a fun project built with next.js, you can <a href='https://github.com/mantism/personal-website'>view the source here</a> </p>
       </div>
       <style jsx>{`
         .projects {

@@ -17,7 +17,7 @@ const Projects = (props) => {
         <div className='card'>
           <h3>Vertigo Tricking</h3>
           <p> Single page web app for Vertigo Tricking, a Philadelphia based tricking 
-            organization that runs a bi-annual event seeing up to 100 attendees worlwide.
+            organization that runs a bi-annual event seeing up to 100 attendees worldwide.
           </p>
           <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with next.js</p>
         </div>
@@ -82,7 +82,7 @@ const Projects = (props) => {
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid #eaeaea;
+          border: 1px solid ${theme.borderColor};
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }

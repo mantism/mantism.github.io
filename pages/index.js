@@ -4,9 +4,10 @@ import Projects from '../components/Projects';
 import Tricking from '../components/Tricking';
 import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
-import React, { useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect, useContext} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
-import DarkModeToggle from '../components/DarkModeToggle';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { ThemeContext } from 'styled-components';
 
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
@@ -24,6 +25,7 @@ const Home = (props) => {
   const workRef = useRef(null);
   const projectsRef = useRef(null);
   const trickingRef = useRef(null);
+  const theme = useContext(ThemeContext);
 
   const handleNavClick = (section) => {
     setActiveSection(section);
@@ -82,10 +84,12 @@ const Home = (props) => {
   return (
     <Layout>
       <h1 className='title'>
-        Mikael Mantis
+        Hi, I'm Mikael
       </h1>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
-      <DarkModeToggle darkMode={props.darkMode}/>
+      <p className='caption'>
+        <FontAwesomeIcon icon='map-marker-alt'/> Philadelphia
+      </p>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>
         <div className='content'>
@@ -129,6 +133,12 @@ const Home = (props) => {
 
         img {
           margin: 1rem 0;
+        }
+
+        .caption {
+          text-align: center;
+          font-size: ${theme.baseFontSize * 0.8}em;
+          font-weight: ${theme.fontWeights.caption};
         }
       `}</style>
     </Layout>

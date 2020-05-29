@@ -68,26 +68,11 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
   }
 
-  @media (min-width: 64em) {
+  @media (min-width: 120em) {
     html
     body {
       font-size: ${props => props.theme.baseFontSize * 1.2}em;
       line-height: ${props => props.theme.lineHeights.body * 1.2};
-    }
-  }
-
-  @media (min-width: 85.375em) {
-    html
-    body {
-      font-size: ${props => props.theme.baseFontSize * 1.3}em;
-    }
-  }
-
-  @media (min-width: 120em) {
-    html
-    body {
-      font-size: ${props => props.theme.baseFontSize * 1.4}em;
-      line-height: ${props => props.theme.lineHeights.body * 1.4};
     }
   }
 `

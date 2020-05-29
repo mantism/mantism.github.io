@@ -8,13 +8,12 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        Hi, I'm currently a Software Engineer at BlackRock, Inc. where I have been 
-        rotating amongst various development teams within the Aladdin Product Group.
-        I consider Java and JavaScript my main languages but also work regularly with Python, sometimes Perl, 
-        and in the past have dabbled in C/C++.
+        I am currently a Software Engineer at BlackRock where I have been 
+        rotating amongst various dev teams within the Aladdin Product Group.
+        I consider Java and JavaScript my main languages but also work regularly with Python and sometimes Perl. 
         <br/><br/>
-        In my free time I like brewing coffee, reading sci-fi, and practicing a sport called tricking!
-          I also co-run a tricking event brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>
+        In my free time I like brewing coffee, reading sci-fi, and trying to push the physical boundaries of my beloved sport called tricking!
+          I also co-run a tricking brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>
       </p>
       <div style={{textAlign: 'center'}}>
         Feel free to reach me at: <br/>
@@ -22,7 +21,6 @@ const About = (props) => {
         <Icons/>
       </div>
       <style jsx>{`
-
         .about {
           border-bottom: 1px solid ${theme.borderColor};
           padding-bottom: 5rem;

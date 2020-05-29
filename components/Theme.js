@@ -82,6 +82,7 @@ const defaultTheme = {
     '40px'  // 6
   ],
   fontWeights: {
+    caption: 100,
     body: 400,
     subheading: 500,
     link: 600,

@@ -21,12 +21,13 @@ const Layout = ({children}) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Mikael Mantis</title>
-        <meta charSet="utf-8" />
+        <title>Mikael Mantis, Software Engineer</title>
+        <meta httpEquiv='Content-Type' content='text/html' charSet='utf-8' />
         <meta name='description' content='Personal website of Mikael Mantis, Software Engineer and Martial Arts Tricker, currently based out of Philadelphia'/>
-        <meta name="author" content="Mikael Mantis" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet"></link>
+        <meta name='author' content='Mikael Mantis' />
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap' rel='stylesheet'></link>
+        <link rel='canonical' href='https://mikaelmantis.com'/>
       </Head>
       <StyledContainer>
         {children}

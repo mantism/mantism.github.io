@@ -8,8 +8,7 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        I am currently a Software Engineer at BlackRock where I have been 
-        rotating amongst various dev teams within the Aladdin Product Group.
+        I am currently a Software Engineer at BlackRock working full-stack on our regulatory technology team.
         I consider Java and JavaScript my main languages but also work regularly with Python and sometimes Perl. 
         <br/><br/>
         In my free time I like brewing coffee, reading sci-fi, and trying to push the physical boundaries of my beloved sport called tricking!

@@ -1,8 +1,8 @@
-import { lightTheme, darkTheme } from '../components/Theme'
+import { lightTheme, darkTheme } from './Theme'
 import { ThemeProvider } from 'styled-components'
 import useDarkMode from 'use-dark-mode'
 import React, { useState, useEffect} from 'react'
-import GlobalStyle from '../components/GlobalStyles'
+import GlobalStyle from './GlobalStyles'
 
 export default (props) => {
   const [mounted, setMounted] = useState(false);

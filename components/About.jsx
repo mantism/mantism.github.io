@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Icons from '../components/Icons';
+import Icons from './Icons';
 import { ThemeContext } from 'styled-components';
 
 const About = (props) => {
@@ -8,8 +8,8 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        I am currently a Software Engineer at BlackRock working full-stack on our regulatory technology team.
-        I consider Java and JavaScript my main languages but also work regularly with Python and sometimes Perl. 
+        I am currently a Software Engineer at BlackRock building new products on our regulatory technology team.
+        I consider Java and JavaScript my main languages but also work with Python sometimes.
         <br/><br/>
         In my free time I like brewing coffee, reading sci-fi, and trying to push the physical boundaries of my beloved sport called tricking!
           I also co-run a tricking brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>

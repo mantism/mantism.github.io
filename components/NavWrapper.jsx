@@ -1,5 +1,6 @@
-import SideNav from '../components/SideNav';
-import MobileNav from '../components/MobileNav';
+import React from 'react';
+import SideNav from './SideNav';
+import MobileNav from './MobileNav';
 
 const NavWrapper = (props) => {
   return (

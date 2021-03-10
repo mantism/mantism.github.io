@@ -31,10 +31,12 @@ const Footer = styled.footer`
   }
 `
 
-export default (props) => {
+const FooterComponent = (props) => {
   return (
     <Footer>
-      <FontAwesomeIcon icon='code' style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon='heart' style={{margin: '0.5rem'}}/> by Mikael Mantis, 2020
+      <FontAwesomeIcon icon='code' style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon='heart' style={{margin: '0.5rem'}}/> by Mikael Mantis, 2021
     </Footer>
   );
 }
+
+export default FooterComponent;

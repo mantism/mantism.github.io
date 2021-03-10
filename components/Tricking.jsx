@@ -33,7 +33,7 @@ const Tricking = (props) => {
         </p>
         <p>
           You can find my tricking progress on <a href='https://www.youtube.com/user/ninjamikael'>Youtube</a> and 
-          <a href='https://instagram.com/mikael_mantis'> Instagram</a>, some tricking tutorials on 
+          <a href='/instagram'> Instagram</a>, some tricking tutorials on 
           <a href='https://www.kojostricklab.com/'>Kojos Trick Lab</a>, and 
           a few of my past battles at <a href='https://adrenalineworldwide.com'>Adrenaline</a>.
         </p>

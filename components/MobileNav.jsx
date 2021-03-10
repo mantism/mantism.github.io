@@ -55,7 +55,7 @@ const MobileNav = ({display, section, handleClick}) => {
               toggleMenu(openInNewTab('https://www.youtube.com/user/ninjamikael'));
             }}/>
             <IconButton icon={['fab','instagram']} action={() => {
-              toggleMenu(openInNewTab('https://instagram.com/mikael_mantis'));
+              toggleMenu(openInNewTab('/instagram'));
             }}/>
           </div>
           <div className='menu-footer'>

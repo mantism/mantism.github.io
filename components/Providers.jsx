@@ -4,14 +4,14 @@ import useDarkMode from 'use-dark-mode'
 import React, { useState, useEffect} from 'react'
 import GlobalStyle from './GlobalStyles'
 
-export default (props) => {
+const Providers = (props) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, [])
 
-  const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
+  const darkMode = useDarkMode(false);
   const theme = darkMode.value ? darkTheme : lightTheme;
 
   const children = React.Children.map(props.children, child => {
@@ -33,3 +33,5 @@ export default (props) => {
 
   return body;
 }
+
+export default Providers;

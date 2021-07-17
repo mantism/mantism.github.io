@@ -14,8 +14,7 @@ const Projects = (props) => {
     <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
       <FontAwesomeIcon icon='coffee' size='3x' style={iconStyle}/>
       <h2>Projects</h2>
-      Heres a brief overview of some of my favorite projects over the past few years! A handful of them are from my time
-      in undergrad so unfortunately the code is all in private repos. Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'><a>GitHub</a></Link>) 
+      Heres a brief overview of some of my favorite/ongoing tricking projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'><a>GitHub</a></Link>) 
       they may or may not get replaced. 
       <div className='grid'>
         <Link href='https://vertigotricking.com'>
@@ -27,6 +26,12 @@ const Projects = (props) => {
             <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with next.js, redux, stripe</p>
           </div>
         </Link>
+        <div className='card'>
+          <h3>US Tricking</h3>
+          <p>
+            TBA - 👀
+          </p>
+        </div>
         <Link href='https://trickstats.com'>
           <div className='card'>
             <h3>Trick Stats</h3>
@@ -37,32 +42,6 @@ const Projects = (props) => {
             <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with React, scss, D3.js</p>
           </div>
         </Link>
-        <div className='card'>
-          <h3>VR Lighting Design</h3>
-          <p>
-            Virtual experience developed for Oculus that places the user in
-            an environment for previewing light shows. Lights could be configured 
-            manually or light shows could be pre-configured and loaded via art-net.
-          </p>
-          <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with C++, Unreal Engine</p>
-        </div>
-        <div className='card'>
-          <h3>PennOS</h3>
-          <p>
-            Operating systems final project. Developed a flat file system using 
-            the FAT architecture, system calls modeled after UNIX system calls 
-            to interact with the file system, and a UNIX-like shell using those system calls. 
-          </p>
-          <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with C</p>
-        </div>
-        <div className='card'>
-          <h3>Flying Mantis Search Engine</h3>
-          <p>Internet and Web Systems final project. Developed search engine as java servlet 
-            running on a Jetty-like server implementation running on AWS EC2. Retrieved search results from 
-            AWS RDS instance along with search results from Amazon using Amazon's Product Advertising API
-          </p>
-          <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with Java, JS, HTML, CSS</p>
-        </div>
         <p className='footnote'>Also this website was a fun project built with next.js, you can <a href='https://github.com/mantism/personal-website'>view the source here</a> </p>
       </div>
       <style jsx>{`

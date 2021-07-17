@@ -15,20 +15,17 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@svgr/webpack": "^5.4.0",
-    "@zeit/next-css": "^1.0.1",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
-    "next": "^10.0.7",
-    "next-compose-plugins": "^2.2.0",
-    "next-images": "^1.4.0",
-    "next-optimized-images": "^2.6.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "responsive-loader": "^1.2.0",
-    "sharp": "^0.25.3",
-    "styled-components": "^5.1.1",
+    "next": "^11.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "responsive-loader": "^2.3.0",
+    "sharp": "^0.28.3",
+    "styled-components": "^5.3.0",
     "use-dark-mode": "^2.3.1",
-    "webpack": "^5.24.2"
+    "webpack": "^5.45.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7"

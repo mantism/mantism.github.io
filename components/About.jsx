@@ -8,13 +8,11 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        I am currently a Software Engineer at BlackRock building new products on our regulatory technology team.
-        I consider Java and JavaScript my main languages but also work with Python sometimes.
+        Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon within AWS and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>. 
         <br/><br/>
-        In my free time I like brewing coffee, reading sci-fi, and trying to push the physical boundaries of my beloved sport called tricking!
-          I also co-run a tricking brand called <a href='https://vertigotricking.com'>Vertigo Tricking.</a>
       </p>
       <div style={{textAlign: 'center'}}>
+        Want to work with me on a tricking project?
         Feel free to reach me at: <br/>
         E: <a href="mailto:mikael.mantis7@gmail.com">mikael.mantis7@gmail.com</a><br/><br/>
         <Icons/>

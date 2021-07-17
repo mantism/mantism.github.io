@@ -12,7 +12,7 @@ import { ThemeContext } from 'styled-components';
 const MIN_SCROLL_NAV = 25;
 const MIN_SCROLL_TO_SHOW_WORK = 300;
 const MIN_SCROLL_TO_SHOW_PROJ = 1000;
-const MIN_SCROLL_TO_TRICKING = 2200;
+const MIN_SCROLL_TO_TRICKING = 1300;
 const TIMEOUT_DELAY = 0;
 
 const Home = (props) => {
@@ -88,7 +88,7 @@ const Home = (props) => {
       </h1>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
       <p className='caption'>
-        <FontAwesomeIcon icon='map-marker-alt'/> Philadelphia
+        <FontAwesomeIcon icon='map-marker-alt'/> Bay Area
       </p>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>

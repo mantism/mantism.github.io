@@ -14,7 +14,8 @@ const Work = (props) => {
       <FontAwesomeIcon icon='suitcase' size='3x' style={iconStyle}/>
       <h2>Work</h2>
       <ul className='positions'>
-        <li>Software Engineer <a href='https://aws.amazon.com'>@Amazon</a><br/><i>Jun '21 - Present</i></li>
+        <li>Software Engineer <a href='https://luna.amazon.com'>@Amazon Luna</a>May '22 to Present</li>
+        <li>Software Engineer <a href='https://aws.amazon.com'>@Amazon (AWS)</a><br/><i>Jun '21 - May '22</i></li>
         <li>Software Engineer <a href='https://blackrock.com'>@BlackRock, Inc</a><br/> <i>Jul '18 - May '21</i></li>
         <li>Software Engineering Intern <a href='https://willowtreeapps.com'>@WillowTree, Inc</a><br/><i>Jun '17 - Aug '17</i></li>
         <li>Teaching Assistant <a href='https://upenn.edu'>@University of Pennslyvania</a> <br/> <i>Sept '16 - May '18</i></li>

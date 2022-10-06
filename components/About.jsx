@@ -8,7 +8,7 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon within AWS and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>. 
+        Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon working on <a href='https://luna.amazon.com'>Luna</a> and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>. 
         <br/><br/>
       </p>
       <div style={{textAlign: 'center'}}>

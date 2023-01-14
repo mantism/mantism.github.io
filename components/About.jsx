@@ -8,7 +8,8 @@ const About = (props) => {
   return (
     <div className='about' ref={props.refProp}>
       <p className='description'>
-        Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon working on <a href='https://luna.amazon.com'>Luna</a> and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>. 
+        Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon working on <a href='https://luna.amazon.com'>Luna</a> and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>.{' '}
+        At the moment, I'm cooking up the <a href='https://trickingapi.dev'>TrickingAPI</a> open source project. Oh, and I also started a <a href='https://mantism.blog'>blog</a> this year if you're curious! 
         <br/><br/>
       </p>
       <div style={{textAlign: 'center'}}>

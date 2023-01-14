@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { duotone, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import styled from 'styled-components';
 
 const Footer = styled.footer`
@@ -34,7 +35,7 @@ const Footer = styled.footer`
 const FooterComponent = (props) => {
   return (
     <Footer>
-      <FontAwesomeIcon icon='code' style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon='heart' style={{margin: '0.5rem'}}/> by Mikael Mantis, 2021
+      <FontAwesomeIcon icon={duotone('code')} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={solid('heart')} style={{margin: '0.5rem'}}/> by Mikael Mantis, last updated 2023
     </Footer>
   );
 }

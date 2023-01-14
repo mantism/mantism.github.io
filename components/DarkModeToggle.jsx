@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const StyledButton = styled.button`
   border: none;
@@ -22,7 +23,7 @@ const DarkModeToggle = ({darkMode}) => {
 
   return (
     <StyledButton aria-label='dark-mode toggle' onClick={darkMode.toggle}>
-      <FontAwesomeIcon icon={darkMode.value ? 'moon' : 'sun'}/>
+      {darkMode.value ? <FontAwesomeIcon icon={solid('moon')}/> : <FontAwesomeIcon icon={solid('sun')}/>}
     </StyledButton>
   );
 };

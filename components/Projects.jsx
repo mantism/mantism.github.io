@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { ThemeContext } from 'styled-components';
 import Link from 'next/link';
 
@@ -12,9 +13,9 @@ const Projects = (props) => {
 
   return (
     <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
-      <FontAwesomeIcon icon='coffee' size='3x' style={iconStyle}/>
+      <FontAwesomeIcon icon={duotone('coffee')} size='3x' style={iconStyle}/>
       <h2>Projects</h2>
-      Heres a brief overview of some of my favorite/ongoing tricking projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'><a>GitHub</a></Link>) 
+      Heres a brief overview of some of my favorite/ongoing tricking projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'>GitHub</Link>) 
       they may or may not get replaced. 
       <div className='grid'>
         <Link href='https://vertigotricking.com'>
@@ -23,7 +24,7 @@ const Projects = (props) => {
             <p> Online store for Vertigo Tricking, a Philadelphia based tricking 
               organization that runs a bi-annual event seeing up to 100 attendees worldwide.
             </p>
-            <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with next.js, redux, stripe</p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with next.js, redux, stripe</p>
           </div>
         </Link>
         <div className='card'>
@@ -39,7 +40,7 @@ const Projects = (props) => {
               related to the sport of martial arts tricking. Data collected via survey in 2016 
               with 300+ responses. Rewritten in December 2017.
             </p>
-            <p className='code'><FontAwesomeIcon icon='code' size='xs'/> with React, scss, D3.js</p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with React, scss, D3.js</p>
           </div>
         </Link>
         <p className='footnote'>Also this website was a fun project built with next.js, you can <a href='https://github.com/mantism/personal-website'>view the source here</a> </p>

@@ -7,6 +7,7 @@ import NavWrapper from '../components/NavWrapper';
 import React, { useState, useRef, useEffect, useContext} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { solid, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { ThemeContext } from 'styled-components';
 
 const MIN_SCROLL_NAV = 25;
@@ -88,7 +89,7 @@ const Home = (props) => {
       </h1>
       <img src='/me.png' alt='picture of me (mikael mantis)'></img>
       <p className='caption'>
-        <FontAwesomeIcon icon='map-marker-alt'/> Bay Area
+        <FontAwesomeIcon icon={solid('map-marker-alt')}/> Bay Area
       </p>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>

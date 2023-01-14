@@ -1,6 +1,6 @@
 {
-  "name": "mantism.github.io",
-  "version": "0.1.0",
+  "name": "mikaelmantis.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,25 +9,35 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/react-fontawesome": "^0.1.9",
-    "@svgr/webpack": "^5.4.0",
-    "imagemin-optipng": "^7.1.0",
-    "imagemin-svgo": "^7.1.0",
-    "next": "^12.1.0",
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-pro": "^6.1.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/pro-duotone-svg-icons": "^6.1.1",
+    "@fortawesome/pro-light-svg-icons": "^6.1.1",
+    "@fortawesome/pro-regular-svg-icons": "^6.1.1",
+    "@fortawesome/pro-solid-svg-icons": "^6.1.1",
+    "@fortawesome/pro-thin-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@svgr/webpack": "^6.5.1",
+    "babel-plugin-macros": "^3.1.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "next": "^13.1.2",
     "next-compose-plugins": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "responsive-loader": "^2.3.0",
-    "sharp": "^0.30.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "responsive-loader": "^3.1.2",
+    "sharp": "^0.31.3",
     "styled-components": "^5.3.0",
     "use-dark-mode": "^2.3.1",
-    "webpack": "^5.45.1"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "babel-plugin-styled-components": "^2.0.7"
+  },
+  "browser": {
+    "fs": false
   }
 }

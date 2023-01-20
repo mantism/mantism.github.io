@@ -28,19 +28,19 @@ const Tricking = (props) => {
           community no matter where you're training in the world.
         </p>
         <p>
-          Having practiced for roughly 12 years I've gotten the opportunity to compete around the world, 
-          teach at events, contribute to various online platforms, and honestly more importantly - make lifelong friends.
+          Having practiced for more than half my life (since 12 years old), I've gotten the opportunity to compete around the world, 
+          teach at events, contribute to various online platforms, host my own events, be a part of the larger organizing body for tricking, and honestly more importantly - make lifelong friends.
         </p>
         <p>
           You can find my tricking progress on <a href='https://www.youtube.com/user/ninjamikael'>Youtube</a> and 
-          <a href='/instagram'> Instagram</a>, some tricking tutorials on 
+          <a href='https://www.instagram.com/mikael_mantis'> Instagram</a>, some tricking tutorials on 
           <a href='https://www.kojostricklab.com/'>Kojos Trick Lab</a>, and 
           a few of my past battles at <a href='https://adrenalineworldwide.com'>Adrenaline</a>.
         </p>
         <p>
           By 2018, I had been a guest at several events around the US and was inspired to start running my own events
-          alongside <a href='https://mikehom.com/'>Mike Hom</a>. Together we formed <a href='https://vertigotricking.com'>Vertigo Tricking</a>, 
-          an annual multi-day Tricking Gathering in Philadelphia that has been attended and spectated by up to 100 people around the world. 
+          alongside <a href='https://mikehom.com/'>Mike Hom</a>. Together we formed <a href='https://vertigotricking.com'>Vertigo Tricking</a>; 
+          a Tricking company that aims to provide a best-in-class gathering experience for all trickers by bringing together the community, sharing knowledge, and showcasing tremendous athletes through the Vertigames and battles.
         </p>
       </div>
       <img src='v2_group_photo.jpeg' alt='Attendees photo from Vertigo 2 in 2019' id='groupPhoto'></img>

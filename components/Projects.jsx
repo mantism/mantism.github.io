@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { ThemeContext } from 'styled-components';
 import Link from 'next/link';
 
@@ -15,34 +15,74 @@ const Projects = (props) => {
     <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
       <FontAwesomeIcon icon={duotone('coffee')} size='3x' style={iconStyle}/>
       <h2>Projects</h2>
-      Heres a brief overview of some of my favorite/ongoing tricking projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'>GitHub</Link>) 
+      Heres a brief overview of some of my past and ongoing <Link href='/tricking'>tricking</Link> projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'>GitHub</Link>) 
       they may or may not get replaced. 
       <div className='grid'>
         <Link href='https://vertigotricking.com'>
           <div className='card'>
             <h3>Vertigo Tricking</h3>
-            <p> Online store for Vertigo Tricking, a Philadelphia based tricking 
-              organization that runs a bi-annual event seeing up to 100 attendees worldwide.
+            <p> 
+              Website for Vertigo Tricking, LLC. Built and maintained by yours truly
             </p>
-            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with next.js, redux, stripe</p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with typescript, react/next.js, redux, stripe, and more</p>
           </div>
         </Link>
         <div className='card'>
-          <h3>US Tricking</h3>
-          <p>
-            TBA - 👀
-          </p>
-        </div>
-        <Link href='https://trickstats.com'>
-          <div className='card'>
-            <h3>Trick Stats</h3>
-            <p> Single page application that compiles data and displays interactive graphics 
-              related to the sport of martial arts tricking. Data collected via survey in 2016 
-              with 300+ responses. Rewritten in December 2017.
+          <Link href='https://trickingapi.dev'>
+            <h3>The Tricking API Project</h3>
+            <p>
+              Creator and primary contributor to the open source project centered around a lightweight consumption-only REST API for the Tricking vocabulary. 
+              Includes three main projects - as of 1/19/23
             </p>
-            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with React, scss, D3.js</p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with go, typescript, react/next.js</p>
+            <hr/>
+          </Link>
+          <br/>
+          <div className='code github-links'>
+            <Link href='https://github.com/TrickingApi/trickingapi'>
+              <FontAwesomeIcon icon={brands('github')} size='xl'/> api{' '}
+            </Link>
+            <Link href='https://github.com/TrickingApi/trickingapi.dev'>
+              <FontAwesomeIcon icon={brands('github')} size='xl'/> docs{' '}
+            </Link>
+            <Link href='https://github.com/TrickingApi/tricking-ts'>
+              <FontAwesomeIcon icon={brands('github')} size='xl'/> ts-lib{' '}
+            </Link>
+            <Link href='https://www.npmjs.com/package/tricking-ts'>
+              <FontAwesomeIcon icon={brands('npm')} size='xl'/>
+            </Link>
           </div>
-        </Link>
+        </div>
+        <div className='card'>
+          <Link href='https://ustricking.com'>
+            <h3>US Tricking</h3>
+            <p>
+              Tabled react project to eventually replace the squarespace hosted site 
+            </p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with js, css</p>
+            <hr/>
+          </Link>
+          <br/>
+          <Link href='https://github.com/USTricking/USTricking.com'>
+            <FontAwesomeIcon icon={brands('github')} size='xl'/>
+          </Link>
+        </div>
+          <div className='card'>
+            <Link href='https://trickstats.com'>
+              <h3>Trick Stats - Outdated</h3>
+              <p> Single page application that compiles data and displays interactive graphics 
+                related to the sport of martial arts tricking. Data collected via survey in 2016 
+                with 300+ responses. Rewritten in December 2017.
+              </p>
+              <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with React, scss, D3.js</p>
+              <hr/>
+            </Link>
+            <br/>
+            <Link href='https://github.com/mantism/TrickingSurvey'>
+              <FontAwesomeIcon icon={brands('github')} size='xl'/>
+            </Link>
+          </div>
+
         <p className='footnote'>Also this website was a fun project built with next.js, you can <a href='https://github.com/mantism/personal-website'>view the source here</a> </p>
       </div>
       <style jsx>{`
@@ -65,7 +105,7 @@ const Projects = (props) => {
 
         .card {
           margin: 1rem;
-          flex-basis: 45%;
+          flex-basis: 95%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
@@ -73,13 +113,6 @@ const Projects = (props) => {
           border: 1px solid ${theme.borderColor};
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        //tablet or smaller screen sizes (600px)
-        @media (max-width: 37.5em) {
-          .card {
-            flex-basis: 95%;
-          }
         }
 
         .card:hover,

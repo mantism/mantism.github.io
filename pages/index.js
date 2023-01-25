@@ -87,9 +87,9 @@ const Home = (props) => {
       <h1 className='title'>
         Hi, I'm Mikael
       </h1>
-      <img src='/me.png' alt='picture of me (mikael mantis)'></img>
+      <img src='/me_v2.png' alt='drawing of me (mikael mantis)' width='132' height='132'></img>
       <p className='caption'>
-        <FontAwesomeIcon icon={solid('map-marker-alt')}/> Bay Area
+        <FontAwesomeIcon icon={solid('map-marker-alt')}/> Bay Area, CA
       </p>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>
@@ -134,6 +134,8 @@ const Home = (props) => {
 
         img {
           margin: 1rem 0;
+          border-radius: 10px;
+          box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
         }
 
         .caption {

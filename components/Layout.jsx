@@ -23,6 +23,7 @@ const Layout = ({children}) => {
     <React.Fragment>
       <Head>
         <title>Mikael Mantis, Software Engineer</title>
+        <link rel="icon" href="/favicon.ico"/>
         <meta httpEquiv='Content-Type' content='text/html' charSet='utf-8' />
         <meta name='description' content='Personal website of Mikael Mantis, Software Engineer and Martial Arts Tricker, currently based out of Philadelphia'/>
         <meta name='author' content='Mikael Mantis' />

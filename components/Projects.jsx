@@ -54,12 +54,12 @@ const Projects = (props) => {
           </div>
         </div>
         <div className='card'>
-          <Link href='https://ustricking.com'>
-            <h3>US Tricking</h3>
+          <Link href='https://ust-rankings.deno.dev/en/introduction'>
+            <h3>US Tricking League</h3>
             <p>
-              Tabled react project to eventually replace the squarespace hosted site 
+              SSG app built with Astro for the US Tricking League to display rankings and other information.
             </p>
-            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with js, css</p>
+            <p className='code'><FontAwesomeIcon icon={duotone('code')} size='xs'/> with astro, deno</p>
             <hr/>
           </Link>
           <br/>

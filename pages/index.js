@@ -6,8 +6,9 @@ import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
 import React, { useState, useRef, useEffect, useContext} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
+import useIsInViewport from '../hooks/useIsInViewport';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { solid, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { ThemeContext } from 'styled-components';
 
 const MIN_SCROLL_NAV = 25;
@@ -28,8 +29,12 @@ const Home = (props) => {
   const trickingRef = useRef(null);
   const theme = useContext(ThemeContext);
 
+  const isAboutInViewPort = useIsInViewport(aboutRef);
+  const isWorkInViewPort = useIsInViewport(workRef);
+  const isProjectsInViewPort = useIsInViewport(projectsRef);
+  const isTrickingInViewPort = useIsInViewport(trickingRef);
+
   const handleNavClick = (section) => {
-    setActiveSection(section);
     switch (section) {
       case 'about':
         scrollToRef(aboutRef, 500);

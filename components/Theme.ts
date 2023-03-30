@@ -1,4 +1,35 @@
-const light = {
+import { DefaultTheme, ColorTheme } from "styled-components";
+
+const defaultTheme: DefaultTheme = {
+  fontSizes: [
+    '14px', // 0
+    '16px', // 1
+    '18px', // 2
+    '22px', // 3
+    '26px', // 4
+    '32px', // 5
+    '40px'  // 6
+  ],
+  fontWeights: {
+    caption: 100,
+    body: 400,
+    subheading: 500,
+    link: 600,
+    bold: 700,
+    heading: 800,
+  },
+  lineHeights: {
+    body: 1.25,
+    heading: 1.5,
+    code: 1.6,
+  },
+  baseFontSize: 1,
+
+  // ...
+};
+
+export const lightTheme: ColorTheme = {
+  ...defaultTheme,
   bg: {
     primary: '#ffffff',
     secondary: '#eaeaea',
@@ -31,11 +62,10 @@ const light = {
     light: '#ffffff',
     dark: '#fcfcfc'
   },
-
-
 }
 
-const dark = {
+export const darkTheme: ColorTheme = {
+  ...defaultTheme,
   bg: {
     primary: '#282a36',
     secondary: '#44475a',
@@ -49,7 +79,7 @@ const dark = {
     quarternary: '#6c6f7e',
     placeholder: 'rgba(145,148,161,0.5)',
     links: '#6272a4',
-    //links: '#8be9fd'
+    onPrimary: '#ffffff',
   },
   borderColor: '#44475a',
   boxShadow: {
@@ -70,34 +100,3 @@ const dark = {
   },
   // ...
 }
-
-const defaultTheme = {
-  fontSizes: [
-    '14px', // 0
-    '16px', // 1
-    '18px', // 2
-    '22px', // 3
-    '26px', // 4
-    '32px', // 5
-    '40px'  // 6
-  ],
-  fontWeights: {
-    caption: 100,
-    body: 400,
-    subheading: 500,
-    link: 600,
-    bold: 700,
-    heading: 800,
-  },
-  lineHeights: {
-    body: 1.25,
-    heading: 1.5,
-    code: 1.6,
-  },
-  baseFontSize: '1',
-
-  // ...
-};
-
-export const lightTheme = { ...defaultTheme, ...light }
-export const darkTheme = { ...defaultTheme, ...dark}

@@ -1,9 +1,11 @@
+import { INavProps } from 'navigation';
 import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, ThemeContext } from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
 
-const SideNav = ({display, section, handleClick, darkMode}) => {
-  const theme = useContext(ThemeContext);
+const SideNav = (props: INavProps) => {
+  const {display, section, handleClick, darkMode} = props;
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
     <div className={`sidenav ${ display ? 'visible' : 'hidden'}`}>

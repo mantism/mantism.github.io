@@ -1,10 +1,18 @@
 import React, { useContext } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, ThemeContext } from 'styled-components';
 
-const IconButton = ({icon, text, action, children}) => {
-  const theme = useContext(ThemeContext);
+interface IIconButtonProps {
+  icon?: string;
+  text?: string;
+  action?: () => void;
+  children?: React.ReactNode;
+}
+
+const IconButton = (props: IIconButtonProps) => {
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
+  const { icon, text, action, children} = props;
 
   return (
     <div className='icon-button' onClick={action}>

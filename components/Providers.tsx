@@ -1,6 +1,6 @@
 import { lightTheme, darkTheme } from './Theme'
-import { ThemeProvider } from 'styled-components'
-import useDarkMode from 'use-dark-mode'
+import { ColorTheme, ThemeProvider } from 'styled-components'
+import useDarkMode, { DarkMode } from 'use-dark-mode'
 import React, { useState, useEffect} from 'react'
 import GlobalStyle from './GlobalStyles'
 
@@ -11,8 +11,8 @@ const Providers = (props) => {
     setMounted(true);
   }, [])
 
-  const darkMode = useDarkMode(false);
-  const theme = darkMode.value ? darkTheme : lightTheme;
+  const darkMode: DarkMode = useDarkMode(false);
+  const theme: ColorTheme = darkMode.value ? darkTheme : lightTheme;
 
   const children = React.Children.map(props.children, child => {
     return React.cloneElement(child, {

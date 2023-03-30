@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { MutableRefObject } from 'react';
 
-const Tricking = (props) => {
+interface ITrickingProps {
+  display: boolean;
+}
+
+export const Tricking = React.forwardRef((props: ITrickingProps, ref: MutableRefObject<HTMLDivElement>) => {
   const imgStyle = {
     width: '48px',
     height: '48px'
   }
   
   return (
-    <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={props.refProp}>
+    <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={ref}>
       <img src='./V-Logo.svg' alt='vertigo-logo' style={imgStyle}></img>
       <h2>Tricking</h2>
       <video autoPlay loop muted playsInline id='combo'>
@@ -104,6 +108,4 @@ const Tricking = (props) => {
       `}</style>
     </div>
   );
-};
-
-export default Tricking;
+});

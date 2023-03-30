@@ -1,12 +1,14 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, CSSProperties} from 'react';
 import IconButton from './IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, ThemeContext } from 'styled-components';
+import { INavProps } from 'navigation';
 
-const MobileNav = ({display, section, handleClick}) => {
+const MobileNav = (props: INavProps) => {
+  const { handleClick } = props;
   const [open, setOpen] = useState(false);
-  const theme = useContext(ThemeContext);
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   const toggleMenu = (callback) => {
     setOpen(!open);
@@ -16,17 +18,20 @@ const MobileNav = ({display, section, handleClick}) => {
     window.open(url, '_blank');
   }
 
-  const duotoneIconStyleOrange = {
+  const duotoneIconStyleOrange: CSSProperties = {
+    //@ts-ignore
     '--fa-primary-color': '#FF8357',
     '--fa-secondary-color': '#e3e4e8',
   };
 
-  const duotoneIconStyleBlue = {
+  const duotoneIconStyleBlue: CSSProperties = {
+    //@ts-ignore
     '--fa-primary-color': '#0070f3',
     '--fa-secondary-color': '#e3e4e8',
   }
 
-  const duotoneIconStyleGreen = {
+  const duotoneIconStyleGreen: CSSProperties = {
+    //@ts-ignore
     '--fa-primary-color': '#B3DDD1',
     '--fa-secondary-color': '#e3e4e8'
   }

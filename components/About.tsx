@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React, { MutableRefObject, useContext } from 'react';
 import Icons from './Icons';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, ThemeContext } from 'styled-components';
 
-const About = (props) => {
-  const theme = useContext(ThemeContext);
+export const About = React.forwardRef((props, ref: MutableRefObject<HTMLDivElement>) => {
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
-    <div className='about' ref={props.refProp}>
+    <div className='about' ref={ref}>
       <p className='description'>
         Welcome to my corner of the internet! <br/><br/> I'm a Software Engineer at Amazon working on <a href='https://luna.amazon.com'>Luna</a> and am the co-founder of <a href='https://vertigotricking.com'>Vertigo Tricking</a>.{' '}
         At the moment, I'm cooking up the <a href='https://trickingapi.dev'>TrickingAPI</a> open source project and developing the <a href='ust-rankings.deno.dev'>US Tricking League Ranking System</a>. Oh, and I also started a <a href='https://mantism.blog'>blog</a> this year if you're curious! 
@@ -29,6 +29,4 @@ const About = (props) => {
       `}</style>
     </div>
   );
-};
-
-export default About;
+});

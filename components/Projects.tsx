@@ -1,18 +1,22 @@
-import React, { useContext } from 'react';
+import React, { MutableRefObject, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, ThemeContext } from 'styled-components';
 import Link from 'next/link';
 
 const iconStyle = {
   color: '#B3DDD1'
 }
 
-const Projects = (props) => {
-  const theme = useContext(ThemeContext);
+interface IProjectsProps {
+  display: boolean;
+}
+
+export const Projects = React.forwardRef((props: IProjectsProps, ref: MutableRefObject<HTMLDivElement>) => {
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
-    <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
+    <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
       <FontAwesomeIcon icon={duotone('coffee')} size='3x' style={iconStyle}/>
       <h2>Projects</h2>
       Heres a brief overview of some of my past and ongoing <Link href='/tricking'>tricking</Link> projects! Be sure to check back here in the future (or follow me on <Link href='https://github.com/mantism'>GitHub</Link>) 
@@ -147,6 +151,4 @@ const Projects = (props) => {
       `}</style>
     </div>
   )
-};
-
-export default Projects;
+});

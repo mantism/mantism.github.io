@@ -21,6 +21,8 @@
     "@fortawesome/pro-thin-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@svgr/webpack": "^7.0.0",
+    "@types/react": "^18.0.31",
+    "@types/styled-components": "^5.1.26",
     "babel-plugin-macros": "^3.1.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
@@ -32,6 +34,7 @@
     "responsive-loader": "^3.1.2",
     "sharp": "^0.32.0",
     "styled-components": "^5.3.9",
+    "typescript": "^5.0.2",
     "use-dark-mode": "^2.3.1",
     "webpack": "^5.76.3"
   },

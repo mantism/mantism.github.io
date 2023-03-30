@@ -56,9 +56,9 @@ const Home: NextPage = (props: IHomePageProps) => {
   useDocumentScroll((callbackData: {currentScrollTop: number}) => {
     const { currentScrollTop } = callbackData;
     const scrolledForNav = currentScrollTop > MIN_SCROLL_TO_SHOW_NAV;
-    const scrolledToWork = workRef.current ? currentScrollTop > workRef.current.getBoundingClientRect().top : false;
-    const scrolledToProjects = projectsRef.current ? currentScrollTop > projectsRef.current.getBoundingClientRect().top : false;
-    const scrolledToTricking = trickingRef.current ? currentScrollTop > trickingRef.current.getBoundingClientRect().top : false;
+    const scrolledToWork = workRef.current ? currentScrollTop > workRef.current.offsetTop : false;
+    const scrolledToProjects = projectsRef.current ? currentScrollTop > projectsRef.current.offsetTop : false;
+    const scrolledToTricking = trickingRef.current ? currentScrollTop > trickingRef.current.offsetTop : false;
     
     if (scrolledToWork && !scrolledToProjects) {
       setActiveSection('work');

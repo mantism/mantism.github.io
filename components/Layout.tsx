@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Head from 'next/head';
 import Footer from './Footer';
 
 const StyledContainer = styled.div`
@@ -21,16 +20,6 @@ const StyledContainer = styled.div`
 const Layout = ({children}) => {
   return (
     <React.Fragment>
-      <Head>
-        <title>Mikael Mantis, Software Engineer</title>
-        <link rel="icon" type="image/png" href='/me_v2.png'/>
-        <meta httpEquiv='Content-Type' content='text/html' charSet='utf-8' />
-        <meta name='description' content='Personal website of Mikael Mantis, Software Engineer and Martial Arts Tricker, currently based out of Philadelphia'/>
-        <meta name='author' content='Mikael Mantis' />
-        <meta name='viewport' content='width=device-width, initial-scale=1'/>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap' rel='stylesheet'></link>
-        <link rel='canonical' href='https://mikaelmantis.com'/>
-      </Head>
       <StyledContainer>
         {children}
         <Footer/>

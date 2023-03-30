@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useDocumentScroll(callback) {
+function useDocumentScroll(callback: Function) {
   const [, setScrollPosition] = useState(0);
   let previousScrollTop = 0;
 

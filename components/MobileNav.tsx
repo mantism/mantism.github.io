@@ -1,11 +1,14 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, CSSProperties} from 'react';
 import IconButton from './IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ThemeContext } from 'styled-components';
+import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { ColorTheme, ThemeContext } from 'styled-components';
+import { INavProps } from 'navigation';
 
-const MobileNav = ({display, section, handleClick}) => {
+const MobileNav = (props: INavProps) => {
+  const { handleClick } = props;
   const [open, setOpen] = useState(false);
-  const theme = useContext(ThemeContext);
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   const toggleMenu = (callback) => {
     setOpen(!open);
@@ -15,29 +18,53 @@ const MobileNav = ({display, section, handleClick}) => {
     window.open(url, '_blank');
   }
 
+  const duotoneIconStyleOrange: CSSProperties = {
+    //@ts-ignore
+    '--fa-primary-color': '#FF8357',
+    '--fa-secondary-color': '#e3e4e8',
+  };
+
+  const duotoneIconStyleBlue: CSSProperties = {
+    //@ts-ignore
+    '--fa-primary-color': '#0070f3',
+    '--fa-secondary-color': '#e3e4e8',
+  }
+
+  const duotoneIconStyleGreen: CSSProperties = {
+    //@ts-ignore
+    '--fa-primary-color': '#B3DDD1',
+    '--fa-secondary-color': '#e3e4e8'
+  }
+
   return (
     <div className='mobilenav'>
         <div className={'outer-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon='bars' size='sm'/>
+            <FontAwesomeIcon icon={duotone('bars')} size='sm' style={duotoneIconStyleOrange}/>
         </div>
         <div className={'menu ' + (open ? 'opened' : 'closed')}>
           <div className={'inner-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon='times' size='sm'/>
+            <FontAwesomeIcon icon={duotone('times')} size='sm'/>
           </div>
           <div className='label'>
             Sections
           </div>
           <div className='sections'>
-            <IconButton icon='home' text='about' action={() => {
+            <IconButton text='about' action={() => {
               toggleMenu(handleClick('about'));
-            }}/>
-            <IconButton icon='suitcase' text='work' color='#FF8357' action={() => {
+            }}>
+              <FontAwesomeIcon icon={duotone('home')} size='2x' style={duotoneIconStyleBlue}/>
+            </IconButton>
+            <IconButton text='work' action={() => {
               toggleMenu(handleClick('work'));
-            }}/>
-            <IconButton icon='coffee' text='projects' color='#B3DDD1' action={() => {
+            }}>
+              <FontAwesomeIcon icon={duotone('suitcase')} size='2x' style={duotoneIconStyleOrange}/>
+            </IconButton>
+            <IconButton text='projects' action={() => {
               toggleMenu(handleClick('projects'));
-            }}/>
-            <IconButton icon='vertigo' text='tricking' color='#B3DDD1' action={() => {
+            }}>
+              <FontAwesomeIcon icon={duotone('coffee')} size='2x' style={duotoneIconStyleGreen}/>
+            </IconButton>
+            <IconButton icon='vertigo' text='tricking' action={() => {
               toggleMenu(handleClick('tricking'));
             }}/>
           </div>
@@ -45,18 +72,31 @@ const MobileNav = ({display, section, handleClick}) => {
             Socials
           </div>
           <div className='socials'>
-            <IconButton icon={['fab','linkedin']} action={() => {
-              toggleMenu(openInNewTab('https://www.linkedin.com/in/mikaelmantis'));
-            }}/>
-            <IconButton icon={['fab','github']} action={()=>{
+            <IconButton action={()=>{
               toggleMenu(openInNewTab('https://github.com/mantism'));
-            }}/>
-            <IconButton icon={['fab','youtube-square']} action={() => {
+            }}>
+              <FontAwesomeIcon icon={brands('github')} size='2x' style={{color: '#0070f3'}}/>
+            </IconButton>
+            <IconButton action={()=>{
+              toggleMenu(openInNewTab('https://www.mantism.blog'));
+            }}>
+              <FontAwesomeIcon icon={duotone('typewriter')} size='2x' style={duotoneIconStyleBlue}/>
+            </IconButton>
+            <IconButton action={() => {
+              toggleMenu(openInNewTab('https://www.linkedin.com/in/mikaelmantis'));
+            }}>
+              <FontAwesomeIcon icon={brands('linkedin')} size='2x' style={{color: '#0070f3'}}/>
+            </IconButton>
+            <IconButton action={() => {
               toggleMenu(openInNewTab('https://www.youtube.com/user/ninjamikael'));
-            }}/>
-            <IconButton icon={['fab','instagram']} action={() => {
+            }}>
+              <FontAwesomeIcon icon={brands('youtube-square')} size='2x' style={{color: '#0070f3'}}/>
+            </IconButton>
+            <IconButton action={() => {
               toggleMenu(openInNewTab('/instagram'));
-            }}/>
+            }}>
+              <FontAwesomeIcon icon={brands('instagram')} size='2x' style={{color: '#0070f3'}}/>
+            </IconButton>
           </div>
           <div className='menu-footer'>
             <div className='contact-me' onClick={() => {openInNewTab('mailto:mikael.mantis7@gmail.com')}}>

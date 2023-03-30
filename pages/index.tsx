@@ -1,34 +1,37 @@
-import About from '../components/About';
-import Work from '../components/Work';
-import Projects from '../components/Projects';
-import Tricking from '../components/Tricking';
+import {About} from '../components/About';
+import {Work} from '../components/Work';
+import {Projects} from '../components/Projects';
+import {Tricking} from '../components/Tricking';
 import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
-import React, { useState, useRef, useEffect, useContext} from 'react';
+import { useState, useRef, useContext, MutableRefObject} from 'react';
 import useDocumentScroll from '../hooks/useDocumentScroll';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { ThemeContext } from 'styled-components';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { DefaultTheme, ThemeContext } from 'styled-components';
+import { NextPage } from 'next/types';
+import Image from 'next/image';
 
-const MIN_SCROLL_NAV = 25;
-const MIN_SCROLL_TO_SHOW_WORK = 300;
-const MIN_SCROLL_TO_SHOW_PROJ = 1000;
-const MIN_SCROLL_TO_TRICKING = 1300;
+const MIN_SCROLL_TO_SHOW_NAV = 25;
 const TIMEOUT_DELAY = 0;
 
-const Home = (props) => {
+interface IHomePageProps {
+  darkMode: boolean;
+}
+
+const Home: NextPage = (props: IHomePageProps) => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
   const [shouldShowWork, setShouldShowWork] = useState(false);
   const [shouldShowProjects, setShouldShowProjects] = useState(false);
   const [shouldShowTricking, setShouldShowTricking] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const aboutRef = useRef(null); 
-  const workRef = useRef(null);
-  const projectsRef = useRef(null);
-  const trickingRef = useRef(null);
-  const theme = useContext(ThemeContext);
+  const aboutRef = useRef<HTMLDivElement>(null); 
+  const workRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const trickingRef = useRef<HTMLDivElement>(null);
+  const theme: DefaultTheme = useContext(ThemeContext);
 
-  const handleNavClick = (section) => {
-    setActiveSection(section);
+  const handleNavClick = (section: string) => {
     switch (section) {
       case 'about':
         scrollToRef(aboutRef, 500);
@@ -47,21 +50,17 @@ const Home = (props) => {
     }
   }
 
-  const scrollToRef = (ref, offset=0) => {
+  const scrollToRef = (ref: MutableRefObject<HTMLElement>, offset=0) => {
     window.scrollTo(0, ref.current.offsetTop - offset)
   };
 
-  useEffect(() => {
-    handleNavClick.bind(this);
-  }, []);
-  
-
-  useDocumentScroll(callbackData => {
-    const { previousScrollTop, currentScrollTop } = callbackData;
-    const scrolledForNav = currentScrollTop > MIN_SCROLL_NAV;
-    const scrolledToWork = currentScrollTop > MIN_SCROLL_TO_SHOW_WORK;
-    const scrolledToProjects = currentScrollTop > MIN_SCROLL_TO_SHOW_PROJ;
-    const scrolledToTricking = currentScrollTop > MIN_SCROLL_TO_TRICKING;
+  useDocumentScroll((callbackData: {currentScrollTop: number}) => {
+    const { currentScrollTop } = callbackData;
+    const scrolledForNav = currentScrollTop > MIN_SCROLL_TO_SHOW_NAV;
+    const scrolledToWork = workRef.current ? currentScrollTop > workRef.current.offsetTop : false;
+    const scrolledToProjects = projectsRef.current ? currentScrollTop > projectsRef.current.offsetTop : false;
+    const scrolledToTricking = trickingRef.current ? currentScrollTop > trickingRef.current.offsetTop : false;
+    
     if (scrolledToWork && !scrolledToProjects) {
       setActiveSection('work');
     } else if (scrolledToProjects && !scrolledToTricking) {
@@ -86,17 +85,17 @@ const Home = (props) => {
       <h1 className='title'>
         Hi, I'm Mikael
       </h1>
-      <img src='/me.png' alt='picture of me (mikael mantis)'></img>
+      <Image src='/me_v2.png' alt='drawing of me (mikael mantis)' width='132' height='132'/>
       <p className='caption'>
-        <FontAwesomeIcon icon='map-marker-alt'/> Bay Area
+        <FontAwesomeIcon icon={solid('map-marker-alt')}/> Bay Area, CA
       </p>
       <main>
         <NavWrapper display={shouldShowSideNav} section={activeSection} handleClick={handleNavClick} darkMode={props.darkMode}/>
         <div className='content'>
-          <About refProp={aboutRef}/>
-          <Work refProp={workRef} display={shouldShowWork}/>
-          <Projects refProp={projectsRef} display={shouldShowProjects}/>
-          <Tricking refProp={trickingRef} display={shouldShowTricking}/>
+          <About ref={aboutRef}/>
+          <Work ref={workRef} display={shouldShowWork}/>
+          <Projects ref={projectsRef} display={shouldShowProjects}/>
+          <Tricking ref={trickingRef} display={shouldShowTricking}/>
         </div>
       </main>
       <style jsx>{`
@@ -133,6 +132,8 @@ const Home = (props) => {
 
         img {
           margin: 1rem 0;
+          border-radius: 10px;
+          box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
         }
 
         .caption {

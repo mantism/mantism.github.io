@@ -1,19 +1,28 @@
 import React, { useContext } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { ThemeContext } from 'styled-components';
+import Image from 'next/image';
+import { ColorTheme, ThemeContext } from 'styled-components';
 
-const IconButton = ({icon, text, color='#0070f3', action}) => {
-  const theme = useContext(ThemeContext);
+interface IIconButtonProps {
+  icon?: string;
+  text?: string;
+  action?: () => void;
+  children?: React.ReactNode;
+}
+
+const IconButton = (props: IIconButtonProps) => {
+  const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
+  const { icon, text, action, children} = props;
 
   return (
     <div className='icon-button' onClick={action}>
       <div className='icon-circle'>
         <div className='svg-icon'>
-          {icon == 'vertigo' ? 
-            <img src='./V-Logo.svg' alt='vertigo-logo' 
-              style={{width: '16px', height:'16px', marginTop: '2.5px'}}></img>
-            :
-            <FontAwesomeIcon icon={icon} size='1x' style={{color}}/>
+          {icon == 'vertigo' && 
+            <Image src='./V-Logo.svg' alt='vertigo-logo' width='32' height='32'
+              style={{marginTop: '2.5px'}}/>
+          }
+          {
+           children ? children : ''
           }
         </div>
       </div>
@@ -28,6 +37,7 @@ const IconButton = ({icon, text, color='#0070f3', action}) => {
           margin-left: 1rem;
           display: inline-block;
           margin-right: 0;
+          cursor: pointer;
         }
         
         .svg-icon {
@@ -37,8 +47,8 @@ const IconButton = ({icon, text, color='#0070f3', action}) => {
         }
 
         .icon-circle {
-          width: 32px;
-          height: 32px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
           background: linear-gradient(145deg, ${theme.circleButton.light}, ${theme.circleButton.dark});
           box-shadow:  5px 5px 100px ${theme.circleShadow.dark}, 

@@ -1,20 +1,27 @@
-import React, { useContext } from 'react';
+import React, { MutableRefObject, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ThemeContext } from 'styled-components';
+import { ColorTheme, DefaultTheme, ThemeContext } from 'styled-components';
+import { duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const iconStyle = {
   color: '#FF8357'
 }
 
-const Work = (props) => {
-  const theme = useContext(ThemeContext);
+interface IWorkProps {
+  display: boolean;
+}
+
+
+export const Work = React.forwardRef((props: IWorkProps, ref: MutableRefObject<HTMLDivElement>) => {
+  const theme: DefaultTheme | ColorTheme = useContext(ThemeContext);
+  const coloredTheme: ColorTheme = theme as ColorTheme;
 
   return (
-    <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={props.refProp}>
-      <FontAwesomeIcon icon='suitcase' size='3x' style={iconStyle}/>
+    <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
+      <FontAwesomeIcon icon={duotone('suitcase')} size='3x' style={iconStyle}/>
       <h2>Work</h2>
       <ul className='positions'>
-        <li>Software Engineer <a href='https://luna.amazon.com'>@Amazon Luna</a>May '22 to Present</li>
+        <li>Software Engineer <a href='https://luna.amazon.com'>@Amazon Luna</a><br/>May '22 to Present</li>
         <li>Software Engineer <a href='https://aws.amazon.com'>@Amazon (AWS)</a><br/><i>Jun '21 - May '22</i></li>
         <li>Software Engineer <a href='https://blackrock.com'>@BlackRock, Inc</a><br/> <i>Jul '18 - May '21</i></li>
         <li>Software Engineering Intern <a href='https://willowtreeapps.com'>@WillowTree, Inc</a><br/><i>Jun '17 - Aug '17</i></li>
@@ -28,7 +35,7 @@ const Work = (props) => {
           text-align: center;
           max-width: 300px;
           margin: 0 auto;
-          border-bottom: 1px solid ${theme.borderColor};
+          border-bottom: 1px solid ${coloredTheme.borderColor};
           padding-bottom: 3rem;
         }
 
@@ -52,6 +59,4 @@ const Work = (props) => {
       </style>
     </div>
   );
-};
-
-export default Work;
+});

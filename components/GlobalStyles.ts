@@ -1,4 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import { ColorTheme, createGlobalStyle } from 'styled-components';
+
+interface IGlobalStyleProps {
+  theme: ColorTheme;
+}
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -6,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: Open Sans, sans-serif;
-    font-size: ${props => props.theme.baseFontSize}em;
+    font-size: ${(props: IGlobalStyleProps) => props.theme.baseFontSize}em;
     line-height: ${props => props.theme.lineHeights.body};
     scroll-behavior: smooth;
     background: ${props => props.theme.bg.primary};

@@ -1,18 +1,13 @@
 import React, { MutableRefObject } from 'react';
-
+import Image from 'next/image';
 interface ITrickingProps {
   display: boolean;
 }
 
 export const Tricking = React.forwardRef((props: ITrickingProps, ref: MutableRefObject<HTMLDivElement>) => {
-  const imgStyle = {
-    width: '48px',
-    height: '48px'
-  }
-  
   return (
     <div className={`tricking ${props.display? 'visible' : 'hidden'}`} ref={ref}>
-      <img src='./V-Logo.svg' alt='vertigo-logo' style={imgStyle}></img>
+      <Image src='./V-Logo.svg' alt='vertigo-logo' width='48' height='48'/>
       <h2>Tricking</h2>
       <video autoPlay loop muted playsInline id='combo'>
         <source src="./combo.mp4" type="video/mp4"/>
@@ -47,7 +42,9 @@ export const Tricking = React.forwardRef((props: ITrickingProps, ref: MutableRef
           a Tricking company that aims to provide a best-in-class gathering experience for all trickers by bringing together the community, sharing knowledge, and showcasing tremendous athletes through the Vertigames and battles.
         </p>
       </div>
-      <img src='v2_group_photo.jpeg' alt='Attendees photo from Vertigo 2 in 2019' id='groupPhoto'></img>
+      <div className='image-wrapper' id='groupPhoto'>
+        <Image src='/v4_group_photo.jpg' alt='Attendees photo from Vertigo 4 in 2022' fill/>
+      </div>
       <div className='description'>
         <p>
           Through running the event we aim to help grow our beloved sport and one day get people to say "Oh I've heard of tricking!" instead of "whats that?"
@@ -86,8 +83,10 @@ export const Tricking = React.forwardRef((props: ITrickingProps, ref: MutableRef
         }
 
         #groupPhoto {
-          max-width: 350px;
+          width: 600px;
+          height: 400px;
           margin: 0 auto;
+          position: relative;
         }
 
         #combo {
@@ -97,7 +96,8 @@ export const Tricking = React.forwardRef((props: ITrickingProps, ref: MutableRef
         //mobile sizing for images
         @media (max-width: 420px) {
           #groupPhoto {
-            max-width: 300px;
+            width: 300px;
+            height: 200px;
           }
 
           #combo {

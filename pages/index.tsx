@@ -10,6 +10,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { DefaultTheme, ThemeContext } from 'styled-components';
 import { NextPage } from 'next/types';
+import Image from 'next/image';
 
 const MIN_SCROLL_TO_SHOW_NAV = 25;
 const TIMEOUT_DELAY = 0;
@@ -84,7 +85,7 @@ const Home: NextPage = (props: IHomePageProps) => {
       <h1 className='title'>
         Hi, I'm Mikael
       </h1>
-      <img src='/me_v2.png' alt='drawing of me (mikael mantis)' width='132' height='132'></img>
+      <Image src='/me_v2.png' alt='drawing of me (mikael mantis)' width='132' height='132'/>
       <p className='caption'>
         <FontAwesomeIcon icon={solid('map-marker-alt')}/> Bay Area, CA
       </p>

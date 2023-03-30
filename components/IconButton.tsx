@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
+import Image from 'next/image';
 import { ColorTheme, ThemeContext } from 'styled-components';
 
 interface IIconButtonProps {
@@ -19,8 +18,8 @@ const IconButton = (props: IIconButtonProps) => {
       <div className='icon-circle'>
         <div className='svg-icon'>
           {icon == 'vertigo' && 
-            <img src='./V-Logo.svg' alt='vertigo-logo' 
-              style={{width: '32px', height:'32px', marginTop: '2.5px'}}></img>
+            <Image src='./V-Logo.svg' alt='vertigo-logo' width='32' height='32'
+              style={{marginTop: '2.5px'}}/>
           }
           {
            children ? children : ''

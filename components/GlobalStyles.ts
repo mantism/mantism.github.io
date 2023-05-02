@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Open Sans, sans-serif;
     font-size: ${(props: IGlobalStyleProps) => props.theme.baseFontSize}em;
-    line-height: ${props => props.theme.lineHeights.body};
+    line-height: ${(props) => props.theme.lineHeights.body};
     scroll-behavior: smooth;
-    background: ${props => props.theme.bg.primary};
-    color: ${props => props.theme.text.primary};
+    background: ${(props) => props.theme.bg.primary};
+    color: ${(props) => props.theme.text.primary};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a, a:visited {
-    color: ${props => props.theme.text.links};
+    color: ${(props) => props.theme.text.links};
     text-decoration: none;
   }
 
@@ -75,10 +75,10 @@ const GlobalStyle = createGlobalStyle`
   @media (min-width: 120em) {
     html
     body {
-      font-size: ${props => props.theme.baseFontSize * 1.2}em;
-      line-height: ${props => props.theme.lineHeights.body * 1.2};
+      font-size: ${(props) => props.theme.baseFontSize * 1.2}em;
+      line-height: ${(props) => props.theme.lineHeights.body * 1.2};
     }
   }
-`
+`;
 
 export default GlobalStyle;

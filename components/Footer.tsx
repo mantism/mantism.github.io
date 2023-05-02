@@ -34,14 +34,15 @@ const Footer = styled.footer`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 const FooterComponent: FunctionComponent = () => {
   return (
     <Footer>
-      <FontAwesomeIcon icon={duotone('code')} style={{margin: '0.5rem'}}/> with <FontAwesomeIcon icon={solid('heart')} style={{margin: '0.5rem'}}/> by Mikael Mantis, last updated 2023
+      <FontAwesomeIcon icon={duotone('code')} style={{ margin: '0.5rem' }} /> with{' '}
+      <FontAwesomeIcon icon={solid('heart')} style={{ margin: '0.5rem' }} /> by Mikael Mantis, last updated 2023
     </Footer>
   );
-}
+};
 
 export default FooterComponent;

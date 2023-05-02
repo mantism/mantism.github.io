@@ -11,7 +11,7 @@ interface IWorkProps {
   display: boolean;
 }
 
-export const Work = React.forwardRef((props: IWorkProps, ref: MutableRefObject<HTMLDivElement>) => {
+export const Work = React.forwardRef(function Work(props: IWorkProps, ref: MutableRefObject<HTMLDivElement>) {
   const theme: DefaultTheme | ColorTheme = useContext(ThemeContext);
   const coloredTheme: ColorTheme = theme as ColorTheme;
 
@@ -23,37 +23,38 @@ export const Work = React.forwardRef((props: IWorkProps, ref: MutableRefObject<H
         <li>
           Software Engineer <a href="https://aalyria.com">@Aalyria</a>
           <br />
-          May '23 - Present
+          May &apos;23 - Present
         </li>
         <li>
           Software Engineer <a href="https://luna.amazon.com">@Amazon Luna</a>
           <br />
-          May '22 to Mar '23
+          May &apos;22 to Mar &apos;23
         </li>
         <li>
           Software Engineer <a href="https://aws.amazon.com">@Amazon (AWS)</a>
           <br />
-          <i>Jun '21 - May '22</i>
+          <i>Jun &apos;21 - May &apos;22</i>
         </li>
         <li>
           Software Engineer <a href="https://blackrock.com">@BlackRock, Inc</a>
-          <br /> <i>Jul '18 - May '21</i>
+          <br /> <i>Jul &apos;18 - May &apos;21</i>
         </li>
         <li>
           Software Engineering Intern <a href="https://willowtreeapps.com">@WillowTree, Inc</a>
           <br />
-          <i>Jun '17 - Aug '17</i>
+          <i>Jun &apos;17 - Aug &apos;17</i>
         </li>
         <li>
           Teaching Assistant <a href="https://upenn.edu">@University of Pennslyvania</a> <br />{' '}
-          <i>Sept '16 - May '18</i>
+          <i>Sept &apos;16 - May &apos;18</i>
         </li>
         <li>
           Game Development Intern <a href="https://brav.org">@Brav Conflict Management</a> <br />{' '}
-          <i>May '16 - Jul '16</i>
+          <i>May &apos;16 - Jul &apos;16</i>
         </li>
         <li>
-          Front-End Developer <a href="https://thedp.com">@The Daily Pennsylvanian</a> <br /> <i>Feb '16 - May '17</i>
+          Front-End Developer <a href="https://thedp.com">@The Daily Pennsylvanian</a> <br />{' '}
+          <i>Feb &apos;16 - May &apos;17</i>
         </li>
       </ul>
       <style jsx>

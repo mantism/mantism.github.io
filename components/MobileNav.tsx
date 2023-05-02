@@ -1,4 +1,4 @@
-import React, {useState, useContext, CSSProperties} from 'react';
+import React, { useState, useContext, CSSProperties } from 'react';
 import IconButton from './IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -12,11 +12,11 @@ const MobileNav = (props: INavProps) => {
 
   const toggleMenu = (callback) => {
     setOpen(!open);
-  }
+  };
 
   const openInNewTab = (url) => {
     window.open(url, '_blank');
-  }
+  };
 
   const duotoneIconStyleOrange: CSSProperties = {
     //@ts-ignore
@@ -28,84 +28,109 @@ const MobileNav = (props: INavProps) => {
     //@ts-ignore
     '--fa-primary-color': '#0070f3',
     '--fa-secondary-color': '#e3e4e8',
-  }
+  };
 
   const duotoneIconStyleGreen: CSSProperties = {
     //@ts-ignore
     '--fa-primary-color': '#B3DDD1',
-    '--fa-secondary-color': '#e3e4e8'
-  }
+    '--fa-secondary-color': '#e3e4e8',
+  };
 
   return (
-    <div className='mobilenav'>
-        <div className={'outer-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon={duotone('bars')} size='sm' style={duotoneIconStyleOrange}/>
+    <div className="mobilenav">
+      <div className={'outer-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
+        <FontAwesomeIcon icon={duotone('bars')} size="sm" style={duotoneIconStyleOrange} />
+      </div>
+      <div className={'menu ' + (open ? 'opened' : 'closed')}>
+        <div className={'inner-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
+          <FontAwesomeIcon icon={duotone('times')} size="sm" />
         </div>
-        <div className={'menu ' + (open ? 'opened' : 'closed')}>
-          <div className={'inner-toggle ' + (open ? 'opened' : 'closed')} onClick={toggleMenu}>
-            <FontAwesomeIcon icon={duotone('times')} size='sm'/>
-          </div>
-          <div className='label'>
-            Sections
-          </div>
-          <div className='sections'>
-            <IconButton text='about' action={() => {
+        <div className="label">Sections</div>
+        <div className="sections">
+          <IconButton
+            text="about"
+            action={() => {
               toggleMenu(handleClick('about'));
-            }}>
-              <FontAwesomeIcon icon={duotone('home')} size='2x' style={duotoneIconStyleBlue}/>
-            </IconButton>
-            <IconButton text='work' action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={duotone('home')} size="2x" style={duotoneIconStyleBlue} />
+          </IconButton>
+          <IconButton
+            text="work"
+            action={() => {
               toggleMenu(handleClick('work'));
-            }}>
-              <FontAwesomeIcon icon={duotone('suitcase')} size='2x' style={duotoneIconStyleOrange}/>
-            </IconButton>
-            <IconButton text='projects' action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={duotone('suitcase')} size="2x" style={duotoneIconStyleOrange} />
+          </IconButton>
+          <IconButton
+            text="projects"
+            action={() => {
               toggleMenu(handleClick('projects'));
-            }}>
-              <FontAwesomeIcon icon={duotone('coffee')} size='2x' style={duotoneIconStyleGreen}/>
-            </IconButton>
-            <IconButton icon='vertigo' text='tricking' action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={duotone('coffee')} size="2x" style={duotoneIconStyleGreen} />
+          </IconButton>
+          <IconButton
+            icon="vertigo"
+            text="tricking"
+            action={() => {
               toggleMenu(handleClick('tricking'));
-            }}/>
-          </div>
-          <div className='label'>
-            Socials
-          </div>
-          <div className='socials'>
-            <IconButton action={()=>{
+            }}
+          />
+        </div>
+        <div className="label">Socials</div>
+        <div className="socials">
+          <IconButton
+            action={() => {
               toggleMenu(openInNewTab('https://github.com/mantism'));
-            }}>
-              <FontAwesomeIcon icon={brands('github')} size='2x' style={{color: '#0070f3'}}/>
-            </IconButton>
-            <IconButton action={()=>{
+            }}
+          >
+            <FontAwesomeIcon icon={brands('github')} size="2x" style={{ color: '#0070f3' }} />
+          </IconButton>
+          <IconButton
+            action={() => {
               toggleMenu(openInNewTab('https://www.mantism.blog'));
-            }}>
-              <FontAwesomeIcon icon={duotone('typewriter')} size='2x' style={duotoneIconStyleBlue}/>
-            </IconButton>
-            <IconButton action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={duotone('typewriter')} size="2x" style={duotoneIconStyleBlue} />
+          </IconButton>
+          <IconButton
+            action={() => {
               toggleMenu(openInNewTab('https://www.linkedin.com/in/mikaelmantis'));
-            }}>
-              <FontAwesomeIcon icon={brands('linkedin')} size='2x' style={{color: '#0070f3'}}/>
-            </IconButton>
-            <IconButton action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={brands('linkedin')} size="2x" style={{ color: '#0070f3' }} />
+          </IconButton>
+          <IconButton
+            action={() => {
               toggleMenu(openInNewTab('https://www.youtube.com/user/ninjamikael'));
-            }}>
-              <FontAwesomeIcon icon={brands('youtube-square')} size='2x' style={{color: '#0070f3'}}/>
-            </IconButton>
-            <IconButton action={() => {
+            }}
+          >
+            <FontAwesomeIcon icon={brands('youtube-square')} size="2x" style={{ color: '#0070f3' }} />
+          </IconButton>
+          <IconButton
+            action={() => {
               toggleMenu(openInNewTab('/instagram'));
-            }}>
-              <FontAwesomeIcon icon={brands('instagram')} size='2x' style={{color: '#0070f3'}}/>
-            </IconButton>
-          </div>
-          <div className='menu-footer'>
-            <div className='contact-me' onClick={() => {openInNewTab('mailto:mikael.mantis7@gmail.com')}}>
-              Contact Me
-            </div>
+            }}
+          >
+            <FontAwesomeIcon icon={brands('instagram')} size="2x" style={{ color: '#0070f3' }} />
+          </IconButton>
+        </div>
+        <div className="menu-footer">
+          <div
+            className="contact-me"
+            onClick={() => {
+              openInNewTab('mailto:mikael.mantis7@gmail.com');
+            }}
+          >
+            Contact Me
           </div>
         </div>
+      </div>
 
-        <style jsx>{`
+      <style jsx>
+        {`
           .menu {
             width: 85vw;
             height: auto;
@@ -117,8 +142,7 @@ const MobileNav = (props: INavProps) => {
             border-radius: 10px;
             transition: opacity 0.5s;
             background: ${theme.bg.primary};
-            box-shadow:  14px 14px 28px ${theme.boxShadow.dark}, 
-             -14px -14px 28px ${theme.boxShadow.light};
+            box-shadow: 14px 14px 28px ${theme.boxShadow.dark}, -14px -14px 28px ${theme.boxShadow.light};
           }
 
           .sections {
@@ -151,7 +175,7 @@ const MobileNav = (props: INavProps) => {
             right: 1em;
             font-size: 2em;
           }
-        
+
           .outer-toggle.opened {
             display: none;
           }
@@ -169,7 +193,7 @@ const MobileNav = (props: INavProps) => {
           .inner-toggle.closed {
             display: none;
           }
-          
+
           .label {
             display: block;
             margin-top: 2rem;
@@ -207,9 +231,9 @@ const MobileNav = (props: INavProps) => {
             }
           }
         `}
-        </style>
+      </style>
     </div>
   );
-}
+};
 
 export default MobileNav;

@@ -5,9 +5,9 @@ import { INavProps } from 'navigation';
 
 const NavWrapper: FunctionComponent<INavProps> = (props) => {
   return (
-    <div className='navigation'>
-      <MobileNav {...props}/>
-      <SideNav {...props}/>
+    <div className="navigation">
+      <MobileNav {...props} />
+      <SideNav {...props} />
     </div>
   );
 };

@@ -4,30 +4,26 @@ import { ColorTheme, ThemeContext } from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
 
 const SideNav = (props: INavProps) => {
-  const {display, section, handleClick, darkMode} = props;
+  const { display, section, handleClick, darkMode } = props;
   const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
-    <div className={`sidenav ${ display ? 'visible' : 'hidden'}`}>
+    <div className={`sidenav ${display ? 'visible' : 'hidden'}`}>
       <ul>
-        <li className={section == 'about' ? 'active' : ''} 
-          onClick={() => handleClick('about')}>
-            About
+        <li className={section == 'about' ? 'active' : ''} onClick={() => handleClick('about')}>
+          About
         </li>
-        <li className={section == 'work' ? 'active' : ''}
-          onClick={() => handleClick('work')}>
-            Work
+        <li className={section == 'work' ? 'active' : ''} onClick={() => handleClick('work')}>
+          Work
         </li>
-        <li className={section == 'projects' ? 'active' : ''}
-          onClick={() => handleClick('projects')}>
-            Projects
+        <li className={section == 'projects' ? 'active' : ''} onClick={() => handleClick('projects')}>
+          Projects
         </li>
-        <li className={section == 'tricking' ? 'active' : ''}
-          onClick={() => handleClick('tricking')}>
-            Tricking
+        <li className={section == 'tricking' ? 'active' : ''} onClick={() => handleClick('tricking')}>
+          Tricking
         </li>
         <li>
-          <DarkModeToggle darkMode={darkMode}/>
+          <DarkModeToggle darkMode={darkMode} />
         </li>
       </ul>
       <style jsx>{`
@@ -44,7 +40,7 @@ const SideNav = (props: INavProps) => {
           list-style: none;
           padding: 0;
         }
-        
+
         li {
           padding-left: 10px;
           font-size: 1.25rem;
@@ -53,7 +49,7 @@ const SideNav = (props: INavProps) => {
         li:hover {
           color: ${theme.text.links};
         }
-        
+
         .active {
           border-left: solid 3px ${theme.text.links};
         }

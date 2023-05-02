@@ -27,24 +27,24 @@ declare module 'styled-components' {
       secondary: string;
       inset: string;
       input: string;
-    },
+    };
     borderColor: string;
     boxShadow: {
       light: string;
       dark: string;
-    },
+    };
     boxButton: {
       light: string;
       dark: string;
-    },
+    };
     circleButton: {
       light: string;
       dark: string;
-    },
+    };
     circleShadow: {
       light: string;
       dark: string;
-    },
+    };
     text: {
       primary: string;
       secondary: string;
@@ -53,6 +53,6 @@ declare module 'styled-components' {
       placeholder: string;
       links: string;
       onPrimary: string;
-    },
+    };
   }
 }

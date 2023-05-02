@@ -16,10 +16,13 @@ I do ask that you don't copy anything directly if you find anything useful from 
 3. Install [Yarn](https://classic.yarnpkg.com/en/docs/install) - follow their installation guide
 
 4. Install JS Dependencies:
+
    ```bash
    yarn
    ```
+
    or
+
    ```bash
    yarn install
    ```
@@ -29,4 +32,4 @@ I do ask that you don't copy anything directly if you find anything useful from 
    yarn run dev
    ```
 
-Should be as simple as that!  If there is any trouble, feel free to raise an issue here on the repo or a PR if you would like to resolve the issue yourself! 
+Should be as simple as that! If there is any trouble, feel free to raise an issue here on the repo or a PR if you would like to resolve the issue yourself!

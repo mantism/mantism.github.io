@@ -11,12 +11,12 @@ const nextConfig = {
       test: /\.(jpe?g|png|svg)$/i,
       loader: 'responsive-loader',
       options: {
-        adapter: require('responsive-loader/sharp')
-      }
+        adapter: require('responsive-loader/sharp'),
+      },
     });
 
     return config;
-  }
-}
+  },
+};
 
 module.exports = nextConfig;

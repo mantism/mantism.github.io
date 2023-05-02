@@ -11,26 +11,23 @@ interface IIconButtonProps {
 
 const IconButton = (props: IIconButtonProps) => {
   const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
-  const { icon, text, action, children} = props;
+  const { icon, text, action, children } = props;
 
   return (
-    <div className='icon-button' onClick={action}>
-      <div className='icon-circle'>
-        <div className='svg-icon'>
-          {icon == 'vertigo' && 
-            <Image src='./V-Logo.svg' alt='vertigo-logo' width='32' height='32'
-              style={{marginTop: '2.5px'}}/>
-          }
-          {
-           children ? children : ''
-          }
+    <div className="icon-button" onClick={action}>
+      <div className="icon-circle">
+        <div className="svg-icon">
+          {icon == 'vertigo' && (
+            <Image src="./V-Logo.svg" alt="vertigo-logo" width="32" height="32" style={{ marginTop: '2.5px' }} />
+          )}
+          {children ? children : ''}
         </div>
       </div>
-      {text && 
-        <div className='text'>
+      {text && (
+        <div className="text">
           <h5>{text}</h5>
         </div>
-      }
+      )}
       <style jsx>{`
         .icon-button {
           padding: 0;
@@ -39,7 +36,7 @@ const IconButton = (props: IIconButtonProps) => {
           margin-right: 0;
           cursor: pointer;
         }
-        
+
         .svg-icon {
           display: block;
           text-align: center;
@@ -51,8 +48,7 @@ const IconButton = (props: IIconButtonProps) => {
           height: 48px;
           border-radius: 50%;
           background: linear-gradient(145deg, ${theme.circleButton.light}, ${theme.circleButton.dark});
-          box-shadow:  5px 5px 100px ${theme.circleShadow.dark}, 
-             -5px -5px 100px ${theme.circleShadow.light};
+          box-shadow: 5px 5px 100px ${theme.circleShadow.dark}, -5px -5px 100px ${theme.circleShadow.light};
           margin-right: 1rem;
           display: inline-block;
           vertical-align: middle;
@@ -60,18 +56,16 @@ const IconButton = (props: IIconButtonProps) => {
 
         .icon-circle:hover {
           background: linear-gradient(145deg, ${theme.circleButton.dark}, ${theme.circleButton.light});
-          box-shadow:  5px 5px 100px ${theme.circleShadow.dark}, 
-             -5px -5px 100px ${theme.circleShadow.light};
+          box-shadow: 5px 5px 100px ${theme.circleShadow.dark}, -5px -5px 100px ${theme.circleShadow.light};
         }
 
         .text {
           display: inline-block;
           vertical-align: middle;
         }
-
       `}</style>
     </div>
   );
-}
+};
 
 export default IconButton;

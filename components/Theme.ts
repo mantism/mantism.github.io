@@ -1,4 +1,4 @@
-import { DefaultTheme, ColorTheme } from "styled-components";
+import { DefaultTheme, ColorTheme } from 'styled-components';
 
 const defaultTheme: DefaultTheme = {
   fontSizes: [
@@ -8,7 +8,7 @@ const defaultTheme: DefaultTheme = {
     '22px', // 3
     '26px', // 4
     '32px', // 5
-    '40px'  // 6
+    '40px', // 6
   ],
   fontWeights: {
     caption: 100,
@@ -34,7 +34,7 @@ export const lightTheme: ColorTheme = {
     primary: '#ffffff',
     secondary: '#eaeaea',
     inset: '#e2e4e8',
-    input: 'rgba(65, 67, 78, 0, 0.12'
+    input: 'rgba(65, 67, 78, 0, 0.12',
   },
   text: {
     primary: '#050505',
@@ -43,26 +43,26 @@ export const lightTheme: ColorTheme = {
     quarternary: '#9194a1',
     placeholder: 'rgba(82,85,96,0.5)',
     onPrimary: '#ffffff',
-    links: '#0070f3'
+    links: '#0070f3',
   },
   borderColor: '#eaeaea',
   boxShadow: {
     light: '#ffffff',
-    dark: '#b8b8b8'
+    dark: '#b8b8b8',
   },
   boxButton: {
     light: '#0078ff',
-    dark: '#0065db'
+    dark: '#0065db',
   },
   circleButton: {
     light: '#ffffff',
-    dark: '#e6e6e6'
+    dark: '#e6e6e6',
   },
   circleShadow: {
     light: '#ffffff',
-    dark: '#fcfcfc'
+    dark: '#fcfcfc',
   },
-}
+};
 
 export const darkTheme: ColorTheme = {
   ...defaultTheme,
@@ -70,7 +70,7 @@ export const darkTheme: ColorTheme = {
     primary: '#282a36',
     secondary: '#44475a',
     inset: '#111111',
-    input: 'rgba(191,193,201,0.12)'
+    input: 'rgba(191,193,201,0.12)',
   },
   text: {
     primary: '#f8f8f2',
@@ -84,19 +84,19 @@ export const darkTheme: ColorTheme = {
   borderColor: '#44475a',
   boxShadow: {
     light: '#2e303e',
-    dark: '#22242e'
+    dark: '#22242e',
   },
   boxButton: {
     light: '#697aaf',
-    dark: '#586794'
+    dark: '#586794',
   },
   circleButton: {
     light: '#2b2d3a',
-    dark: '#242631'
+    dark: '#242631',
   },
   circleShadow: {
     light: '#282a37',
-    dark: '#282a35'
+    dark: '#282a35',
   },
   // ...
-}
+};

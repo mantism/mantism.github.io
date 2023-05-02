@@ -15,17 +15,17 @@ const StyledContainer = styled.div`
   @media (max-width: 37.5em) {
     padding: 2rem 0;
   }
-`
+`;
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <StyledContainer>
         {children}
-        <Footer/>
+        <Footer />
       </StyledContainer>
     </React.Fragment>
   );
-}
+};
 
 export default Layout;

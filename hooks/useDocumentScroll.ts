@@ -7,21 +7,19 @@ function useDocumentScroll(callback: Function) {
   function handleDocumentScroll() {
     const { scrollTop: currentScrollTop } = document.documentElement || document.body;
 
-    setScrollPosition(previousPosition => {
+    setScrollPosition((previousPosition) => {
       previousScrollTop = previousPosition;
       return currentScrollTop;
     });
 
-    callback({previousScrollTop, currentScrollTop});
+    callback({ previousScrollTop, currentScrollTop });
   }
-  
+
   useEffect(() => {
     window.addEventListener('scroll', handleDocumentScroll);
 
-    return () =>
-      window.removeEventListener('scroll', handleDocumentScroll);
+    return () => window.removeEventListener('scroll', handleDocumentScroll);
   }, []);
-  
 }
 
 export default useDocumentScroll;

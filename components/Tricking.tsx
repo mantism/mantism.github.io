@@ -9,7 +9,7 @@ export const Tricking = React.forwardRef(function Tricking(
   ref: MutableRefObject<HTMLDivElement>
 ) {
   return (
-    <div className={`tricking ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
+    <div id="tricking" className={`tricking ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
       <Image src="./V-Logo.svg" alt="vertigo-logo" width="48" height="48" />
       <h2>Tricking</h2>
       <video autoPlay loop muted playsInline id="combo">

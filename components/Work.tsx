@@ -16,7 +16,7 @@ export const Work = React.forwardRef(function Work(props: IWorkProps, ref: Mutab
   const coloredTheme: ColorTheme = theme as ColorTheme;
 
   return (
-    <div className={`work ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
+    <div id="work" className={`work ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
       <FontAwesomeIcon icon={duotone('suitcase')} size="3x" style={iconStyle} />
       <h2>Work</h2>
       <ul className="positions">

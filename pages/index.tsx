@@ -51,7 +51,7 @@ const Home: NextPage = (props: IHomePageProps) => {
   };
 
   const scrollToRef = (ref: MutableRefObject<HTMLElement>, offset = 0) => {
-    window.scrollTo(0, ref.current.offsetTop - offset);
+    window.scrollTo(0, ref.current.offsetTop + 20 - offset);
   };
 
   useDocumentScroll((callbackData: { currentScrollTop: number }) => {
@@ -63,11 +63,15 @@ const Home: NextPage = (props: IHomePageProps) => {
 
     if (scrolledToWork && !scrolledToProjects) {
       setActiveSection('work');
-    } else if (scrolledToProjects && !scrolledToTricking) {
+    } 
+    if (scrolledToProjects && !scrolledToTricking) {
       setActiveSection('projects');
-    } else if (scrolledToTricking) {
+    } 
+    if (scrolledToTricking) {
       setActiveSection('tricking');
-    } else {
+    }
+
+    if (!scrolledToWork && !scrolledToProjects && !scrolledToTricking) {
       setActiveSection('about');
     }
 

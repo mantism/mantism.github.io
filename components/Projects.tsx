@@ -19,10 +19,10 @@ export const Projects = React.forwardRef(function Projects(
   const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
-    <div className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
+    <div id="projects" className={`projects ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
       <FontAwesomeIcon icon={duotone('coffee')} size="3x" style={iconStyle} />
       <h2>Projects</h2>
-      Heres a brief overview of some of my past and ongoing <Link href="/tricking">tricking</Link> projects! Be sure to
+      Heres a brief overview of some of my past and ongoing <Link href="#tricking">tricking</Link> projects! Be sure to
       check back here in the future (or follow me on <Link href="https://github.com/mantism">GitHub</Link>) they may or
       may not get replaced.
       <div className="grid">
@@ -108,6 +108,7 @@ export const Projects = React.forwardRef(function Projects(
           text-align: center;
           border-bottom: 1px solid ${theme.borderColor};
           padding-bottom: 3rem;
+          margin: 1rem 0;
         }
 
         .grid {

@@ -6,7 +6,7 @@ export const About = React.forwardRef(function About(_, ref: MutableRefObject<HT
   const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (
-    <div className="about" ref={ref}>
+    <div id="about" className="about" ref={ref}>
       <p className="description">
         Welcome to my corner of the internet! <br />
         <br /> I&apos;m a Software Engineer at Aalyria working on <a href="https://www.aalyria.com/spacetime">Spacetime</a> and am the

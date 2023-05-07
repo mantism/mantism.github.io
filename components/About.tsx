@@ -12,7 +12,7 @@ export const About = React.forwardRef(function About(_, ref: MutableRefObject<HT
         <br /> I&apos;m a Software Engineer at Aalyria working on <a href="https://www.aalyria.com/spacetime">Spacetime</a> and am the
         co-founder of <a href="https://vertigotricking.com">Vertigo Tricking</a>. At the moment, I&apos;m also cooking up the{' '}
         <a href="https://trickingapi.dev">TrickingAPI</a> open source project and developing the{' '}
-        <a href="ust-rankings.deno.dev">US Tricking League Ranking System</a>. Oh, and I also started a{' '}
+        <a href="https://ust-rankings.deno.dev">US Tricking League Ranking System</a>. Oh, and I also started a{' '}
         <a href="https://mantism.blog">blog</a> this year if you&apos;re curious!
         <br />
         <br />

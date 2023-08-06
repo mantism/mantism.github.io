@@ -111,7 +111,7 @@ const MobileNav = (props: INavProps) => {
           </IconButton>
           <IconButton
             action={() => {
-              toggleMenu(openInNewTab('/instagram'));
+              toggleMenu(openInNewTab('https://www.instagram.com/mikael_mantis.lk'));
             }}
           >
             <FontAwesomeIcon icon={brands('instagram')} size="2x" style={{ color: '#0070f3' }} />

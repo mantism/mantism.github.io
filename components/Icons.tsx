@@ -19,7 +19,7 @@ const Icons = () => {
       <a href="https://www.youtube.com/user/ninjamikael" className="fontIcon" aria-label="youtube">
         <FontAwesomeIcon icon={brands('youtube-square')} size="2x" />
       </a>
-      <a href="https://www.instagram.com/mikael_mantis" className="fontIcon" aria-label="instagram">
+      <a href="https://www.instagram.com/mikael_mantis.lk" className="fontIcon" aria-label="instagram">
         <FontAwesomeIcon icon={brands('instagram')} size="2x" />
       </a>
       <style jsx>

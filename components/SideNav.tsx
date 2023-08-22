@@ -13,12 +13,6 @@ const SideNav = (props: INavProps) => {
         <li className={section == 'about' ? 'active' : ''} onClick={() => handleClick('about')}>
           About
         </li>
-        <li className={section == 'work' ? 'active' : ''} onClick={() => handleClick('work')}>
-          Work
-        </li>
-        <li className={section == 'projects' ? 'active' : ''} onClick={() => handleClick('projects')}>
-          Projects
-        </li>
         <li className={section == 'tricking' ? 'active' : ''} onClick={() => handleClick('tricking')}>
           Tricking
         </li>

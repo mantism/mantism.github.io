@@ -56,22 +56,6 @@ const MobileNav = (props: INavProps) => {
             <FontAwesomeIcon icon={duotone('home')} size="2x" style={duotoneIconStyleBlue} />
           </IconButton>
           <IconButton
-            text="work"
-            action={() => {
-              toggleMenu(handleClick('work'));
-            }}
-          >
-            <FontAwesomeIcon icon={duotone('suitcase')} size="2x" style={duotoneIconStyleOrange} />
-          </IconButton>
-          <IconButton
-            text="projects"
-            action={() => {
-              toggleMenu(handleClick('projects'));
-            }}
-          >
-            <FontAwesomeIcon icon={duotone('coffee')} size="2x" style={duotoneIconStyleGreen} />
-          </IconButton>
-          <IconButton
             icon="vertigo"
             text="tricking"
             action={() => {

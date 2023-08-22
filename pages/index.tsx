@@ -36,12 +36,6 @@ const Home: NextPage = (props: IHomePageProps) => {
       case 'about':
         scrollToRef(aboutRef, 500);
         break;
-      case 'work':
-        scrollToRef(workRef);
-        break;
-      case 'projects':
-        scrollToRef(projectsRef);
-        break;
       case 'tricking':
         scrollToRef(trickingRef);
         break;
@@ -57,29 +51,17 @@ const Home: NextPage = (props: IHomePageProps) => {
   useDocumentScroll((callbackData: { currentScrollTop: number }) => {
     const { currentScrollTop } = callbackData;
     const scrolledForNav = currentScrollTop > MIN_SCROLL_TO_SHOW_NAV;
-    const scrolledToWork = workRef.current ? currentScrollTop > workRef.current.offsetTop : false;
-    const scrolledToProjects = projectsRef.current ? currentScrollTop > projectsRef.current.offsetTop : false;
     const scrolledToTricking = trickingRef.current ? currentScrollTop > trickingRef.current.offsetTop : false;
 
-    if (scrolledToWork && !scrolledToProjects) {
-      setActiveSection('work');
-    } 
-    if (scrolledToProjects && !scrolledToTricking) {
-      setActiveSection('projects');
-    } 
     if (scrolledToTricking) {
       setActiveSection('tricking');
-    }
-
-    if (!scrolledToWork && !scrolledToProjects && !scrolledToTricking) {
+    } else {
       setActiveSection('about');
     }
 
     setTimeout(() => {
       // sets state only once
       setShouldShowSideNav((prev) => (prev ? prev : scrolledForNav));
-      setShouldShowWork((prev) => (prev ? prev : scrolledToWork));
-      setShouldShowProjects((prev) => (prev ? prev : scrolledToProjects));
       setShouldShowTricking((prev) => (prev ? prev : scrolledToTricking));
     }, TIMEOUT_DELAY);
   });
@@ -100,8 +82,6 @@ const Home: NextPage = (props: IHomePageProps) => {
         />
         <div className="content">
           <About ref={aboutRef} />
-          <Work ref={workRef} display={shouldShowWork} />
-          <Projects ref={projectsRef} display={shouldShowProjects} />
           <Tricking ref={trickingRef} display={shouldShowTricking} />
         </div>
       </main>

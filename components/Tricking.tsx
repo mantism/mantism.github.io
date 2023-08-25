@@ -16,11 +16,6 @@ export const Tricking = React.forwardRef(function Tricking(
         <source src="./combo.mp4" type="video/mp4" />
         <source src="./combo.webm" type="video/webm" />
       </video>
-      <div className="caption">
-        Above is one of my favorite &quot;combos&quot; to do but it doesn&apos;t nearly capture the beauty of the
-        movement! If interested, I recommend doing a search of &quot;tricking&quot; or &quot;martial arts tricking&quot;
-        on YouTube or Instagram to see the breadth of maneuvers performed by the community.
-      </div>
       <div className="description">
         <h3>
           So what is{' '}

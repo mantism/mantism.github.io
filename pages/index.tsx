@@ -1,6 +1,4 @@
 import { About } from '../components/About';
-import { Work } from '../components/Work';
-import { Projects } from '../components/Projects';
 import { Tricking } from '../components/Tricking';
 import Layout from '../components/Layout';
 import NavWrapper from '../components/NavWrapper';
@@ -11,6 +9,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { DefaultTheme, ThemeContext } from 'styled-components';
 import { NextPage } from 'next/types';
 import Image from 'next/image';
+import styled, { ColorTheme } from 'styled-components';
 
 const MIN_SCROLL_TO_SHOW_NAV = 25;
 const TIMEOUT_DELAY = 0;
@@ -19,15 +18,46 @@ interface IHomePageProps {
   darkMode: boolean;
 }
 
+const Title = styled.h1`
+  line-height: 1.15;
+  text-align: center;
+`;
+
+const Caption = styled.p`
+  text-align: center;
+  font-size: ${(props: { theme: ColorTheme }) => props.theme.baseFontSize * 0.8}em;
+  font-weight: ${(props: { theme: ColorTheme }) => props.theme.fontWeights.caption};
+`;
+
+const Content = styled.div`
+  padding-top: 2rem;
+  margin: 0 auto;
+  flex: 1;
+  max-width: 650px;
+
+  @media (max-width: 37.5em) {
+    .content {
+      max-width: 300px;
+    }
+  }
+
+  @media (min-width: 120em) {
+    .content {
+      max-width: 800px;
+    }
+  }
+`;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: row;
+`;
+
 const Home: NextPage = (props: IHomePageProps) => {
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false);
-  const [shouldShowWork, setShouldShowWork] = useState(false);
-  const [shouldShowProjects, setShouldShowProjects] = useState(false);
   const [shouldShowTricking, setShouldShowTricking] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
   const aboutRef = useRef<HTMLDivElement>(null);
-  const workRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
   const trickingRef = useRef<HTMLDivElement>(null);
   const theme: DefaultTheme = useContext(ThemeContext);
 
@@ -68,67 +98,23 @@ const Home: NextPage = (props: IHomePageProps) => {
 
   return (
     <Layout>
-      <h1 className="title">Hi, I&apos;m Mikael</h1>
+      <Title>Hi, I&apos;m Mikael</Title>
       <Image src="/me_v2.png" alt="drawing of me (mikael mantis)" width="132" height="132" />
-      <p className="caption">
+      <Caption theme={theme}>
         <FontAwesomeIcon icon={solid('map-marker-alt')} /> Bay Area, CA
-      </p>
-      <main>
+      </Caption>
+      <Main>
         <NavWrapper
           display={shouldShowSideNav}
           section={activeSection}
           handleClick={handleNavClick}
           darkMode={props.darkMode}
         />
-        <div className="content">
+        <Content>
           <About ref={aboutRef} />
           <Tricking ref={trickingRef} display={shouldShowTricking} />
-        </div>
-      </main>
-      <style jsx>{`
-        main {
-          display: flex;
-          flex-direction: row;
-        }
-
-        .title {
-          line-height: 1.15;
-          font-size: rem;
-          text-align: center;
-        }
-
-        .content {
-          padding-top: 2rem;
-          margin: 0 auto;
-          flex: 1;
-          max-width: 650px;
-        }
-
-        //tablet or smaller screen sizes (600px)
-        @media (max-width: 37.5em) {
-          .content {
-            max-width: 300px;
-          }
-        }
-
-        @media (min-width: 120em) {
-          .content {
-            max-width: 800px;
-          }
-        }
-
-        img {
-          margin: 1rem 0;
-          border-radius: 10px;
-          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .caption {
-          text-align: center;
-          font-size: ${theme.baseFontSize * 0.8}em;
-          font-weight: ${theme.fontWeights.caption};
-        }
-      `}</style>
+        </Content>
+      </Main>
     </Layout>
   );
 };

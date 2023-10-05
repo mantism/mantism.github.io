@@ -9,7 +9,6 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { DefaultTheme, ThemeContext } from 'styled-components';
 import { NextPage } from 'next/types';
 import Image from 'next/image';
-import styled, { ColorTheme } from 'styled-components';
 import { Title } from '../src/ui/Title';
 import { Caption } from '../src/ui/Caption';
 import { Main } from '../src/ui/Main';

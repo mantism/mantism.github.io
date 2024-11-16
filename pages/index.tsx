@@ -69,7 +69,7 @@ const Home: NextPage = (props: IHomePageProps) => {
       <Title>Hi, I&apos;m Mikael</Title>
       <Image src="/me_v2.png" alt="drawing of me (mikael mantis)" width="132" height="132" />
       <Caption theme={theme}>
-        <FontAwesomeIcon icon={solid('map-marker-alt')} /> Bay Area, CA
+        <FontAwesomeIcon icon={solid('map-marker-alt')} /> Los Angeles, CA
       </Caption>
       <Main>
         <NavWrapper

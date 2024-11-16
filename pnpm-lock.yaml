@@ -71,9 +71,6 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
-      use-dark-mode:
-        specifier: ^2.3.1
-        version: 2.3.1(react@18.3.1)
       webpack:
         specifier: ^5.96.1
         version: 5.96.1
@@ -1202,11 +1199,6 @@ packages:
   '@typescript-eslint/visitor-keys@8.14.0':
     resolution: {integrity: sha512-vG0XZo8AdTH9OE6VFRwAZldNc7qtJ/6NLGWak+BtENuEUXGZgFpihILPiBvKXvJ2nFu27XNGC6rKiwuaoMbYzQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@use-it/event-listener@0.1.7':
-    resolution: {integrity: sha512-hgfExDzUU9uTRTPDCpw2s9jWTxcxmpJya3fK5ADpf5VDpSy8WYwY/kh28XE0tUcbsljeP8wfan48QvAQTSSa3Q==}
-    peerDependencies:
-      react: '>=16.8.0'
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -2734,16 +2726,6 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  use-dark-mode@2.3.1:
-    resolution: {integrity: sha512-hmcdJR96tTustRQdaQwe6jMrZHnmPqXBxgy4jaQ4gsfhwajsCpjECuq9prgDe9XxMx/f9r96o2/md6O4Lwhwjg==}
-    peerDependencies:
-      react: ^16.8.0
-
-  use-persisted-state@0.3.3:
-    resolution: {integrity: sha512-pCNlvYC8+XjRxwnIut4teGC9f2p9aD88R8OGseQGZa2dvqG/h1vEGk1vRE1IZG0Vf161UDpn+NlW4+UGubQflQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-
   watchpack@2.4.2:
     resolution: {integrity: sha512-TnbFSbcOCcDgjZ4piURLCbJ3nJhznVh9kw6F6iokjiFPl8ONxe9A6nMDVXDiNbrSfLILs6vB07F7wLBrwPYzJw==}
     engines: {node: '>=10.13.0'}
@@ -4032,10 +4014,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.14.0
       eslint-visitor-keys: 3.4.3
-
-  '@use-it/event-listener@0.1.7(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -5817,17 +5795,6 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
-
-  use-dark-mode@2.3.1(react@18.3.1):
-    dependencies:
-      '@use-it/event-listener': 0.1.7(react@18.3.1)
-      react: 18.3.1
-      use-persisted-state: 0.3.3(react@18.3.1)
-
-  use-persisted-state@0.3.3(react@18.3.1):
-    dependencies:
-      '@use-it/event-listener': 0.1.7(react@18.3.1)
-      react: 18.3.1
 
   watchpack@2.4.2:
     dependencies:

@@ -3,6 +3,7 @@ import App from 'next/app';
 import Providers from '../src/theme/Providers';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { DarkModeProvider } from '../src/theme/DarkModeContext';
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 /*export function reportWebVitals(metric) {
@@ -15,9 +16,11 @@ class MyApp extends App {
 
     return (
       <React.Fragment>
-        <Providers>
-          <Component {...pageProps} />
-        </Providers>
+        <DarkModeProvider>
+          <Providers>
+            <Component {...pageProps} />
+          </Providers>
+        </DarkModeProvider>
       </React.Fragment>
     );
   }

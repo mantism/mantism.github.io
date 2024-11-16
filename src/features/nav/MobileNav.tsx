@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useContext, CSSProperties } from 'react';
 import IconButton from './IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -126,7 +127,9 @@ const MobileNav = (props: INavProps) => {
             border-radius: 10px;
             transition: opacity 0.5s;
             background: ${theme.bg.primary};
-            box-shadow: 14px 14px 28px ${theme.boxShadow.dark}, -14px -14px 28px ${theme.boxShadow.light};
+            box-shadow:
+              14px 14px 28px ${theme.boxShadow.dark},
+              -14px -14px 28px ${theme.boxShadow.light};
           }
 
           .sections {

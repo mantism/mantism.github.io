@@ -17,7 +17,7 @@ const SideNav = (props: INavProps) => {
           Tricking
         </li>
         <li>
-          <DarkModeToggle darkMode={darkMode} />
+          <DarkModeToggle />
         </li>
       </ul>
       <style jsx>{`

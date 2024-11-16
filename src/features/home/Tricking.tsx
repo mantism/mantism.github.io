@@ -1,5 +1,7 @@
-import React, { MutableRefObject } from 'react';
+'use client';
+import React, { MutableRefObject, useContext } from 'react';
 import Image from 'next/image';
+import { DarkModeContext } from '../../theme/DarkModeContext';
 interface ITrickingProps {
   display: boolean;
 }
@@ -8,9 +10,16 @@ export const Tricking = React.forwardRef(function Tricking(
   props: ITrickingProps,
   ref: MutableRefObject<HTMLDivElement>
 ) {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <div id="tricking" className={`tricking ${props.display ? 'visible' : 'hidden'}`} ref={ref}>
-      <Image src="./V-Logo.svg" alt="vertigo-logo" width="48" height="48" />
+      <Image
+        src={darkMode ? '/ustricking_logo_dark.png' : '/ustricking_logo_light.png'}
+        alt="US Tricking Logo"
+        width="60"
+        height="48"
+      />
       <h2>Tricking</h2>
       <video autoPlay loop muted playsInline id="combo">
         <source src="./combo.mp4" type="video/mp4" />

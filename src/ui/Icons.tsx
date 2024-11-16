@@ -10,9 +10,6 @@ const Icons = () => {
       <a href="https://www.mantism.blog" className="fontIcon" aria-label="substack">
         <FontAwesomeIcon icon={duotone('typewriter')} size="2x" />
       </a>
-      <a href="https://ko-fi.com/mantism" className="fontIcon" aria-label="kofi">
-        <FontAwesomeIcon icon={duotone('coffee')} size="2x" />
-      </a>
       <a href="https://www.linkedin.com/in/mikaelmantis" className="fontIcon" aria-label="linkedin">
         <FontAwesomeIcon icon={brands('linkedin')} size="2x" />
       </a>

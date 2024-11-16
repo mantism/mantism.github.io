@@ -22,7 +22,7 @@ const Providers = (props) => {
 
   const body = (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
+      <GlobalStyle theme={theme} />
       {children}
     </ThemeProvider>
   );

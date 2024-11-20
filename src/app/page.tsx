@@ -1,18 +1,19 @@
-import { About } from '../src/features/home/About';
-import { Tricking } from '../src/features/home/Tricking';
-import Layout from '../src/ui/Layout';
-import NavWrapper from '../src/features/nav/NavWrapper';
-import { useState, useRef, useContext, MutableRefObject } from 'react';
-import useDocumentScroll from '../hooks/useDocumentScroll';
+'use client';
+import { About } from '../features/home/About';
+import { Tricking } from '../features/home/Tricking';
+import Layout from '../ui/Layout';
+import NavWrapper from '../features/nav/NavWrapper';
+import { useState, useRef, useContext, MutableRefObject, RefObject } from 'react';
+import useDocumentScroll from '../../hooks/useDocumentScroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { DefaultTheme, ThemeContext } from 'styled-components';
 import { NextPage } from 'next/types';
 import Image from 'next/image';
-import { Title } from '../src/ui/Title';
-import { Caption } from '../src/ui/Caption';
-import { Main } from '../src/ui/Main';
-import { Content } from '../src/ui/Content';
+import { Title } from '../ui/Title';
+import { Caption } from '../ui/Caption';
+import { Main } from '../ui/Main';
+import { Content } from '../ui/Content';
 
 const MIN_SCROLL_TO_SHOW_NAV = 25;
 const TIMEOUT_DELAY = 0;
@@ -27,7 +28,7 @@ const Home: NextPage = (props: IHomePageProps) => {
   const [activeSection, setActiveSection] = useState('about');
   const aboutRef = useRef<HTMLDivElement>(null);
   const trickingRef = useRef<HTMLDivElement>(null);
-  const theme: DefaultTheme = useContext(ThemeContext);
+  const theme: DefaultTheme | undefined = useContext(ThemeContext);
 
   const handleNavClick = (section: string) => {
     switch (section) {
@@ -42,7 +43,10 @@ const Home: NextPage = (props: IHomePageProps) => {
     }
   };
 
-  const scrollToRef = (ref: MutableRefObject<HTMLElement>, offset = 0) => {
+  const scrollToRef = (ref: RefObject<HTMLElement>, offset = 0) => {
+    if (!ref.current) {
+      return;
+    }
     window.scrollTo(0, ref.current.offsetTop + 20 - offset);
   };
 

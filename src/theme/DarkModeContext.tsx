@@ -1,3 +1,4 @@
+'use client';
 import React, { createContext, useState, useEffect } from 'react';
 
 const DarkModeContext = createContext({
@@ -21,7 +22,7 @@ function getInitialState() {
     }
   }
 
-  return darkMode;
+  return darkMode ?? false;
 }
 
 function DarkModeProvider(props) {

@@ -1,3 +1,4 @@
+'use client';
 import { FunctionComponent } from 'react';
 import SideNav from './SideNav';
 import MobileNav from './MobileNav';

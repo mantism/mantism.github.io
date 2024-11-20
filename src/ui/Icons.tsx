@@ -1,3 +1,4 @@
+'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 

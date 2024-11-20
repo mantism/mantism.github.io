@@ -1,3 +1,4 @@
+'use client';
 import { INavProps } from 'navigation';
 import { useContext } from 'react';
 import { ColorTheme, ThemeContext } from 'styled-components';

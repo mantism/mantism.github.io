@@ -1,3 +1,4 @@
+'use client';
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import { ColorTheme, ThemeContext } from 'styled-components';
@@ -48,7 +49,9 @@ const IconButton = (props: IIconButtonProps) => {
           height: 48px;
           border-radius: 50%;
           background: linear-gradient(145deg, ${theme.circleButton.light}, ${theme.circleButton.dark});
-          box-shadow: 5px 5px 100px ${theme.circleShadow.dark}, -5px -5px 100px ${theme.circleShadow.light};
+          box-shadow:
+            5px 5px 100px ${theme.circleShadow.dark},
+            -5px -5px 100px ${theme.circleShadow.light};
           margin-right: 1rem;
           display: inline-block;
           vertical-align: middle;
@@ -56,7 +59,9 @@ const IconButton = (props: IIconButtonProps) => {
 
         .icon-circle:hover {
           background: linear-gradient(145deg, ${theme.circleButton.dark}, ${theme.circleButton.light});
-          box-shadow: 5px 5px 100px ${theme.circleShadow.dark}, -5px -5px 100px ${theme.circleShadow.light};
+          box-shadow:
+            5px 5px 100px ${theme.circleShadow.dark},
+            -5px -5px 100px ${theme.circleShadow.light};
         }
 
         .text {

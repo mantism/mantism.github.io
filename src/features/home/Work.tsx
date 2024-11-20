@@ -1,3 +1,4 @@
+'use client';
 import React, { MutableRefObject, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ColorTheme, DefaultTheme, ThemeContext } from 'styled-components';
@@ -12,7 +13,7 @@ interface IWorkProps {
 }
 
 export const Work = React.forwardRef(function Work(props: IWorkProps, ref: MutableRefObject<HTMLDivElement>) {
-  const theme: DefaultTheme | ColorTheme = useContext(ThemeContext);
+  const theme: DefaultTheme | undefined = useContext(ThemeContext);
   const coloredTheme: ColorTheme = theme as ColorTheme;
 
   return (

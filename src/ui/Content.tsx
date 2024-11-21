@@ -7,14 +7,10 @@ export const Content = styled.div`
   max-width: 650px;
 
   @media (max-width: 37.5em) {
-    .content {
-      max-width: 300px;
-    }
+    max-width: 300px;
   }
 
   @media (min-width: 120em) {
-    .content {
-      max-width: 800px;
-    }
+    max-width: 800px;
   }
 `;

@@ -5,7 +5,7 @@ import { ColorTheme, ThemeContext } from 'styled-components';
 import DarkModeToggle from '../DarkModeToggle';
 
 const SideNav = (props: INavProps) => {
-  const { display, section, handleClick, darkMode } = props;
+  const { display, section, handleClick } = props;
   const theme: ColorTheme = useContext(ThemeContext) as ColorTheme;
 
   return (

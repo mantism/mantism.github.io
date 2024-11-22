@@ -17,11 +17,11 @@ const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
+  flex-direction: column;
 
   @media (max-width: ${breakpoints.sm}) {
     padding-top: 0;
     width: 80%;
-    flex-direction: column;
   }
 
   .footer-section {
@@ -41,7 +41,7 @@ const FooterComponent: FunctionComponent = () => {
       <div className="footer-section">
         <FontAwesomeIcon icon={duotone('code')} style={{ margin: '0.5rem' }} /> with{' '}
         <FontAwesomeIcon icon={solid('heart')} style={{ margin: '0.5rem' }} />
-        by Mikael Mantis
+        by Mikael Mantis{' '}
       </div>
       <div className="footer-section tertiary">Last Updated 2024</div>
     </Footer>

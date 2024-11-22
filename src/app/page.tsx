@@ -2,14 +2,14 @@
 import { About } from '../features/home/About';
 import { Tricking } from '../features/home/Tricking';
 import Layout from '../ui/Layout';
-import NavWrapper from '../features/nav/NavWrapper';
-import { useState, useRef, useContext, MutableRefObject, RefObject } from 'react';
+import { useState, useRef, useContext, RefObject } from 'react';
 import useDocumentScroll from '../../hooks/useDocumentScroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { DefaultTheme, ThemeContext } from 'styled-components';
 import { NextPage } from 'next/types';
 import Image from 'next/image';
+import SideNav from '../features/SideNav';
 import { Title } from '../ui/Title';
 import { Caption } from '../ui/Caption';
 import { Main } from '../ui/Main';
@@ -76,7 +76,7 @@ const Home: NextPage = (props: IHomePageProps) => {
         <FontAwesomeIcon icon={solid('map-marker-alt')} /> Los Angeles, CA
       </Caption>
       <Main>
-        <NavWrapper
+        <SideNav
           display={shouldShowSideNav}
           section={activeSection}
           handleClick={handleNavClick}

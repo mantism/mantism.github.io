@@ -2,7 +2,7 @@
 import { INavProps } from 'navigation';
 import { useContext } from 'react';
 import { ColorTheme, ThemeContext } from 'styled-components';
-import DarkModeToggle from '../DarkModeToggle';
+import DarkModeToggle from './DarkModeToggle';
 
 const SideNav = (props: INavProps) => {
   const { display, section, handleClick } = props;

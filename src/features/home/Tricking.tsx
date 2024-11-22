@@ -117,7 +117,7 @@ export const Tricking = React.forwardRef(function Tricking(
         }
 
         //mobile sizing for images
-        @media (max-width: 420px) {
+        @media (max-width: 450px) {
           #groupPhoto {
             width: 300px;
             height: 200px;

@@ -3,7 +3,7 @@ import React, { FunctionComponent, useContext } from 'react';
 import styled, { ColorTheme } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { DarkModeContext } from '../theme/DarkModeContext';
+import { DarkModeContext } from 'theme/DarkModeContext';
 
 interface IDarkModeStyledButtonProps {
   theme: ColorTheme;

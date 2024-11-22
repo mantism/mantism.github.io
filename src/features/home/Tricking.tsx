@@ -1,7 +1,7 @@
 'use client';
 import React, { MutableRefObject, useContext } from 'react';
 import Image from 'next/image';
-import { DarkModeContext } from '../../theme/DarkModeContext';
+import { DarkModeContext } from 'theme/DarkModeContext';
 interface ITrickingProps {
   display: boolean;
 }

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import Providers from '../theme/Providers';
+import Providers from 'theme/Providers';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { DarkModeProvider } from '../theme/DarkModeContext';
+import { DarkModeProvider } from 'theme/DarkModeContext';
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 export const metadata: Metadata = {

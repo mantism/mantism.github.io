@@ -1,6 +1,6 @@
 'use client';
 import React, { MutableRefObject, useContext } from 'react';
-import Icons from '../../ui/Icons';
+import Icons from 'ui/Icons';
 import { ColorTheme, ThemeContext } from 'styled-components';
 
 export const About = React.forwardRef(function About(_, ref: MutableRefObject<HTMLDivElement>) {
